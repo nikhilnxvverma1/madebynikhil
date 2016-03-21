@@ -7,7 +7,8 @@
 		<title>glitchgone</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.css" rel="stylesheet">
-
+        <!--<link href="/fonts/materialize/material-design-icons/Material-Design-Icons.woff" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 		{{{isAdminEditorCSS user}}}
@@ -25,11 +26,25 @@
             <nav>
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo">{glitch} gone</a>
+                    <ul id="appsDropDown" class="dropdown-content">
+                        <li><a href="carry-the-flame">Carry the Flame</a></li>
+                        <li><a href="sudoku-all-solver">Sudoku all Solver</a></li>
+                        <li><a href="laying-bricks">Laying Bricks</a></li>
+                        <li><a href="snakes-ergo">Snakes Ergo</a></li>
+                    </ul>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
 						{{# each navLinks}}
-                            <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-                                <a href="{{ href }}">{{ label }}</a>
-                            </li>
+							{{#ifeq key 'apps'}}
+                                <li>
+									<a class="dropdown-button" data-activates="appsDropDown">
+										Apps<i class="material-icons right">arrow_drop_down</i>
+									</a>
+                                </li>
+							{{else}}
+                                <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+                                    <a href="{{ href }}">{{ label }}</a>
+                                </li>
+							{{/ifeq}}
 						{{/each}}
 						
 						{{#if user}}
@@ -99,7 +114,13 @@
             </div>
         </footer>
         <script src="/js/jquery/jquery-2.2.1.min.js"></script>
-        <script src="/js/bootstrap/materialize.min.js"></script>
+        <script src="/js/materialize/materialize-0.97.5.min.js"></script>
 		{{{isAdminEditorJS user}}}
+        <script type="application/javascript">
+            $(document).ready(function () {
+                $(".dropdown-button").dropdown();
+            });
+
+        </script>
 	</body>
 </html>

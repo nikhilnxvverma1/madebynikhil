@@ -1,0 +1,85 @@
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+          
+      
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!--Custom javascript-->
+        <script>
+            $(document).ready(function(){
+               $(".button-collapse").sideNav(); 
+            });
+            
+            (function() {
+                var canvas = document.getElementById('connected-particles'),
+                        context = canvas.getContext('2d');
+
+                // resize the canvas to fill browser window dynamically
+                window.addEventListener('resize', resizeCanvas, false);
+
+                function resizeCanvas() {
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight;
+
+                        /**
+                         * Your drawings need to be inside this function otherwise they will be reset when 
+                         * you resize the browser window and the canvas goes will be cleared.
+                         */
+                        drawStuff(); 
+                    console.log("Resizing the canvas");
+                }
+                resizeCanvas();
+
+                function drawStuff() {
+                        // do your drawing stuff here
+                }
+            })();
+
+        </script>
+        <style>
+            #header-box{
+                background-color: #3d3da3;
+                width: 100%;
+                height:320px;
+                    
+            }
+            #connected-particles{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">{glitch} GONE</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Sass</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">Sass</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="header-box">
+<!--            <canvas id="connected-particles"></canvas>-->
+            <h1>{glitch} GONE</h1>
+        </div>
+    </body>
+</html>
