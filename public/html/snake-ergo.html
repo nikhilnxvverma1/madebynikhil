@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <!-- Basic Page Needs–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <meta charset="utf-8">
+          <title>Snake Ergo</title>
+          <meta name="description" content="">
+          <meta name="author" content="">
+
+          <!-- Mobile Specific Metas
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          <!-- FONT
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+          <!-- Skeleton CSS
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link rel="stylesheet" href="../styles/skeleton/normalize.css">
+          <link rel="stylesheet" href="../styles/skeleton/skeleton.css">
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        
+        <style>
+            body{
+                margin: 0px;
+                background-color: #ededed;
+            }
+            
+            .active{
+                background-color: #5530a2;
+            }
+            .logoContainer{
+                background:#6427c2;
+                background: -webkit-linear-gradient(#2906c2,#6427c2);
+                background: -o-linear-gradient(#2906c2,#6427c2);
+                background: -moz-linear-gradient(#2906c2,#6427c2);     
+                background: linear-gradient(#2906c2,#6427c2);
+                text-align: center;
+            }
+            
+            .featureHeading{
+                background-color: black;
+                color: #ededed;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            
+            .featureSection{
+                padding-top: 70px;
+                padding-bottom: 30px;
+            }
+            #header{
+                z-index: 2;
+/*                position: fixed;*/
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                background-color: #734fbd;\
+               
+            }
+            #header #siteTitle{
+                position: absolute;
+                top: 0;
+                left: 5%;
+                color: #ededed;
+            }
+            
+            #navContainer{
+                
+                position: relative;
+                margin: 0 auto;
+                width: 94%;
+                max-width: 1100px;
+                font-family: helvetica, sans-serif;
+            }
+            #nav{
+                position: absolute;
+                right: 0;
+                z-index: 1;
+            }
+            
+            #nav ul li{
+                float: left;        
+            }
+            
+            #nav ul li a{
+                display: block;
+                padding: 0 10px;
+                color: white;
+                text-decoration: none;
+            }
+            
+            #nav li a:hover:not(.active){
+                background-color: #6948ad;
+                color:white;
+            }
+            
+            @media (max-width: 599px) {
+              #header .navContainer {
+                width: 100%;
+              }
+              #header h1 {
+                left: 3%;
+              }
+              #nav {
+                width: 100%;
+                top: 50px;
+              }
+              #nav:before {
+                content: '\2630';
+                display: block;
+                position: absolute;
+                right: 3%;
+                top: -50px;
+                line-height: 40px;
+                cursor: pointer;
+              }
+              #nav ul {
+                z-index: 1;
+                background: #222;
+                width: 100%;
+                list-style: none;
+              }
+              #nav ul li {
+                float: none;
+              }
+              #nav ul li a {
+                padding: 10px;
+                line-height: 20px;
+/*                border-top: 1px solid #333;*/
+                
+              }
+              #nav ul {
+                transition: 350ms;
+                -moz-transition: 350ms;
+                -webkit-transition: 350ms;
+                transform: perspective(600) rotate3d(0, 0, 0, 0);
+                -moz-transform: perspective(600) rotate3d(0, 0, 0, 0);
+                -webkit-transform: perspective(600) rotate3d(1, 0, 0, -90deg);
+                transform-origin: 50% 0;
+                -moz-transform-origin: 50% 0;
+                -webkit-transform-origin: 50% 0;
+                text-decoration: none;
+              }
+              #nav.open ul {
+                transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
+                
+              }
+            }
+        </style>
+        <script>
+            $(function(){
+              $('#nav').click(function() {
+                $(this).toggleClass('open');
+              });
+            });            
+        </script>
+    </head>
+    <body>
+        
+        <header id="header">
+            <div class="navContainer">
+                <h3 id="siteTitle">{glitch} GONE</h3>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a class="active" href="#">Apps</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div id="container">
+            <div class="row">
+                <div class="twelve columns logoContainer">
+                    <img style="width:70%" src="../images/snake-ergo/snake-ergo-logo.svg" align="middle" alt="logo"/>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="row featureSection">
+                    <div class="four columns offset-by-one">
+    <!--                    TODO GIF-->
+                        <img src="../images/sample-iphone.svg"/ alt="game demo" width="100%">
+                    </div>
+                    <div class="five columns offset-by-two featureSection">
+                        <h4><span class="featureHeading">Classic.Mobile.Simple</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, molestie mollis faucibus tempus enim tellus nec, velit vehicula euismod fames tempor et eu, lectus quam faucibus et, ac lacinia egestas sapien nisl vehicula. Risus tempor egestas dignissim morbi, natoque vitae curabitur tempor. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <div class="row featureSection">
+                    <div class="four columns offset-by-two u-pull-right">
+    <!--                    TODO GIF-->
+                        <img src="../images/sample-iphone.svg"/ alt="game demo" width="100%">
+                    </div>
+                    <div class="five columns offset-by-one u-pull-left featureSection">
+                        <h4><span class="featureHeading">Grid Size.Customize</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, molestie mollis faucibus tempus enim tellus nec, velit vehicula euismod fames tempor et eu, lectus quam faucibus et, ac lacinia egestas sapien nisl vehicula. Risus tempor egestas dignissim morbi, natoque vitae curabitur tempor. 
+                        </p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <div class="row featureSection">
+                    <div class="four columns offset-by-one">
+    <!--                    TODO GIF-->
+                        <img src="../images/sample-iphone.svg"/ alt="game demo" width="100%">
+                    </div>
+                    <div class="four columns offset-by-three featureSection">
+                        <h4><span class="featureHeading">Themes.Many</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, molestie mollis faucibus tempus enim tellus nec, velit vehicula euismod fames tempor et eu, lectus quam faucibus et, ac lacinia egestas sapien nisl vehicula. Risus tempor egestas dignissim morbi, natoque vitae curabitur tempor. 
+                        </p>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <div class="row" style="padding-top:30px;padding-bottom:50px;">
+            <div class="four columns offset-by-four">
+                <a href="#"><img id="appStore" src="../images/app-store-badge.svg" width="100%" alt="App Store Link"/></a>
+            </div>
+        </div>
+    </body>
+</html>
