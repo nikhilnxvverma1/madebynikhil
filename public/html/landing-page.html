@@ -21,7 +21,7 @@
             });
             
             (function() {
-                var canvas = document.getElementById('connected-particles'),
+                var canvas = document.getElementById('connectedParticles'),
                         context = canvas.getContext('2d');
 
                 // resize the canvas to fill browser window dynamically
@@ -47,14 +47,17 @@
 
         </script>
         <style>
-            #header-box{
+            #headerBox{
                 background-color: #3d3da3;
                 width: 100%;
                 height:320px;
-                    
             }
-            #connected-particles{
+            #connectedParticles{
                 display: block;
+            }
+            .wideOpening{
+                height: 200px;
+                background-color: #2a2a5f;
             }
         </style>
     </head>
@@ -64,22 +67,50 @@
                 <a href="#!" class="brand-logo">{glitch} GONE</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Sass</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">Mobile</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Apps</a></li>
+                    <li><a href="#">Projects</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#">Sass</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">Mobile</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Apps</a></li>
+                    <li><a href="#">Projects</a></li>
                 </ul>
             </div>
         </nav>
-        <div id="header-box">
-<!--            <canvas id="connected-particles"></canvas>-->
-            <h1>{glitch} GONE</h1>
+        <div id="headerBox">
+<!--            <canvas id="connectedParticles"></canvas>-->
+<!--            <h1>{glitch} GONE</h1>-->
+        </div>
+        <div class="container">
+            <h1>About</h1>
+            <div class="z-depth-3">
+                <p style="padding:20px">
+                    Lorem ipsum dolor sit amet, eum in corpora constituto. Ne veritus civibus accumsan vim, mei posse partem eu. Est tollit facete explicari cu, ius errem nihil eruditi ne. His et saepe viderer urbanitas, ne cum equidem dolorum suavitate. Inani prompta ea nec, ius zril singulis maluisset at, cu eum dicam quaestio.
+
+Id mel nisl purto quaestio, et elitr nobis accumsan nam, per civibus adversarium at. In mollis consectetuer mei. Autem viderer sanctus sit no, in usu eirmod dignissim maiestatis. Vis ut sale populo expetenda. Vocent appetere repudiandae pri an, impetus labores eligendi pro ea.
+
+Justo efficiantur eu vis, mei nominati expetendis cu. Recteque mediocrem per et. Sumo vocent convenire qui cu. Ius volumus assentior ad, utroque abhorreant ad vis, et perpetua intellegebat eam. Eum an urbanitas efficiendi, usu integre aliquid id.
+
+Mea essent noluisse an, cu sumo legere fabulas mel. Pri ei facer fastidii insolens, fabulas urbanitas gloriatur sea ex. In est oblique periculis, ridens vivendo ea quo, per ad movet utinam. Illud similique an cum, eam dicunt explicari no. Ad qui graece evertitur, melius concludaturque an eam, vim ei vidit fabulas gloriatur.
+
+Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant definitiones, id pro amet sale. Vel in sanctus facilisi definitionem. Nam an veniam splendide, ea sea sensibus recteque, sed ex perfecto molestiae. His legere aliquid adipiscing an, euismod apeirian vis ex, lorem facer ea qui.
+                </p>
+            </div>
+        </div>
+        <div class="wideOpening valign-wrapper">
+            <div class="z-depth-2 valign center-align" style="border-radius:50%;width:100px;height:100px;background:yellow;overflow:hidden">
+                <img src="../images/logo.svg"/>
+            </div>
+            <div class="z-depth-2 valign center-align" style="border-radius:50%;width:100px;height:100px;background:yellow;overflow:hidden">
+                <img src="../images/logo.svg"/>
+            </div>
+            <div class="z-depth-2 valign center-align" style="border-radius:50%;width:100px;height:100px;background:yellow;overflow:hidden">
+                <img src="../images/logo.svg"/>
+            </div>
+            
         </div>
     </body>
 </html>
