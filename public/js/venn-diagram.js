@@ -3,6 +3,9 @@
 var allVenn=['vennLeft','vennRight','vennBottom','vennLeftRight','vennRightBottom','vennLeftBottom','vennCore'];
 var vennTitles=['vennLeftTitle','vennRightTitle','vennBottomTitle'];
 
+
+
+
 var currentHover=null;
 
 $(document).ready(function(){
@@ -18,6 +21,7 @@ $(document).ready(function(){
         $(selector).on('mouseover',hoveringOnVenn);
         $(selector).on('mouseout',deHoveringOnVenn);
     }
+    fadeAllExplainers(0,0);
 });
 
 
@@ -25,18 +29,21 @@ function hoveringOnVenn(event){
     var id=revisedIdForVenn($(this).attr('id'));
 
     fadeAllVennsTo(0.5,0);
-    fadeTheseIds(0.5,0,vennTitles);
+    fadeTheseIds(0.3,0,vennTitles);
+    fadeAllExplainers(0,0);
     
     $('#'+id).fadeTo(0,1);
     var titlesToShow=qualifyingTitlesForId(id);
     fadeTheseIds(1,0,titlesToShow);
-    
+    fadeExplainersCorrespondingTo(id,1,0);
 }
 
 function deHoveringOnVenn(event){
     //reset everything back to normal
     fadeAllVennsTo(1,0);
     fadeTheseIds(1,0,vennTitles);
+    $('#vennDiagramContainer .explainer').remove();
+    fadeAllExplainers(0,0);
 }
 
 function fadeAllVennsTo(fadeTo,duration,except){
@@ -54,7 +61,23 @@ function fadeTheseIds(fadeTo,duration,ids){
     }
 }
 
+function fadeAllExplainers(fadeTo,duration){
+    for(var i=0;i<allVenn.length;i++){
+        fadeExplainersCorrespondingTo(allVenn[i],fadeTo,duration);
+    }
+}
 
+function fadeExplainersCorrespondingTo(vennId,fadeTo,duration){
+    var withoutVenn=vennId.slice(4);//remove the word 'venn' from each id
+    var till=4;
+    if((withoutVenn=='LeftRight')||(withoutVenn=='RightBottom')||(withoutVenn=='LeftBottom')){
+        till=2;
+    }
+    for(var j=1;j<=till;j++){
+        var explainerId='explain'+withoutVenn+j;
+        $('#'+explainerId).fadeTo(duration,fadeTo);
+    }
+}
 
 function qualifyingTitlesForId(vennId,fadeTo,duration){
     var titles=[];
@@ -91,4 +114,29 @@ function revisedIdForVenn(id){
         }
     }
     return id;
+}
+
+/**constructs a div containing a heading and a paragraph element sized just appropriately to be displyed next to a venn
+element
+@param vennIndex : tells the index of the venn element this explainer is for
+@param n : the explainer number
+*/
+function explainerSection(vennIndex,n){
+    
+    //TOOD get Heading from data structure
+    var heading='Heading';
+    //TODO get description from data structure
+    var desc='Lorem ipsum dolor sit amet, ius no movet epicuri temporibus, solum graeco albucius nec cu. Percipitur cotidieque mei in, eu sit illud augue tamquam. Quo complectitur comprehensam ut. Id ancillae inimicus complectitur per, vis partem postea in.';
+    
+    var explainer=`
+        <div class="explainer" 
+style="
+width:25%;
+position:absolute;
+">
+            <h3>`+heading+`</h3>
+            <p>`+desc+`</p>
+        </div>
+    `;
+    return explainer;
 }
