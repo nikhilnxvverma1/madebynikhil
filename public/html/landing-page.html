@@ -9,6 +9,8 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <script src="../js/particlejs/blue-connected.json"></script>
+        <script src="../js/particlejs/particles.min.js"></script>
           
       
       <!--Let browser know website is optimized for mobile-->
@@ -19,60 +21,46 @@
             $(document).ready(function(){
                $(".button-collapse").sideNav(); 
                 $('.dropdown-button').dropdown({hover:false});
+                //load the particle system,
+                //connectedBlueDots is defined in config file(blue-connected.json)
+                particlesJS('connectedParticles',connectedBlueDots);
             });
-            
-            (function() {
-                var canvas = document.getElementById('connectedParticles'),
-                        context = canvas.getContext('2d');
-
-                // resize the canvas to fill browser window dynamically
-                window.addEventListener('resize', resizeCanvas, false);
-
-                function resizeCanvas() {
-                        canvas.width = window.innerWidth;
-                        canvas.height = window.innerHeight;
-
-                        /**
-                         * Your drawings need to be inside this function otherwise they will be reset when 
-                         * you resize the browser window and the canvas goes will be cleared.
-                         */
-                        drawStuff(); 
-                    console.log("Resizing the canvas");
-                }
-                resizeCanvas();
-
-                function drawStuff() {
-                        // do your drawing stuff here
-                }
-            })();
 
         </script>
         <style>
-            #headerBox{
-                background-color: #3d3da3;
-                width: 100%;
-                height:320px;
-            }
             #connectedParticles{
-                display: block;
+                widows: 100%;
+                height:320px;
+                background-color: #011d37;
             }
             .wideOpening{
                 height: 200px;
                 background-color: #2a2a5f;
             }
-/*
-            .circleShadow {
-                width:120px;
-                height:120px; 
-                border: solid 1px #bebebe; 
-                background-color: #e6e6e6; 
-                box-shadow: 10px -10px rgba(0,0,0,0.6); 
-                -moz-box-shadow: 10px -10px rgba(0,0,0,0.6); 
-                -webkit-box-shadow: 10px -10px rgba(0,0,0,0.6); 
-                -o-box-shadow: 10px -10px rgba(0,0,0,0.6);
-                border-radius:100px; 
+            .anchoredCenter{
+                -webkit-transform:translate(-50%,-50%);
+                -moz-transform:translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                position: relative;
+                top:50%;
+                left:50%;
             }
-*/
+            .circleImage {
+                width:150px;
+                height:150px; 
+                -webkit-transform:translate(-50%,-50%);
+                -moz-transform:translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                position: absolute;
+                top:50%;
+                left:50%;
+            }
+            .circleImageContainer{
+                border-radius: 50%;
+                overflow: hidden;
+                width: 120px;
+                height:120px;
+            }
         </style>
     </head>
     <body>
@@ -132,6 +120,11 @@
             </div>
         </nav>
 
+        <!--Connected Particles-->
+        <div id="connectedParticles">
+            <img class="anchoredCenter" width="400px" src="../images/logo.svg"/ alt="logo">
+        </div>        
+        
         
         <!--About me-->
         <div class="container">
@@ -159,22 +152,23 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
                 <div class="row">
                     <div class="col s4 m4 pull-m4 l4 pull-l10">
                         <a href="#">
-                            <div class="z-depth-4" style="border-radius:50%">
-                                <img class="circleShadow" width="120px" src="../images/linked-in-logo.svg"/>
+                            <div class="circleImageContainer z-depth-4 waves-effect">
+                                <img class="circleImage" src="../images/linked-in-logo.svg"/>
                             </div>
+                             
                         </a>
                     </div>
                     <div class="col s4 m4">
                         <a href="#">
-                            <div class="z-depth-4" style="border-radius:50%">
-                                <img width="120px" src="../images/github-logo.svg"/>
+                            <div class="circleImageContainer z-depth-4 waves-effect">
+                                <img class="circleImage" src="../images/github-logo.svg"/>
                             </div>
                         </a>
                     </div>
                     <div class="col s4 m4 push-m4 l4 push-l10">
                         <a href="#">
-                            <div class="z-depth-4" style="border-radius:50%">
-                                <img width="120px" src="../images/facebook-logo.svg"/>
+                            <div class="circleImageContainer z-depth-4 waves-effect">
+                                <img class="circleImage" src="../images/facebook-logo.svg"/>
                             </div>
                         </a>
                     </div>
