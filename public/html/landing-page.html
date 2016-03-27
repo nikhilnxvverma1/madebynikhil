@@ -5,7 +5,8 @@
         <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">-->
+        <link rel="stylesheet" href="../styles/materialize/materialize.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
@@ -24,6 +25,15 @@
                 //load the particle system,
                 //connectedBlueDots is defined in config file(blue-connected.json)
                 particlesJS('connectedParticles',connectedBlueDots);
+                
+                //import the venn diagram
+                var svgObject = document.getElementById("mySVG");
+
+                moSVG.onload = function(){
+                    var svgDoc = moSVG.contentDocument;
+                    //Do SVG manipulation here, using svgDoc instead of document
+                    console.log("svg loaded");
+                }
             });
 
         </script>
@@ -35,7 +45,10 @@
             }
             .wideOpening{
                 height: 200px;
-                background-color: #2a2a5f;
+                background-color: #0c4b81;
+                -webkit-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+                -moz-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+                box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
             }
             .anchoredCenter{
                 -webkit-transform:translate(-50%,-50%);
@@ -60,6 +73,17 @@
                 overflow: hidden;
                 width: 120px;
                 height:120px;
+            }
+            #vennDiagramContainer{
+                margin: 0 auto;   
+                /* for center alignment*/
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+            
+            .explainer{
+                background-color: blueviolet;
             }
         </style>
     </head>
@@ -127,20 +151,29 @@
         
         
         <!--About me-->
-        <div class="container">
-            <h1>About</h1>
-            <div class="z-depth-3">
-                <p style="padding:20px">
-                    Lorem ipsum dolor sit amet, eum in corpora constituto. Ne veritus civibus accumsan vim, mei posse partem eu. Est tollit facete explicari cu, ius errem nihil eruditi ne. His et saepe viderer urbanitas, ne cum equidem dolorum suavitate. Inani prompta ea nec, ius zril singulis maluisset at, cu eum dicam quaestio.
+        <div class="section" style="padding-bottom:50px">
+            <div class="container">
+                <h1>About me</h1>
+                <div class="z-depth-3">
+                    <div style="padding:70px">
+                        <div class="circleImageContainer z-depth-4 waves-effect" style="padding:10px;float:right;width:170px;height:170px">
+                                <img class="circleImage" src="../images/facebook-logo.svg"/  style="width:250px;height:250px">
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, eum in corpora constituto. Ne veritus civibus accumsan vim, mei posse partem eu. Est tollit facete explicari cu, ius errem nihil eruditi ne. His et saepe viderer urbanitas, ne cum equidem dolorum suavitate. Inani prompta ea nec, ius zril singulis maluisset at, cu eum dicam quaestio.
 
-Id mel nisl purto quaestio, et elitr nobis accumsan nam, per civibus adversarium at. In mollis consectetuer mei. Autem viderer sanctus sit no, in usu eirmod dignissim maiestatis. Vis ut sale populo expetenda. Vocent appetere repudiandae pri an, impetus labores eligendi pro ea.
+        Id mel nisl purto quaestio, et elitr nobis accumsan nam, per civibus adversarium at. In mollis consectetuer mei. Autem viderer sanctus sit no, in usu eirmod dignissim maiestatis. Vis ut sale populo expetenda. Vocent appetere repudiandae pri an, impetus labores eligendi pro ea.
 
-Justo efficiantur eu vis, mei nominati expetendis cu. Recteque mediocrem per et. Sumo vocent convenire qui cu. Ius volumus assentior ad, utroque abhorreant ad vis, et perpetua intellegebat eam. Eum an urbanitas efficiendi, usu integre aliquid id.
+        Justo efficiantur eu vis, mei nominati expetendis cu. Recteque mediocrem per et. Sumo vocent convenire qui cu. Ius volumus assentior ad, utroque abhorreant ad vis, et perpetua intellegebat eam. Eum an urbanitas efficiendi, usu integre aliquid id.
+                        </p>
+                        <p>
 
-Mea essent noluisse an, cu sumo legere fabulas mel. Pri ei facer fastidii insolens, fabulas urbanitas gloriatur sea ex. In est oblique periculis, ridens vivendo ea quo, per ad movet utinam. Illud similique an cum, eam dicunt explicari no. Ad qui graece evertitur, melius concludaturque an eam, vim ei vidit fabulas gloriatur.
+        Mea essent noluisse an, cu sumo legere fabulas mel. Pri ei facer fastidii insolens, fabulas urbanitas gloriatur sea ex. In est oblique periculis, ridens vivendo ea quo, per ad movet utinam. Illud similique an cum, eam dicunt explicari no. Ad qui graece evertitur, melius concludaturque an eam, vim ei vidit fabulas gloriatur.
 
-Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant definitiones, id pro amet sale. Vel in sanctus facilisi definitionem. Nam an veniam splendide, ea sea sensibus recteque, sed ex perfecto molestiae. His legere aliquid adipiscing an, euismod apeirian vis ex, lorem facer ea qui.
-                </p>
+        Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant definitiones, id pro amet sale. Vel in sanctus facilisi definitionem. Nam an veniam splendide, ea sea sensibus recteque, sed ex perfecto molestiae. His legere aliquid adipiscing an, euismod apeirian vis ex, lorem facer ea qui.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -149,7 +182,7 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
         <div class="section">
             <div class="wideOpening valign-wrapper">
 
-                <div class="row">
+                <div class="row" style="margin-bottom:0">
                     <div class="col s4 m4 pull-m4 l4 pull-l10">
                         <a href="#">
                             <div class="circleImageContainer z-depth-4 waves-effect">
@@ -176,6 +209,17 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 
 
 
+            </div>
+        </div>
+        
+        <!--Skill Diagram-->
+        
+        <div class="section">
+            <div class="container">
+                <h1>Skills and Technologies</h1>
+                <div id='vennDiagramContainer'>
+                    <object data="skill-venn.svg" type="image/svg+xml" id="skillVenn"></object>
+                </div>
             </div>
         </div>
         
@@ -299,14 +343,14 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
                         <div class="row">
                             <div class="input-field col s12 m8 l6">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="senderName" type="text" class="validate"></input>
+                                <input id="senderName" type="text" class="validate"/>
                                 <label for="senderName">Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 m8 l6">
                                 <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" class="validate"></input>
+                                <input id="email" type="email" class="validate"/>
                                 <label for="email">Email</label>
                             </div>
                         </div>
@@ -328,28 +372,44 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
                 </div>
             </div>
         </div>
+        
+        <!--Footer-->
+        
         <footer class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+              
+              <div class="col l2 s12">
+                <h5 class="white-text">Apps</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Carry the Flame</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Sudoku All Solver</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Laying Bricks</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Snakes Ergo</a></li>
+                </ul>
+              </div>
+              <div class="col l2 s12">
+                <h5 class="white-text">Projects</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Timeshift</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Graph it</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Spot Search</a></li>
+                </ul>
+              </div>
+              <div class="col l2 s12">
+                <h5 class="white-text">More</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                © 2016 Copyright Text
+<!--            <a class="grey-text text-lighten-4 right" href="#!">Blog</a>-->
             </div>
           </div>
         </footer>            
