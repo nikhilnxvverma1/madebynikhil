@@ -26,9 +26,8 @@
                 //connectedBlueDots is defined in config file(blue-connected.json)
                 particlesJS('connectedParticles',connectedBlueDots);
                 
-                //after the particle system has added the canvas in the div
-                //add the drop shadow
-//                $('#connectedParticles').append($("<div class='lowerGradientShadow'></div>"))
+                //initialize parallax effects
+//                $('.parallax').parallax();
                 
                 //import the venn diagram
                 var svgObject = document.getElementById("mySVG");
@@ -42,6 +41,9 @@
 
         </script>
         <style>
+            h1{
+                color: #DA7A22;
+            }
             
             .shadowInside{
                 -webkit-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
@@ -180,25 +182,10 @@
 
         <!--Connected Particles-->
         <div id="connectedParticles" class="shadowInside">
-<!--
-            <div class="upperGradientShadow"
-                 style="position:absolute;
-                        top:64px"
-                 ></div>
--->
             <img class="anchoredCenter" width="400px" src="../images/logo.svg"/ alt="logo"
                  style="position:absolute;top:232px">
-            <!--This will be programmatically added after the canvas is added-->
-<!--            <div class="lowerGradientShadow"></div>-->
-<!--
-            <div class="lowerGradientShadow"
-                 style="position:absolute;
-                        top:364px"
-                 ></div>
--->
         </div>        
         
-<!--        <div class="z-depth-3">-->
         <!--About me-->
         <div class="section" style="padding-bottom:50px">
             <div class="container">
@@ -271,6 +258,12 @@
                 </div>
             </div>
         </div>
+        
+<!--
+        <div class="parallax-container">
+            <div class="parallax"><img src="../images/apple-presentation.jpg"></div>
+        </div>
+-->
         
         <!--Projects-->
         
@@ -421,13 +414,10 @@
                 </div>
             </div>
         </div>
-<!--        </div>-->
         
         <!--Footer-->
         
         <footer class="page-footer shadowInside">
-<!--            style="margin-top:0px; padding-top:0px"-->
-<!--            <div class="upperGradientShadow"></div>-->
           <div class="container">
             <div class="row">
               
