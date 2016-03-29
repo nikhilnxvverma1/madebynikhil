@@ -1,0 +1,939 @@
+
+      <script type="text/javascript" src="../js/venn-diagram.js"></script>        
+        <style>
+            #vennDiagramContainer{
+/*                width: 50%;*/
+                margin: 0 auto;
+/*                padding-top: 150px;*/
+/*                padding-bottom: 150px;*/
+                
+                /* for center alignment*/
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+            
+            .explainer{
+                background-color: blueviolet;
+            }
+        </style>
+    
+        <div id='vennDiagramContainer'>
+        
+           <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="-276 265 612 497" enable-background="new -276 265 612 497" xml:space="preserve">
+            <g id="background">
+            </g>
+            <g id="vennLeft">
+
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="486.1245" y1="263.8571" x2="389.6248" y2="87.6883" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#00AEEF"/>
+                </linearGradient>
+                <path fill="url(#SVGID_1_)" d="M16.3,481.9c-2.3-8.3-3.6-17-3.6-26.1c0-25.7,10.2-49.2,26.5-66.3C21.8,371-3.1,359.7-30.5,359.7
+                    c-53.1,0-96.2,43.1-96.2,96.1c0,45.7,31.9,83.9,74.6,93.7C-42.9,516.7-16.9,490.6,16.3,481.9z"/>
+            </g>
+            <g id="vennRight">
+
+                    <linearGradient id="appsPath_1_" gradientUnits="userSpaceOnUse" x1="526.1848" y1="235.7771" x2="655.4177" y2="117.0223" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#8DC63F"/>
+                </linearGradient>
+                <path id="appsPath" fill="url(#appsPath_1_)" d="M109,360.7c-27.4,0-52.1,11.5-69.7,30.1c16.2,17.2,26.5,40.4,26.5,66.1
+                    c0,8.7-1.1,17.2-3.4,25.1c34.4,8,61.6,34,71.1,67.8c41.3-10.6,71.7-48.4,71.7-92.9C204.9,403.6,162,360.7,109,360.7z"/>
+            </g>
+            <g id="vennBottom">
+                <g>
+
+                        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="596.5856" y1="204.3557" x2="603.5856" y2="391.8557" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_2_)" d="M117.7,518.2c0.4,0.4,0.8,0.9,0.9,1.5C118.4,519.1,118.1,518.7,117.7,518.2z"/>
+
+                        <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="591.2802" y1="204.5539" x2="598.2802" y2="392.0539" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_3_)" d="M112.2,511.3c0.4,0.4,0.9,0.9,1.3,1.5C112.9,512.3,112.6,511.9,112.2,511.3z"/>
+
+                        <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="594.1044" y1="204.4484" x2="601.1044" y2="391.9486" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_4_)" d="M114.7,514c0.8,0.8,1.1,1.5,1.9,2.3C115.8,515.7,115.1,515,114.7,514z"/>
+
+                        <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="586.2236" y1="204.7427" x2="593.2236" y2="392.2426" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_5_)" d="M108.6,507.6c-0.4-0.4-0.9-1.1-1.5-1.5C107.6,506.6,108.2,507.2,108.6,507.6z"/>
+
+                        <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="588.8571" y1="204.6443" x2="595.8571" y2="392.1443" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_6_)" d="M109.7,508.7c0.4,0.4,0.9,0.9,1.5,1.5C110.6,509.6,110.1,509.3,109.7,508.7z"/>
+
+                        <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="576.7527" y1="205.0962" x2="583.7523" y2="392.5961" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_7_)" d="M97.7,498.2c0.8,0.4,1.1,0.9,1.9,1.5C98.8,499.1,98.3,498.7,97.7,498.2z"/>
+
+                        <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="583.0212" y1="204.8621" x2="590.0212" y2="392.3621" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_8_)" d="M102.9,502.5c1.1,1.1,2.5,2.1,3.6,3.2C105.4,504.5,104.2,503.6,102.9,502.5z"/>
+
+                        <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="541.9308" y1="206.3962" x2="548.9308" y2="393.8961" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_9_)" d="M62.1,481.9c1.9,0.4,4,0.9,5.9,1.7C66.3,482.8,64.2,482.4,62.1,481.9c0,0.2,0,0.2,0,0.2
+                        S62.1,482.2,62.1,481.9z"/>
+
+                        <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="579.6124" y1="204.9895" x2="586.6123" y2="392.4895" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_10_)" d="M100.4,500.4c0.5,0.4,1.1,0.9,1.9,1.5C101.5,501.2,101,500.8,100.4,500.4z"/>
+
+                        <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="606.6012" y1="203.9818" x2="613.6011" y2="391.4819" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_11_)" d="M127.8,535c0.2,0.4,0.4,1.1,0.8,1.5C128.2,535.9,128,535.5,127.8,535z"/>
+
+                        <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="609.3814" y1="203.8782" x2="616.3814" y2="391.378" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_12_)" d="M130.9,542c0.2,0.4,0.4,0.9,0.4,1.3C131.1,542.9,130.9,542.4,130.9,542z"/>
+
+                        <linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="608.0459" y1="203.928" x2="615.0459" y2="391.4279" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_13_)" d="M129.3,538.4c0.2,0.4,0.4,1.1,0.8,1.5C129.7,539.5,129.6,539,129.3,538.4z"/>
+
+                        <linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="610.7683" y1="203.8262" x2="617.768" y2="391.3263" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_14_)" d="M132.4,546.7c0.2,0.4,0.2,0.9,0.4,1.5C132.8,547.6,132.6,547,132.4,546.7z"/>
+
+                        <linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="600.769" y1="204.1998" x2="607.769" y2="391.6997" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_15_)" d="M121.8,524.1c0.2,0.4,0.8,0.9,0.9,1.5C122.3,525.1,122.2,524.5,121.8,524.1z"/>
+
+                        <linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="598.6773" y1="204.2777" x2="605.6772" y2="391.7777" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_16_)" d="M119.8,521.2c0.4,0.4,0.8,0.9,0.9,1.5C120.5,522,120.2,521.6,119.8,521.2z"/>
+
+                        <linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="604.9382" y1="204.0439" x2="611.9382" y2="391.5439" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_17_)" d="M126.1,531.8c0.2,0.4,0.4,0.9,0.8,1.5C126.7,532.7,126.3,532.2,126.1,531.8z"/>
+
+                        <linearGradient id="SVGID_18_" gradientUnits="userSpaceOnUse" x1="602.695" y1="204.1277" x2="609.695" y2="391.6277" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_18_)" d="M123.8,527.4c0.2,0.4,0.5,0.8,0.8,1.3C124.2,528.1,124.1,527.8,123.8,527.4z"/>
+
+                        <linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="565.98" y1="205.4984" x2="572.98" y2="392.9983" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_19_)" d="M87,491.3c0.8,0.4,1.5,0.9,2.3,1.3C88.3,492.3,87.6,491.7,87,491.3z"/>
+
+                        <linearGradient id="SVGID_20_" gradientUnits="userSpaceOnUse" x1="522.1644" y1="207.1342" x2="529.1643" y2="394.6342" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_20_)" d="M47.6,512.9c0,0.2-0.2,0.2-0.2,0.4l0,0C47.4,513.1,47.4,513.1,47.6,512.9z"/>
+
+                        <linearGradient id="SVGID_21_" gradientUnits="userSpaceOnUse" x1="520.3678" y1="241.8263" x2="520.3678" y2="241.8263" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_21_)" d="M44.7,516.7L44.7,516.7L44.7,516.7L44.7,516.7z"/>
+
+                        <linearGradient id="SVGID_22_" gradientUnits="userSpaceOnUse" x1="520.2485" y1="207.2056" x2="527.2485" y2="394.7056" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_22_)" d="M46.8,513.6L46.8,513.6c-0.8,0.9-1.3,1.9-2.1,2.8C45.7,515.5,46.3,514.4,46.8,513.6z"/>
+
+                        <linearGradient id="SVGID_23_" gradientUnits="userSpaceOnUse" x1="524.3038" y1="207.0544" x2="525.9739" y2="251.7917" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_23_)" d="M49.5,510.2L49.5,510.2C49.3,510.2,49.3,510.2,49.5,510.2L49.5,510.2z"/>
+
+                        <linearGradient id="SVGID_24_" gradientUnits="userSpaceOnUse" x1="512.7063" y1="207.4873" x2="519.7062" y2="394.9872" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_24_)" d="M133.3,549.7c-7.8,2.1-16,3.1-24.4,3.1c-27.4,0-52.1-11.5-69.7-30.1
+                        C21.9,541.3-3,552.8-30.4,552.8c-7.4,0-14.5-0.9-21.4-2.3c-2.1,8-3.4,16.4-3.4,25.4c0,53.1,43.1,96.1,96.1,96.1
+                        s96.1-43.1,96.1-96.1C136.8,566.7,135.6,557.8,133.3,549.7z"/>
+
+                        <linearGradient id="SVGID_25_" gradientUnits="userSpaceOnUse" x1="571.0625" y1="205.3085" x2="578.0625" y2="392.8087" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_25_)" d="M89.5,492.8c2.5,1.5,5,3.1,7.2,4.7C94.4,495.9,92.2,494.4,89.5,492.8z"/>
+
+                        <linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="529.5344" y1="228.0238" x2="529.5344" y2="228.0238" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_26_)" d="M53.4,503.6L53.4,503.6L53.4,503.6z"/>
+
+                        <linearGradient id="SVGID_27_" gradientUnits="userSpaceOnUse" x1="513.1595" y1="207.4704" x2="520.1595" y2="394.9703" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_27_)" d="M39.4,522.6c0,0,0,0-0.2,0.2C39.4,522.6,39.4,522.6,39.4,522.6L39.4,522.6z"/>
+
+                        <linearGradient id="SVGID_28_" gradientUnits="userSpaceOnUse" x1="515.205" y1="247.6213" x2="515.205" y2="247.6213" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_28_)" d="M39.8,522.2L39.8,522.2L39.8,522.2L39.8,522.2z"/>
+
+                        <linearGradient id="SVGID_29_" gradientUnits="userSpaceOnUse" x1="547.137" y1="206.2019" x2="554.1369" y2="393.7018" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_29_)" d="M68.7,483.7c0.9,0.2,1.7,0.5,2.7,0.9C70.4,484.1,69.7,483.9,68.7,483.7z"/>
+
+                        <linearGradient id="SVGID_30_" gradientUnits="userSpaceOnUse" x1="555.1774" y1="205.9016" x2="562.1773" y2="393.4016" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_30_)" d="M72.2,484.7c3.8,1.3,7.6,2.8,11.1,4.7C79.6,487.6,75.9,486,72.2,484.7z"/>
+
+                        <linearGradient id="SVGID_31_" gradientUnits="userSpaceOnUse" x1="562.6838" y1="205.6214" x2="569.6838" y2="393.1215" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_31_)" d="M83.8,489.6c0.8,0.4,1.5,0.8,2.3,1.1C85.3,490.6,84.6,490.2,83.8,489.6z"/>
+
+                        <linearGradient id="SVGID_32_" gradientUnits="userSpaceOnUse" x1="529.8116" y1="206.8487" x2="536.8116" y2="394.3487" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_32_)" d="M53.4,503.6c0.8-1.1,1.1-2.1,1.9-3.4l0,0C54.6,501.6,54,502.7,53.4,503.6L53.4,503.6z"/>
+
+                        <linearGradient id="SVGID_33_" gradientUnits="userSpaceOnUse" x1="531.6306" y1="206.7807" x2="538.6306" y2="394.2808" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_33_)" d="M56.7,497c-0.4,1.1-0.9,2.1-1.5,3.1C55.7,499.1,56.3,498.2,56.7,497z"/>
+
+                        <linearGradient id="SVGID_34_" gradientUnits="userSpaceOnUse" x1="533.666" y1="206.7049" x2="540.666" y2="394.2049" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_34_)" d="M58.2,493.8c-0.2,0.8-0.8,1.5-0.9,2.3C57.4,495.3,57.8,494.5,58.2,493.8z"/>
+
+                        <linearGradient id="SVGID_35_" gradientUnits="userSpaceOnUse" x1="535.2902" y1="206.6441" x2="542.2899" y2="394.1442" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_35_)" d="M58.6,492.8c0.4-0.9,0.9-2.1,1.1-3.4C59.2,490.6,59,491.7,58.6,492.8z"/>
+                </g>
+            </g>
+            <g id="vennLeftRight">
+                <g>
+
+                        <linearGradient id="SVGID_36_" gradientUnits="userSpaceOnUse" x1="524.1024" y1="238.0416" x2="524.6024" y2="114.5416" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_36_)" d="M49.3,510.2L49.3,510.2c-0.8,0.9-1.5,2.1-2.1,3.1C47.7,512.3,48.7,511.2,49.3,510.2z"/>
+
+                        <linearGradient id="SVGID_37_" gradientUnits="userSpaceOnUse" x1="517.9189" y1="238.0165" x2="518.4189" y2="114.5165" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_37_)" d="M44.7,516.7c-1.5,1.9-3.1,3.8-4.7,5.5C41.5,520.5,43,518.6,44.7,516.7z"/>
+
+                        <linearGradient id="SVGID_38_" gradientUnits="userSpaceOnUse" x1="504.3429" y1="237.9616" x2="504.8429" y2="114.4616" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_38_)" d="M31.7,513.8c0-0.2,0-0.2-0.2-0.2c-1.5-1.9-2.8-3.8-4-5.9C28.9,509.9,30.2,511.9,31.7,513.8z"/>
+
+                        <linearGradient id="SVGID_39_" gradientUnits="userSpaceOnUse" x1="507.682" y1="237.9751" x2="508.182" y2="114.475" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_39_)" d="M33.8,516.9L33.8,516.9c-0.8-0.9-1.5-1.9-2.1-2.8C32.5,515,33.2,515.9,33.8,516.9z"/>
+
+                        <linearGradient id="SVGID_40_" gradientUnits="userSpaceOnUse" x1="513.5953" y1="237.999" x2="514.0953" y2="114.4988" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_40_)" d="M16.6,482.6c0.4-0.2,0.9-0.2,1.1-0.2c0.8-0.2,1.5-0.4,2.3-0.5c0.4-0.2,0.9-0.2,1.5-0.4
+                        c0.8-0.2,1.5-0.2,2.1-0.4c0.4,0,0.9-0.2,1.3-0.2c1.1-0.2,2.3-0.4,3.4-0.4c0.2,0,0.4-0.2,0.8-0.2c0.9-0.2,1.9-0.2,2.8-0.2
+                        c0.4,0,0.9,0,1.1,0c0.9-0.2,1.7-0.2,2.7-0.2c0.4,0,0.8,0,1.1,0c1.1,0,2.5,0,3.8,0c1.1,0,2.5,0,3.8,0c0.2,0,0.8,0,0.9,0
+                        c1.1,0,2.3,0,3.4,0.2h0.2c1.1,0.2,2.3,0.2,3.4,0.4c0.4,0,0.8,0.2,0.9,0.2c0.9,0.2,1.9,0.2,3.1,0.4c0.2,0,0.5,0.2,0.8,0.2
+                        c0.9,0.2,1.9,0.4,2.8,0.5c0.4,0,0.8,0.2,1.1,0.2c0.2,0.2,0.4,0.2,0.8,0.2c-0.8,2.7-1.5,5-2.3,7.6l0,0c-1.3,3.6-2.8,7.2-4.7,10.5
+                        c0,0,0,0,0,0.2c6.6-13,10.4-28,10.4-43.5c0-25.7-10.1-49-26.5-66.1c-16.2,17.2-26.5,40.4-26.5,66.1
+                        C12.8,465.8,14.1,474.4,16.6,482.6C16.4,482.8,16.6,482.8,16.6,482.6z"/>
+
+                        <linearGradient id="SVGID_41_" gradientUnits="userSpaceOnUse" x1="527.4006" y1="238.0549" x2="527.9006" y2="114.5549" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_41_)" d="M53.4,503.6c-1.1,2.3-2.7,4.4-4,6.6C50.6,508.1,51.9,506,53.4,503.6z"/>
+
+                        <linearGradient id="SVGID_42_" gradientUnits="userSpaceOnUse" x1="530.2771" y1="238.0666" x2="530.777" y2="114.5666" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_42_)" d="M55.1,500.4c-0.5,1.1-1.1,2.3-1.9,3.4C54,502.7,54.6,501.6,55.1,500.4z"/>
+
+                        <linearGradient id="SVGID_43_" gradientUnits="userSpaceOnUse" x1="521.4827" y1="238.031" x2="521.9827" y2="114.5309" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_43_)" d="M44.7,516.5c0.8-0.9,1.5-1.9,2.1-2.8C46.3,514.6,45.5,515.5,44.7,516.5L44.7,516.5z"/>
+
+                        <linearGradient id="SVGID_44_" gradientUnits="userSpaceOnUse" x1="500.6864" y1="237.9468" x2="501.1864" y2="114.4467" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_44_)" d="M27.2,507.3c-0.5-0.9-1.1-1.9-1.9-2.8c0-0.2,0-0.2-0.2-0.4C26,505.3,26.6,506.2,27.2,507.3z"/>
+
+                        <linearGradient id="SVGID_45_" gradientUnits="userSpaceOnUse" x1="491.4376" y1="237.9094" x2="491.9376" y2="114.4094" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_45_)" d="M18.6,490.2L18.6,490.2c-0.9-2.5-1.7-5-2.3-7.4C17.2,485.3,17.9,487.7,18.6,490.2z"/>
+
+                        <linearGradient id="SVGID_46_" gradientUnits="userSpaceOnUse" x1="512.3881" y1="237.9941" x2="512.8881" y2="114.4941" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_46_)" d="M39.2,522.7L39.2,522.7c-0.2-0.2-0.2-0.2-0.2-0.4c-0.8-0.8-1.5-1.7-2.1-2.5c0-0.2-0.2-0.2-0.2-0.2
+                        c-0.8-0.9-1.5-1.7-2.1-2.7C35.7,519.1,37.4,521,39.2,522.7c0-0.2,0.2-0.2,0.4-0.4C39.4,522.6,39.2,522.7,39.2,522.7z"/>
+
+                        <linearGradient id="SVGID_47_" gradientUnits="userSpaceOnUse" x1="493.5679" y1="237.918" x2="494.0679" y2="114.418" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_47_)" d="M20.1,493.6L20.1,493.6c-0.4-1.1-0.9-2.3-1.3-3.4C19.4,491.3,19.5,492.5,20.1,493.6z"/>
+
+                        <linearGradient id="SVGID_48_" gradientUnits="userSpaceOnUse" x1="498.8812" y1="237.9393" x2="499.3812" y2="114.4394" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_48_)" d="M25.3,504c-0.5-1.1-1.1-2.1-1.7-3.2C24.1,501.9,24.7,502.8,25.3,504z"/>
+
+                        <linearGradient id="SVGID_49_" gradientUnits="userSpaceOnUse" x1="495.1637" y1="237.9243" x2="495.6637" y2="114.4243" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_49_)" d="M21.7,497.2c-0.4-1.1-0.9-2.1-1.5-3.4C20.9,495.1,21.3,496.3,21.7,497.2z"/>
+
+                        <linearGradient id="SVGID_50_" gradientUnits="userSpaceOnUse" x1="496.8648" y1="237.9313" x2="497.3648" y2="114.4313" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#049486"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_50_)" d="M21.7,497.4c0.5,1.1,0.9,2.3,1.7,3.4l0,0C23,499.7,22.2,498.6,21.7,497.4
+                        C21.8,497.4,21.8,497.4,21.7,497.4z"/>
+                </g>
+            </g>
+            <g id="vennCore">
+
+                    <radialGradient id="SVGID_51_" cx="514.63" cy="222.117" r="23.5683" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)" gradientUnits="userSpaceOnUse">
+                    <stop  offset="0" style="stop-color:#5C99D2"/>
+                    <stop  offset="1" style="stop-color:#2D2D85"/>
+                </radialGradient>
+                <path fill="url(#SVGID_51_)" d="M61.3,481.9c-0.4-0.2-0.8-0.2-1.1-0.4c-0.9-0.2-1.9-0.4-2.8-0.5c-0.2,0-0.5,0-0.8,0
+                    c-0.9-0.2-1.9-0.4-3.1-0.4c-0.4-0.2-0.8-0.2-0.9-0.2c-1.1-0.2-2.3-0.2-3.4-0.4h-0.2c-1.1-0.2-2.3-0.2-3.4-0.2c-0.2,0-0.8,0-0.9,0
+                    c-1.1,0-2.5,0-3.8,0c-1.1,0-2.5,0-3.8,0c-0.4,0-0.8,0-1.1,0.2c-0.9,0-1.7,0.2-2.7,0.2c-0.4,0-0.9,0-1.1,0c-0.9,0.2-1.9,0.2-2.8,0.4
+                    c-0.2,0-0.4,0-0.8,0c-1.1,0.2-2.3,0.2-3.4,0.4c-0.4,0-0.9,0.2-1.3,0.2c-0.8,0.2-1.5,0.2-2.1,0.4c-0.4,0.2-0.9,0.2-1.5,0.2
+                    c-0.8,0.2-1.5,0.4-2.3,0.5c-0.4,0.2-0.9,0.2-1.1,0.4l0,0l0,0c0.8,2.5,1.5,4.7,2.3,7.2c0,0.2,0,0.2,0,0.4c0.4,1.1,0.9,2.3,1.3,3.4
+                    c0,0,0,0.2,0.2,0.4c0.4,1.1,0.9,2.3,1.5,3.4c0,0,0,0,0,0.2c0.5,1.1,0.9,2.1,1.7,3.4c0,0,0,0,0,0.2c0.5,1.1,1.1,2.1,1.7,3.2
+                    c0,0.2,0.2,0.2,0.2,0.4c0.5,0.9,1.1,1.9,1.9,2.8c0,0,0.2,0.2,0.2,0.4c1.1,1.9,2.7,4,4,5.9c0,0.2,0.2,0.4,0.2,0.4
+                    c0.8,0.9,1.3,1.9,2.1,2.7c0,0.2,0.2,0.2,0.4,0.4c0.8,0.8,1.5,1.7,2.1,2.7l0.2,0.2c0.8,0.8,1.5,1.7,2.1,2.5l0.2,0.2v0.2
+                    c0-0.2,0.2-0.2,0.4-0.4c0-0.2,0.2-0.2,0.2-0.4c1.7-1.7,3.4-3.6,4.7-5.5v-0.2c0.8-0.9,1.5-1.9,2.1-2.8c0,0,0-0.2,0.2-0.2
+                    c0.8-0.9,1.5-2.1,2.1-3.1l0,0c1.5-2.1,2.8-4.2,4-6.6l0,0c0.8-1.1,1.1-2.3,1.9-3.4v-0.5c1.9-3.4,3.4-7,4.7-10.5l0,0
+                    c0.9-2.5,1.7-5,2.3-7.6C61.9,481.9,61.7,481.9,61.3,481.9z"/>
+            </g>
+            <g id="vennLeftBottom">
+                <g>
+
+                        <linearGradient id="SVGID_52_" gradientUnits="userSpaceOnUse" x1="534.4295" y1="227.2038" x2="440.4295" y2="287.2037" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_52_)" d="M49.5,510.2c1.5-2.1,2.8-4.2,4-6.4C52.1,505.8,50.8,508.1,49.5,510.2z"/>
+
+                        <linearGradient id="SVGID_53_" gradientUnits="userSpaceOnUse" x1="532.3459" y1="223.9396" x2="438.3459" y2="283.9396" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_53_)" d="M55.4,500.3C55.4,500.3,55.4,500.4,55.4,500.3C55.1,500.3,55.1,500.3,55.4,500.3L55.4,500.3z"/>
+
+                        <linearGradient id="SVGID_54_" gradientUnits="userSpaceOnUse" x1="529.5344" y1="228.0238" x2="529.5344" y2="228.0238" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_54_)" d="M53.4,503.6L53.4,503.6L53.4,503.6z"/>
+
+                        <linearGradient id="SVGID_55_" gradientUnits="userSpaceOnUse" x1="527.1165" y1="215.7466" x2="433.1164" y2="275.7466" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_55_)" d="M59.8,489.4L59.8,489.4L59.8,489.4c0.9-2.3,1.7-4.7,2.3-7.4C61.3,484.7,60.8,487.2,59.8,489.4z"/>
+
+                        <linearGradient id="SVGID_56_" gradientUnits="userSpaceOnUse" x1="529.9637" y1="220.2073" x2="435.9637" y2="280.2073" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_56_)" d="M58.2,493.8c0-0.4,0.2-0.5,0.4-0.9C58.4,493.2,58.2,493.4,58.2,493.8z"/>
+
+                        <linearGradient id="SVGID_57_" gradientUnits="userSpaceOnUse" x1="520.6696" y1="205.6466" x2="426.6696" y2="265.6466" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_57_)" d="M49.1,480h-0.2C48.9,480,48.9,480,49.1,480z"/>
+
+                        <linearGradient id="SVGID_58_" gradientUnits="userSpaceOnUse" x1="536.1119" y1="229.8393" x2="442.1119" y2="289.8393" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_58_)" d="M46.8,513.6c0,0,0-0.2,0.2-0.2C47,513.2,47,513.4,46.8,513.6z"/>
+
+                        <linearGradient id="SVGID_59_" gradientUnits="userSpaceOnUse" x1="521.9653" y1="207.6767" x2="427.9654" y2="267.6767" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_59_)" d="M53.4,480.4c0.9,0,1.9,0.2,3.1,0.4c-2.5-0.4-5-0.8-7.6-0.9c1.1,0,2.3,0.2,3.4,0.4
+                        C52.9,480.4,53.2,480.4,53.4,480.4z"/>
+
+                        <linearGradient id="SVGID_60_" gradientUnits="userSpaceOnUse" x1="536.8641" y1="231.018" x2="442.8642" y2="291.018" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_60_)" d="M44.9,516.3C44.9,516.3,44.7,516.3,44.9,516.3l-0.2,0.2L44.9,516.3z"/>
+
+                        <linearGradient id="SVGID_61_" gradientUnits="userSpaceOnUse" x1="535.6428" y1="229.1049" x2="441.6428" y2="289.1047" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_61_)" d="M49.3,510.2c-0.5,0.9-1.1,1.7-1.9,2.7C48.1,512.1,48.7,511.2,49.3,510.2L49.3,510.2z"/>
+
+                        <linearGradient id="SVGID_62_" gradientUnits="userSpaceOnUse" x1="520.0118" y1="204.616" x2="426.0118" y2="264.616" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_62_)" d="M48.7,480c-1.1-0.2-2.3-0.2-3.4-0.2C46.6,479.9,47.7,479.9,48.7,480z"/>
+
+                        <linearGradient id="SVGID_63_" gradientUnits="userSpaceOnUse" x1="531.0353" y1="221.8861" x2="437.0353" y2="281.8861" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_63_)" d="M56.7,497c0.2-0.4,0.2-0.5,0.4-0.9C57,496.4,56.9,496.8,56.7,497z"/>
+
+                        <linearGradient id="SVGID_64_" gradientUnits="userSpaceOnUse" x1="516.7769" y1="199.5477" x2="422.7769" y2="259.5477" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_64_)" d="M36.1,479.9c0.4,0,0.8,0,1.1-0.2C36.7,479.6,36.4,479.9,36.1,479.9z"/>
+
+                        <linearGradient id="SVGID_65_" gradientUnits="userSpaceOnUse" x1="512.1366" y1="192.278" x2="418.1366" y2="252.278" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_65_)" d="M16.6,482.6c0.4-0.2,0.9-0.2,1.1-0.2C17.4,482.4,16.8,482.6,16.6,482.6z"/>
+
+                        <linearGradient id="SVGID_66_" gradientUnits="userSpaceOnUse" x1="512.8522" y1="193.3995" x2="418.8522" y2="253.3995" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_66_)" d="M19.9,481.9c0.4,0,0.9-0.2,1.5-0.2C20.9,481.8,20.3,481.9,19.9,481.9z"/>
+
+                        <linearGradient id="SVGID_67_" gradientUnits="userSpaceOnUse" x1="514.8022" y1="196.4545" x2="420.8022" y2="256.4545" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_67_)" d="M30.9,480c-0.9,0.2-1.9,0.2-2.7,0.4c0.2,0,0.4-0.2,0.8-0.2C29.8,480.2,30.6,480.2,30.9,480z"/>
+
+                        <linearGradient id="SVGID_68_" gradientUnits="userSpaceOnUse" x1="513.6157" y1="194.5957" x2="419.6157" y2="254.5957" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_68_)" d="M23.6,481.2c0.4-0.2,0.9-0.2,1.3-0.2C24.5,481,24.1,481,23.6,481.2z"/>
+
+                        <linearGradient id="SVGID_69_" gradientUnits="userSpaceOnUse" x1="538.1282" y1="232.9984" x2="444.1281" y2="292.9985" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_69_)" d="M39.4,522.6c0-0.2,0.2-0.2,0.2-0.4C39.8,522.4,39.6,522.4,39.4,522.6z"/>
+
+                        <linearGradient id="SVGID_70_" gradientUnits="userSpaceOnUse" x1="523.5571" y1="210.1701" x2="429.557" y2="270.1701" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_70_)" d="M57.3,481c-0.2,0-0.4,0-0.8,0C56.9,481,57.3,481,57.3,481z"/>
+
+                        <linearGradient id="SVGID_71_" gradientUnits="userSpaceOnUse" x1="524.5681" y1="211.7543" x2="430.5681" y2="271.7543" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_71_)" d="M39.2,522.7L39.2,522.7c-0.2-0.2-0.2-0.2-0.2-0.4c-0.8-0.8-1.5-1.7-2.1-2.5c0-0.2-0.2-0.2-0.2-0.2
+                        c-0.8-0.9-1.5-1.7-2.1-2.7c0-0.2-0.2-0.2-0.4-0.4c-0.8-0.8-1.5-1.7-2.1-2.7c0,0-0.2-0.2-0.2-0.4c-1.5-1.9-2.8-3.8-4-5.9
+                        c0-0.2-0.2-0.4-0.2-0.4c-0.5-0.9-1.1-1.9-1.9-2.8c0-0.2-0.2-0.4-0.2-0.4c-0.5-1.1-1.1-2.1-1.7-3.2c0,0,0,0,0-0.2
+                        c-0.5-1.1-1.1-2.3-1.7-3.4c0,0,0,0,0-0.2c-0.4-1.1-0.9-2.1-1.5-3.4c0-0.2,0-0.2-0.2-0.4c-0.4-1.1-0.9-2.3-1.3-3.4
+                        c0-0.2,0-0.2,0-0.4c-0.9-2.3-1.7-4.7-2.3-7.2l0,0l0,0c-33,8.7-59.5,34.5-68.4,67.7c6.8,1.7,14.1,2.3,21.4,2.3
+                        c27.6,0,52.5-11.5,69.9-30.3C39.2,522.7,39.2,522.7,39.2,522.7z"/>
+
+                        <linearGradient id="SVGID_72_" gradientUnits="userSpaceOnUse" x1="525.5294" y1="213.2603" x2="431.5294" y2="273.2602" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_72_)" d="M61.3,481.9c0.2,0,0.4,0,0.8,0.2l0,0C61.9,481.9,61.7,481.9,61.3,481.9z"/>
+
+                        <linearGradient id="SVGID_73_" gradientUnits="userSpaceOnUse" x1="515.942" y1="198.24" x2="421.942" y2="258.24" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_73_)" d="M35,479.9c-0.9,0.2-1.9,0.2-2.8,0.2c0.4,0,0.9,0,1.1,0C33.8,479.9,34.6,479.9,35,479.9z"/>
+
+                        <linearGradient id="SVGID_74_" gradientUnits="userSpaceOnUse" x1="524.2255" y1="211.2174" x2="430.2255" y2="271.2174" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_74_)" d="M57.3,481c0.9,0.2,1.9,0.4,2.8,0.5C59.2,481.4,58.4,481.2,57.3,481z"/>
+
+                        <linearGradient id="SVGID_75_" gradientUnits="userSpaceOnUse" x1="537.5878" y1="232.1519" x2="443.5877" y2="292.1519" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_75_)" d="M44.7,516.7c-1.5,1.9-3.1,3.8-4.7,5.5C41.5,520.5,43,518.6,44.7,516.7z"/>
+
+                        <linearGradient id="SVGID_76_" gradientUnits="userSpaceOnUse" x1="518.6046" y1="202.4117" x2="424.6047" y2="262.4117" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                        <stop  offset="0" style="stop-color:#FFFFFF"/>
+                        <stop  offset="1" style="stop-color:#C57AB3"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_76_)" d="M40.8,479.6c1.1,0,2.5,0,3.8,0.2C43.2,479.6,42.1,479.6,40.8,479.6z"/>
+                </g>
+            </g>
+            <g id="vennRightBottom">
+
+                    <linearGradient id="SVGID_77_" gradientUnits="userSpaceOnUse" x1="505.259" y1="218.2592" x2="592.759" y2="271.7592" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_77_)" d="M18.8,490.4c0-0.2,0-0.2,0-0.4c-0.9-2.3-1.7-4.7-2.3-7.2C17.2,485.4,17.9,487.7,18.8,490.4z"/>
+
+                    <linearGradient id="SVGID_78_" gradientUnits="userSpaceOnUse" x1="500.8492" y1="225.4714" x2="588.3492" y2="278.9714" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_78_)" d="M23.4,500.8c-0.5-1.1-1.1-2.3-1.7-3.4c0,0,0,0,0-0.2C22.4,498.6,23,499.7,23.4,500.8L23.4,500.8z"
+                    />
+
+                    <linearGradient id="SVGID_79_" gradientUnits="userSpaceOnUse" x1="507.7081" y1="214.2541" x2="595.2081" y2="267.7541" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_79_)" d="M19.9,481.9c-0.8,0.2-1.5,0.4-2.3,0.5C18.5,482.2,19.2,481.9,19.9,481.9z"/>
+
+                    <linearGradient id="SVGID_80_" gradientUnits="userSpaceOnUse" x1="502.79" y1="222.2978" x2="590.29" y2="275.7978" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_80_)" d="M20.1,493.6c0-0.2-0.2-0.4-0.2-0.8c0.2,0.4,0.2,0.8,0.4,1.1C20.3,494,20.3,493.8,20.1,493.6z"/>
+
+                    <linearGradient id="SVGID_81_" gradientUnits="userSpaceOnUse" x1="519.2138" y1="195.4359" x2="606.7139" y2="248.9359" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_81_)" d="M56.5,481c0.2,0,0.5,0,0.8,0C57.3,481,56.9,481,56.5,481z"/>
+
+                    <linearGradient id="SVGID_82_" gradientUnits="userSpaceOnUse" x1="516.3868" y1="200.0596" x2="603.8868" y2="253.5596" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_82_)" d="M44.3,479.6c0.2,0,0.8,0,0.9,0C45.1,479.9,44.7,479.6,44.3,479.6z"/>
+
+                    <linearGradient id="SVGID_83_" gradientUnits="userSpaceOnUse" x1="519.9243" y1="194.2739" x2="607.4243" y2="247.7739" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_83_)" d="M60.2,481.8c0.4,0.2,0.8,0.2,1.1,0.2C60.9,481.8,60.8,481.8,60.2,481.8z"/>
+
+                    <linearGradient id="SVGID_84_" gradientUnits="userSpaceOnUse" x1="509.092" y1="211.9908" x2="596.592" y2="265.4908" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_84_)" d="M21.3,481.6c0.8-0.2,1.5-0.2,2.1-0.4C23,481.2,22.2,481.6,21.3,481.6z"/>
+
+                    <linearGradient id="SVGID_85_" gradientUnits="userSpaceOnUse" x1="517.3605" y1="198.4673" x2="604.8605" y2="251.9672" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_85_)" d="M48.7,480h0.2C48.9,480,48.9,480,48.7,480z"/>
+
+                    <linearGradient id="SVGID_86_" gradientUnits="userSpaceOnUse" x1="518.3196" y1="196.8984" x2="605.8197" y2="250.3984" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_86_)" d="M53.4,480.4c0.4,0,0.9,0,1.3,0.2c-1.1-0.2-2.7-0.4-3.8-0.4c0.4,0.2,0.9,0.2,1.5,0.2
+                    C52.9,480.4,53.2,480.4,53.4,480.4z"/>
+
+                    <linearGradient id="SVGID_87_" gradientUnits="userSpaceOnUse" x1="497.2671" y1="231.3303" x2="584.7671" y2="284.8303" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_87_)" d="M31.5,513.6c-1.5-1.9-2.8-3.8-4-5.9c1.3,2.1,2.8,4.2,4.2,6.3C31.7,514,31.7,513.8,31.5,513.6z"/>
+
+                    <linearGradient id="SVGID_88_" gradientUnits="userSpaceOnUse" x1="495.7047" y1="233.8857" x2="583.2047" y2="287.3856" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_88_)" d="M33.8,516.7c0-0.2-0.2-0.2-0.4-0.4c0.2,0.2,0.4,0.5,0.8,0.9C34.2,517,34,516.9,33.8,516.7z"/>
+
+                    <linearGradient id="SVGID_89_" gradientUnits="userSpaceOnUse" x1="514.7382" y1="202.7558" x2="602.2382" y2="256.2558" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_89_)" d="M37.2,479.6c1.1,0,2.5,0,3.8,0C39.4,479.6,38.2,479.6,37.2,479.6z"/>
+
+                    <linearGradient id="SVGID_90_" gradientUnits="userSpaceOnUse" x1="506.6666" y1="215.9572" x2="594.1666" y2="269.4572" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_90_)" d="M16.4,482.8C16.4,482.8,16.6,482.8,16.4,482.8C16.6,482.8,16.4,482.8,16.4,482.8L16.4,482.8
+                    L16.4,482.8z"/>
+
+                    <linearGradient id="SVGID_91_" gradientUnits="userSpaceOnUse" x1="507.9643" y1="213.835" x2="595.4642" y2="267.335" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_91_)" d="M62.1,481.9c-0.8,2.7-1.5,5.1-2.3,7.6l0,0c-1.3,3.8-2.8,7.4-4.7,10.5v0.2c-0.5,1.1-1.1,2.3-1.9,3.4
+                    l0,0c-1.1,2.1-2.7,4.4-4,6.6l0,0c-0.8,0.9-1.5,1.9-2.1,3.1c0,0.2,0,0.2-0.2,0.2c-0.8,0.9-1.5,1.9-2.1,2.8v0.2
+                    c-1.5,1.9-3.1,3.8-4.7,5.5c0,0.2-0.2,0.2-0.2,0.4s-0.2,0.2-0.4,0.4v-0.2l-0.2-0.2c-0.8-0.8-1.5-1.7-2.1-2.5c0-0.2-0.2-0.2-0.2-0.2
+                    s0,0,0-0.2c17.7,20.5,43.8,33.4,72.8,33.4c8.6,0,16.6-1.1,24.4-3.1C123.8,515.9,96.5,489.8,62.1,481.9z"/>
+
+                    <linearGradient id="SVGID_92_" gradientUnits="userSpaceOnUse" x1="511.9912" y1="207.2487" x2="599.4913" y2="260.7487" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_92_)" d="M28.9,480.4c0.2,0,0.2,0,0.4-0.2c0.9-0.2,1.9-0.2,2.8-0.2C30.9,480,29.8,480.2,28.9,480.4z"/>
+
+                    <linearGradient id="SVGID_93_" gradientUnits="userSpaceOnUse" x1="510.6491" y1="209.4439" x2="598.1491" y2="262.9439" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_93_)" d="M25.1,481c1.1-0.2,2.3-0.4,3.4-0.4C27.2,480.6,26,480.8,25.1,481z"/>
+
+                    <linearGradient id="SVGID_94_" gradientUnits="userSpaceOnUse" x1="498.1805" y1="229.8365" x2="585.6806" y2="283.3365" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_94_)" d="M27.2,507.3c0,0,0.2,0.2,0.2,0.4C27.3,507.6,27.3,507.3,27.2,507.3z"/>
+
+                    <linearGradient id="SVGID_95_" gradientUnits="userSpaceOnUse" x1="513.3112" y1="205.0897" x2="600.8112" y2="258.5898" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_95_)" d="M32.7,480c0.2,0,0.4,0,0.8-0.2c0.9-0.2,1.7-0.2,2.7-0.2C34.7,479.9,33.8,479.9,32.7,480z"/>
+
+                    <linearGradient id="SVGID_96_" gradientUnits="userSpaceOnUse" x1="498.9951" y1="228.5043" x2="586.4949" y2="282.0043" gradientTransform="matrix(0.9445 0 0 0.9445 -446.7539 288.2842)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="1" style="stop-color:#A9812D"/>
+                </linearGradient>
+                <path fill="url(#SVGID_96_)" d="M25.4,504.3c0-0.2-0.2-0.2-0.2-0.4c0.4,0.5,0.8,1.1,0.9,1.7C26,505.3,25.8,504.7,25.4,504.3z"/>
+            </g>
+            <text id="vennLeftTitle" transform="matrix(1 0 0 1 -60.3867 466.7783)" font-family="'MyriadPro-Regular'" font-size="22.6678">Web</text>
+            <text id="vennRightTitle" transform="matrix(1 0 0 1 93.0933 466.7783)" font-family="'MyriadPro-Regular'" font-size="22.6678">Apps</text>
+            <text id="vennBottomTitle" transform="matrix(1 0 0 1 12.2456 602.3145)" font-family="'MyriadPro-Regular'" font-size="22.6678">Games</text>
+            <g id="explainCore2">
+                <text transform="matrix(1 0 0 1 194.7148 280.0733)" font-family="'MyriadPro-Bold'" font-size="11.3885">User Experience</text>
+                <rect x="194.7" y="284.1" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 194.7148 288.7325)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 194.7148 296.5415)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 303.394 296.5415)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 194.7148 304.3511)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 194.7148 312.1606)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 194.7148 319.9697)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 298.2422 319.9697)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 194.7148 327.7788)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainCore1">
+                <text transform="matrix(1 0 0 1 -262.9951 280.0733)" font-family="'MyriadPro-Bold'" font-size="11.3885">Java,Objective-C,Javascript</text>
+                <rect x="-263" y="284.1" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -262.9951 288.7325)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -262.9951 296.5415)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -154.3159 296.5415)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -262.9951 304.3511)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -262.9951 312.1606)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -262.9951 319.9697)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -159.4678 319.9697)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -262.9951 327.7788)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeftRight1">
+                <text transform="matrix(1 0 0 1 -79.4712 303.7041)" font-family="'MyriadPro-Bold'" font-size="11.3885">Angular JS</text>
+                <rect x="-79.5" y="307.7" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -79.4712 312.3633)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -79.4712 320.1729)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 29.208 320.1729)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -79.4712 327.9819)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -79.4712 335.791)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -79.4712 343.6006)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 24.0557 343.6006)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -79.4712 351.4097)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeft1">
+                <text transform="matrix(1 0 0 1 -202.1665 323.0962)" font-family="'MyriadPro-Bold'" font-size="11.3885">HTML5</text>
+                <rect x="-202.2" y="327.1" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -202.1665 331.7559)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -202.1665 339.5654)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -93.4873 339.5654)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -202.1665 347.3745)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -202.1665 355.1836)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -202.1665 362.9932)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -98.6392 362.9932)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -202.1665 370.8022)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeft2">
+                <text transform="matrix(1 0 0 1 -254.5894 389.7109)" font-family="'MyriadPro-Bold'" font-size="11.3885">2 Years work experience</text>
+                <rect x="-254.6" y="393.8" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -254.5894 398.3701)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -254.5894 406.1797)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -145.9106 406.1797)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -254.5894 413.9883)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -254.5894 421.7979)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -254.5894 429.6074)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -151.0625 429.6074)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -254.5894 437.417)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeft3">
+                <text transform="matrix(1 0 0 1 -254.5894 456.958)" font-family="'MyriadPro-Bold'" font-size="11.3885">Hibernate</text>
+                <rect x="-254.6" y="461.1" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -254.5894 465.6182)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -254.5894 473.4277)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -145.9106 473.4277)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -254.5894 481.2363)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -254.5894 489.0459)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -254.5894 496.8545)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -151.0625 496.8545)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -254.5894 504.6641)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeft4">
+                <text transform="matrix(1 0 0 1 -215.5435 521.4668)" font-family="'MyriadPro-Bold'" font-size="11.3885">Spring</text>
+                <rect x="-215.6" y="525.4" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -215.5435 530.125)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -215.5435 537.9346)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -106.8643 537.9346)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -215.5435 545.7441)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -215.5435 553.5537)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -215.5435 561.3623)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -112.0161 561.3623)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -215.5435 569.1719)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeftRight2">
+                <text transform="matrix(1 0 0 1 62.4204 303.7041)" font-family="'MyriadPro-Bold'" font-size="11.3885">Maven/Gradle</text>
+                <rect x="62.4" y="307.7" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 62.4204 312.3633)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 62.4204 320.1729)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 171.0996 320.1729)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 62.4204 327.9819)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 62.4204 335.791)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 62.4204 343.6006)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 165.9473 343.6006)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 62.4204 351.4092)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainRight1">
+                <text transform="matrix(1 0 0 1 186.9219 339.2163)" font-family="'MyriadPro-Bold'" font-size="11.3885">JavaFX/Swing</text>
+                <rect x="186.9" y="343.2" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 186.9219 347.875)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 186.9219 355.6846)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 295.6006 355.6846)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 186.9219 363.4937)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 186.9219 371.3032)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 186.9219 379.1123)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 290.4487 379.1123)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 186.9219 386.9219)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainRight2">
+                <text transform="matrix(1 0 0 1 213.3144 403.9316)" font-family="'MyriadPro-Bold'" font-size="11.3885">iOS Development</text>
+                <rect x="213.3" y="408" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 213.3144 412.5908)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 213.3144 420.4004)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 321.9932 420.4004)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 213.3144 428.21)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 213.3144 436.0186)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 213.3144 443.8281)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 316.8408 443.8281)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 213.3144 451.6367)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainRight3">
+                <text transform="matrix(1 0 0 1 218.0137 472.7305)" font-family="'MyriadPro-Bold'" font-size="11.3885">Core Data</text>
+                <rect x="218" y="476.8" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 218.0137 481.3897)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 218.0137 489.1992)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 326.6934 489.1992)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 218.0137 497.0088)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 218.0137 504.8174)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 218.0137 512.627)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 321.541 512.627)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 218.0137 520.4355)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainRightBottom1">
+                <text transform="matrix(1 0 0 1 197.0449 536.4824)" font-family="'MyriadPro-Bold'" font-size="11.3885">XML</text>
+                <rect x="197.1" y="540.5" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 197.0449 545.1416)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 197.0449 552.9512)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 305.7236 552.9512)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 197.0449 560.7598)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 197.0449 568.5693)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 197.0449 576.3789)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 300.5718 576.3789)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 197.0449 584.1875)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainRight4">
+                <text transform="matrix(1 0 0 1 185.1138 542.6221)" font-family="'MyriadPro-Bold'" font-size="11.3885">Electron</text>
+                <rect x="185.1" y="546.6" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 185.1138 551.2812)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 185.1138 559.0908)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 293.793 559.0908)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 185.1138 566.8994)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 185.1138 574.709)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 185.1138 582.5176)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 288.6411 582.5176)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 185.1138 590.3271)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainRightBottom2">
+                <text transform="matrix(1 0 0 1 148.9805 604.9238)" font-family="'MyriadPro-Bold'" font-size="11.3885">Illustrator/Photoshop</text>
+                <rect x="149" y="608.9" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 148.9805 613.582)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 148.9805 621.3916)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 257.6592 621.3916)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 148.9805 629.2012)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 148.9805 637.0107)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 148.9805 644.8193)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 252.5068 644.8193)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 148.9805 652.6289)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainCore3">
+                <text transform="matrix(1 0 0 1 -262.9951 676.2109)" font-family="'MyriadPro-Bold'" font-size="11.3885">Strong OOP Skills</text>
+                <rect x="-263" y="680.3" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -262.9951 684.8711)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -262.9951 692.6797)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -154.3159 692.6797)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -262.9951 700.4893)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -262.9951 708.2988)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -262.9951 716.1084)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -159.4678 716.1084)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -262.9951 723.917)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeftBottom1">
+                <text transform="matrix(1 0 0 1 -232.3545 541.9609)" font-family="'MyriadPro-Bold'" font-size="11.3885">Cocos2D-JS</text>
+                <rect x="-232.3" y="545.9" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -232.3545 550.6191)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -232.3545 558.4287)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -123.6753 558.4287)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -232.3545 566.2383)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -232.3545 574.0479)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -232.3545 581.8564)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -128.8271 581.8564)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -232.3545 589.666)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainLeftBottom2">
+                <text transform="matrix(1 0 0 1 -176.2256 608.9619)" font-family="'MyriadPro-Bold'" font-size="11.3885">Canvas</text>
+                <rect x="-176.2" y="613" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -176.2256 617.6211)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -176.2256 625.4307)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -67.5459 625.4307)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -176.2256 633.2402)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -176.2256 641.0488)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -176.2256 648.8574)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -72.6982 648.8574)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -176.2256 656.667)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainBottom1">
+                <text transform="matrix(1 0 0 1 -156.1172 652.1992)" font-family="'MyriadPro-Bold'" font-size="11.3885">Box 2D</text>
+                <rect x="-156.1" y="656.2" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -156.1172 660.8594)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -156.1172 668.6689)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 -47.438 668.6689)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -156.1172 676.4785)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -156.1172 684.2871)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -156.1172 692.0957)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 -52.5894 692.0957)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -156.1172 699.9053)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainBottom2">
+                <text transform="matrix(1 0 0 1 -39.7295 701.1152)" font-family="'MyriadPro-Bold'" font-size="11.3885">Cocos2D</text>
+                <rect x="-39.8" y="705.2" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 -39.7295 709.7744)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 -39.7295 717.584)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 68.9497 717.584)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -39.7295 725.3936)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 -39.7295 733.2021)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 -39.7295 741.0117)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 63.7983 741.0117)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 -39.7295 748.8203)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainBottom3">
+                <text transform="matrix(1 0 0 1 85.7256 701.1152)" font-family="'MyriadPro-Bold'" font-size="11.3885">Published 4 apps</text>
+                <rect x="85.7" y="705.2" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 85.7256 709.7744)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 85.7256 717.584)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 194.4048 717.584)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 85.7256 725.3936)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 85.7256 733.2021)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 85.7256 741.0117)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 189.2524 741.0117)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 85.7256 748.8203)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainBottom4">
+                <text transform="matrix(1 0 0 1 165.2646 634.9932)" font-family="'MyriadPro-Bold'" font-size="11.3885">LibGDX</text>
+                <rect x="165.2" y="639.1" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 165.2646 643.6523)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 165.2646 651.4609)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 273.9434 651.4609)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 165.2646 659.2705)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 165.2646 667.0801)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 165.2646 674.8896)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 268.7915 674.8896)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 165.2646 682.6982)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            <g id="explainCore4">
+                <text transform="matrix(1 0 0 1 194.7148 676.2109)" font-family="'MyriadPro-Bold'" font-size="11.3885">Full Stack Developer</text>
+                <rect x="194.7" y="680.3" fill="none" width="112.2" height="52"/>
+                <text transform="matrix(1 0 0 1 194.7148 684.8711)" font-family="'MyriadPro-Regular'" font-size="6.5077">Lorem ipsum dolor sit amet, minim </text>
+                <text transform="matrix(1 0 0 1 194.7148 692.6797)" font-family="'MyriadPro-Regular'" font-size="6.5077">quando ut eum, omnium scripta theoph</text>
+                <text transform="matrix(1 0 0 1 303.394 692.6797)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 194.7148 700.4893)" font-family="'MyriadPro-Regular'" font-size="6.5077">rastus te qui. Mea id bonorum eleifend. </text>
+                <text transform="matrix(1 0 0 1 194.7148 708.2988)" font-family="'MyriadPro-Regular'" font-size="6.5077">Id denique recteque eam, id erant nihil </text>
+                <text transform="matrix(1 0 0 1 194.7148 716.1084)" font-family="'MyriadPro-Regular'" font-size="6.5077">reformidans mea, reformidans disputa</text>
+                <text transform="matrix(1 0 0 1 298.2422 716.1084)" font-family="'MyriadPro-Regular'" font-size="6.5077">-</text>
+                <text transform="matrix(1 0 0 1 194.7148 723.917)" font-family="'MyriadPro-Regular'" font-size="6.5077">tioni cum at. Ad vitae vocent pro.</text>
+            </g>
+            </svg>
+
+
+
+        </div>
+    

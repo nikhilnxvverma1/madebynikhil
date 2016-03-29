@@ -1,0 +1,19 @@
+<html>
+    <head>
+      {{>jquery-materialize}}
+	  
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        
+        <!--Navigation menu (Header section)-->
+       	{{>header}}
+
+		{{! Content will be inserted here}}   
+        {{{body}}}
+        
+        <!--Footer-->
+        {{>footer}}        
+    </body>
+</html>

@@ -1,0 +1,332 @@
+{{!< header-content-footer}}
+ <!--Custom javascript-->
+<script>
+	$(document).ready(function(){
+		$(".button-collapse").sideNav(); 
+		$('.dropdown-button').dropdown({hover:false});
+		//load the particle system,
+		//connectedBlueDots is defined in config file(blue-connected.json)
+		particlesJS('connectedParticles',connectedBlueDots);
+		
+		//initialize parallax effects
+//                $('.parallax').parallax();
+		
+	});
+
+</script>
+<style>
+	h1{
+		color: #DA7A22;
+	}
+	
+	.shadowInside{
+		-webkit-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+		-moz-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+		box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+	}
+	
+	#connectedParticles{
+		widows: 100%;
+		height:320px;
+		background-color: #011d37;
+	}
+	.wideOpening{
+		height: 200px;
+		background-color: #0c4b81;
+	}
+	.anchoredCenter{
+		-webkit-transform:translate(-50%,-50%);
+		-moz-transform:translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		position: relative;
+		top:50%;
+		left:50%;
+	}
+	.anchoredVerticalCenter{
+		-webkit-transform:translate(0%,-50%);
+		-moz-transform:translate(0%,-50%);
+		transform: translate(0%,-50%);
+		position: relative;
+		top:100%;
+		left:0;
+	}
+	.circleImage {
+		width:150px;
+		height:150px; 
+		-webkit-transform:translate(-50%,-50%);
+		-moz-transform:translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		position: absolute;
+		top:50%;
+		left:50%;
+	}
+	.circleImageContainer{
+		border-radius: 50%;
+		overflow: hidden;
+		width: 120px;
+		height:120px;
+	}
+	#vennDiagramContainer{
+		margin: 0 auto;   
+		/* for center alignment*/
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+	
+	.explainer{
+		background-color: blueviolet;
+	}
+	.upperGradientShadow{
+		position: relative;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 30px;
+		background: red;
+		background:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
+	}
+	.lowerGradientShadow{
+		position: relative;
+		bottom: 0;
+		left:0;
+		width: 100%;
+		height: 30px;
+		background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.22));
+	}
+</style>
+
+<!--Connected Particles-->
+<div id="connectedParticles" class="shadowInside">
+	<img class="anchoredCenter" width="400px" src="../images/logo.svg"/ alt="logo"
+			style="position:absolute;top:232px">
+</div>        
+
+<!--About me-->
+<div class="section" style="padding-bottom:50px">
+	<div class="container">
+		<h1>About me</h1>
+		<div class="z-depth-3">
+			<div style="padding:70px">
+				<div class="circleImageContainer z-depth-4 waves-effect" style="padding:10px;float:right;width:170px;height:170px">
+						<img class="circleImage" src="../images/facebook-logo.svg"/  style="width:250px;height:250px">
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, eum in corpora constituto. Ne veritus civibus accumsan vim, mei posse partem eu. Est tollit facete explicari cu, ius errem nihil eruditi ne. His et saepe viderer urbanitas, ne cum equidem dolorum suavitate. Inani prompta ea nec, ius zril singulis maluisset at, cu eum dicam quaestio.
+
+Id mel nisl purto quaestio, et elitr nobis accumsan nam, per civibus adversarium at. In mollis consectetuer mei. Autem viderer sanctus sit no, in usu eirmod dignissim maiestatis. Vis ut sale populo expetenda. Vocent appetere repudiandae pri an, impetus labores eligendi pro ea.
+
+Justo efficiantur eu vis, mei nominati expetendis cu. Recteque mediocrem per et. Sumo vocent convenire qui cu. Ius volumus assentior ad, utroque abhorreant ad vis, et perpetua intellegebat eam. Eum an urbanitas efficiendi, usu integre aliquid id.
+				</p>
+				<p>
+
+Mea essent noluisse an, cu sumo legere fabulas mel. Pri ei facer fastidii insolens, fabulas urbanitas gloriatur sea ex. In est oblique periculis, ridens vivendo ea quo, per ad movet utinam. Illud similique an cum, eam dicunt explicari no. Ad qui graece evertitur, melius concludaturque an eam, vim ei vidit fabulas gloriatur.
+
+Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant definitiones, id pro amet sale. Vel in sanctus facilisi definitionem. Nam an veniam splendide, ea sea sensibus recteque, sed ex perfecto molestiae. His legere aliquid adipiscing an, euismod apeirian vis ex, lorem facer ea qui.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Networking links-->
+
+<div class="section">
+	<div class="wideOpening valign-wrapper shadowInside">
+
+		<div class="row" style="margin-bottom:0">
+			<div class="col s4 m4 pull-m4 l4 pull-l10">
+				<a href="#">
+					<div class="circleImageContainer z-depth-4 waves-effect">
+						<img class="circleImage" src="../images/linked-in-logo.svg"/>
+					</div>
+						
+				</a>
+			</div>
+			<div class="col s4 m4">
+				<a href="#">
+					<div class="circleImageContainer z-depth-4 waves-effect">
+						<img class="circleImage" src="../images/github-logo.svg"/>
+					</div>
+				</a>
+			</div>
+			<div class="col s4 m4 push-m4 l4 push-l10">
+				<a href="#">
+					<div class="circleImageContainer z-depth-4 waves-effect">
+						<img class="circleImage" src="../images/facebook-logo.svg"/>
+					</div>
+				</a>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+<!--Skill Diagram-->
+
+<div class="section">
+	<div class="container">
+		<h1>Skills and Technologies</h1>
+		{{! For desktops}}
+		{{>skill-diagram}}
+		{{!TODO different partial for mobile}}
+	</div>
+</div>
+
+<!--
+<div class="parallax-container">
+	<div class="parallax"><img src="../images/apple-presentation.jpg"></div>
+</div>
+-->
+
+<!--Projects-->
+
+<div class="section">
+	<div class="container">
+		<h1>Projects</h1>
+		<div class="row">
+			<div class="col s12 m6 l5">
+				<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../images/sample-app.jpeg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"><a href="#">Carry the Flame</a><i class="material-icons right">more_vert</i></span>
+					<p>A simulation based puzzle game</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Carry the Flame<i class="material-icons right">close</i></span>
+					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+				</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m6 l5 offset-l2">
+				<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../images/sample-app.jpeg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+					<p><a href="#">App Store</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col s12 m6 l5">
+				<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../images/sample-app.jpeg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"><a href="#">Carry the Flame</a><i class="material-icons right">more_vert</i></span>
+					<p>A simulation based puzzle game</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Carry the Flame<i class="material-icons right">close</i></span>
+					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+				</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m6 l5 offset-l2">
+				<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../images/sample-app.jpeg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+					<p><a href="#">App Store</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col s12 m6 l5">
+				<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../images/sample-app.jpeg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"><a href="#">Carry the Flame</a><i class="material-icons right">more_vert</i></span>
+					<p>A simulation based puzzle game</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Carry the Flame<i class="material-icons right">close</i></span>
+					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+				</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m6 l5 offset-l2">
+				<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../images/sample-app.jpeg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+					<p><a href="#">App Store</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+				</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!--Contact Me-->
+
+<div class="section">
+	<div class="container">
+		<h1>Contact Me</h1>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12 m8 l6">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="senderName" type="text" class="validate"/>
+						<label for="senderName">Name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 m8 l6">
+						<i class="material-icons prefix">email</i>
+						<input id="email" type="email" class="validate"/>
+						<label for="email">Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 m8 l6">
+						<i class="material-icons prefix">mode_edit</i>
+						<textarea id="senderMessage" class="materialize-textarea"></textarea>
+						<label for="senderMessage">Message</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s4 offset-s4">
+						<button class="btn waves-effect waves-light" type="submit" name="action">Send
+						<i class="material-icons right">send</i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
