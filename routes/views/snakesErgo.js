@@ -10,6 +10,6 @@ exports = module.exports = function(req, res) {
 	locals.section = 'apps';
 
 	// Render the view
-	view.render('snakes-ergo');
+	view.render('snakes-ergo',{layout:"header-content"});
 
 };

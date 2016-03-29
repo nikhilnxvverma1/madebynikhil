@@ -1,0 +1,9 @@
+.shadowInside{
+	-webkit-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+	-moz-box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+	box-shadow: inset 0px 0px 67px 13px rgba(0,0,0,0.57);
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: #DA7A22;
+}
