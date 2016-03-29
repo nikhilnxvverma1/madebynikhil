@@ -16,8 +16,19 @@
             .explainer{
                 background-color: blueviolet;
             }
+			/* For larger devices*/
+			@media only screen and (min-width:632px){
+				#vennDiagramContainer{ display: block;}
+				#vennDiagramMobile{ display: none;}
+			}
+			/* For mobile devices*/
+			@media only screen and (max-width:632px){
+				#vennDiagramContainer{ display: none;}
+				#vennDiagramMobile{ display: block;}
+			}
         </style>
-    
+		<!--This will only be shown for mobile-->
+		<img id="vennDiagramMobile" src="../images/landing-page/skill-venn-mobile.svg">
         <div id='vennDiagramContainer'>
         
            <?xml version="1.0" encoding="utf-8"?>
