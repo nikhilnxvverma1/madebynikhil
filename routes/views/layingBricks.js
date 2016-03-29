@@ -10,6 +10,6 @@ exports = module.exports = function(req, res) {
 	locals.section = 'apps';
 
 	// Render the view
-	view.render('laying-bricks');
+	view.render('laying-bricks',{layout:'header-content'});
 
 };

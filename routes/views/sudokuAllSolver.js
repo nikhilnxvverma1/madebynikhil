@@ -10,6 +10,6 @@ exports = module.exports = function(req, res) {
 	locals.section = 'apps';
 
 	// Render the view
-	view.render('sudoku-all-solver');
+	view.render('sudoku-all-solver',{layout:"header-content"});
 
 };

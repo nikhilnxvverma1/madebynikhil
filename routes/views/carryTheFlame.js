@@ -10,6 +10,6 @@ exports = module.exports = function(req, res) {
 	locals.section = 'apps';
 
 	// Render the view
-	view.render('carry-the-flame');
+	view.render('carry-the-flame',{layout:'header-content'});
 
 };
