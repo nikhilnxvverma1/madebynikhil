@@ -13,10 +13,10 @@
 	/* End of changes to header*/
 	 body{
 			margin: 0px;			
-			background: -webkit-linear-gradient(#900303,#000000);
-			background: -o-linear-gradient(#900303,#000000);
-			background: -moz-linear-gradient(#900303,#000000);     
-			background: linear-gradient(#900303,#000000);
+			background: -webkit-linear-gradient(#D92000,#000000);
+			background: -o-linear-gradient(#D92000,#000000);
+			background: -moz-linear-gradient(#D92000,#000000);     
+			background: linear-gradient(#D92000,#000000);
 		}
 		.logoContainer{
 			background:#c55d3c;
@@ -40,25 +40,57 @@
 			padding-bottom: 30px;
 		}
 		
-		.gradientBackground{
-			background: -webkit-linear-gradient(#900303,#000000);
-			background: -o-linear-gradient(#900303,#000000);
-			background: -moz-linear-gradient(#900303,#000000);     
-			background: linear-gradient(#900303,#000000);
-			height: 100%;
+		.logoContainer{
+			/*background:#17558a;*/
+			text-align: end;
+			position: relative;
+			background-image: url('../images/carry-the-flame/header-box.png');
+			background-size: cover;
 		}
+		#logo{
+			padding-top:20px;
+			padding-bottom: 10px;
+		}
+		
+		.headerImages{
+			position: relative;
+			width: 100%;
+		}
+		#rightImage{
+			position: absolute;
+			bottom: 0px;
+			right:0px;
+			padding-right: 0px;
+		}
+		#headerImage{
+			width:100%;
+		}
+		#floorLink{
+			position: relative;
+			bottom:40px;
+			right:50px;
+			width: 30%;
+		}
+		/* For larger devices*/
+		@media only screen and (min-width:600px){
+			
+		}
+		/* For mobile devices*/
+		@media only screen and (max-width:600px){
+			
+			#rightImage{
+				position: relative;
+				padding-top:30px;
+			}
+		}
+		/*#floor{
+			background-image:url("../images/carry-the-flame/floor-items.png");
+		}*/
 </style>
-	
-<div id="container">
-	<div class="row">
-		<div class="col s12 logoContainer">
-			<img style="width:70%" src="../images/snake-ergo/snake-ergo-logo.svg" align="middle" alt="logo"/>
-		</div>
-	</div>
+<div style="background-color:#EF2600">
+	<img id="headerImage" src="../images/carry-the-flame/header-box-no-outer-shadow.png" alt="logo" />
 </div>
 
-	
-	
 	<section>
 		<div class="container">
 			<div class="row featureSection">
@@ -110,10 +142,13 @@
 		</div>
 	</section>
 		
-	<div class="row" style="padding-top:80px;padding-bottom:50px;">
+	<!--<div class="row" style="padding-top:80px;padding-bottom:50px;">
 		<div class="col s12 m10 offset-m1 l8 offset-l2">
 			<object data="https://www.youtube.com/embed/tBg-ZhMQ06Y" width="100%" height="380em"></object>
 		</div>
+	</div>-->
+	<div class="video-container">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/tBg-ZhMQ06Y" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="row">
 		<div class="col s12 m10 offset-m1 l8 offset-l4">
@@ -134,8 +169,17 @@
 -->
 </div>
 
-<div class="row" style="padding-top:30px;padding-bottom:50px;">
+<div class="row hide-on-med-and-up" style="padding-top:30px;padding-bottom:50px;">
 	<div class="col s8 offset-s2 m4 offset-m4 l3 offset-l5">
 		<a href="https://itunes.apple.com/us/app/carry-the-flame/id914483142?mt=8"><img id="appStore" src="../images/app-store-badge.svg" width="100%" alt="App Store Link"/></a>
 	</div>
+</div>
+
+<div id="floor" style="position:relative">
+	<img style="width:100%" src="../images/carry-the-flame/floor-items.png" alt="logo" />
+	<a class="hide-on-small-only" id="floorLink" href="https://itunes.apple.com/us/app/carry-the-flame/id914483142?mt=8"
+	style="position:absolute;bottom:42%;right:10%"
+	>
+		<img id="appStore" style="width:100%" src="../images/app-store-badge.svg" alt="App Store Link"/>
+	</a>
 </div>
