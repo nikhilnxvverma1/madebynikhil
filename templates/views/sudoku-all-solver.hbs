@@ -9,10 +9,6 @@
 			margin: 0px;
 			background-color: #a0d2fa;
 		}
-		.logoContainer{
-			background:#17558a;
-			text-align: center;
-		}
 		
 		.featureHeading{
 /*                background-color: black;*/
@@ -25,12 +21,51 @@
 			padding-top: 50px;
 			padding-bottom: 20px;
 		}
+		
+		.logoContainer{
+			background:#17558a;
+			text-align: end;
+			position: relative;
+		}
+		#logo{
+			padding-top:20px;
+			padding-bottom: 10px;
+		}
+		
+		.headerImages{
+			position: relative;
+			width: 100%;
+		}
+		#partialGrid{
+			position: absolute;
+			bottom: 0px;
+		}
+		
+		/* For larger devices*/
+		@media only screen and (min-width:600px){
+			
+		}
+		/* For mobile devices*/
+		@media only screen and (max-width:600px){
+			
+			#partialGrid{
+				position: relative;
+				padding-top:30px;
+			}
+		}
+		
+		#sudokuCubes{
+			width: 100%;
+		}
 </style>
 <title>Sudoku All Solver</title>
 <div id="container">
-	<div class="row">
-		<div class="col s12 logoContainer">
-			<img style="width:70%" src="../images/snake-ergo/snake-ergo-logo.svg" align="middle" alt="logo"/>
+	<div class="row logoContainer">
+		<div class="col s12 m4 offset-m2" id="logo">
+			<img class="headerImages" src="../images/sudoku-all-solver/logo.png" alt="logo"/>
+		</div>
+		<div class="col s12 m2 offset-m7" id="partialGrid">
+			<img class="headerImages" src="../images/sudoku-all-solver/sudoku-grid-partial.png" alt="partial grid"/>
 		</div>
 	</div>
 </div>
@@ -91,3 +126,4 @@
 		<a href="https://itunes.apple.com/us/app/sudoku-all-solver/id947904468?ls=1&mt=8"><img id="appStore" src="../images/app-store-badge.svg" width="100%" alt="App Store Link"/></a>
 	</div>
 </div>
+<img id="sudokuCubes" src="../images/sudoku-all-solver/sudoku-cubes.png" alt="logo" />
