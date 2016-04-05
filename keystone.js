@@ -5,6 +5,7 @@ require('dotenv').load();
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
+var i18n=require('i18n');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -50,6 +51,21 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable
 });
+
+// Configure i18n
+
+i18n.configure({
+	locales:['en'],
+	directory: __dirname + '/locales'
+});
+
+// // register hbs helpers in res.locals' context which provides this.locale
+// handlebars.registerHelper('__', function () {
+//   return i18n.__.apply(this, arguments);
+// });
+// handlebars.registerHelper('__n', function () {
+//   return i18n.__n.apply(this, arguments);
+// });
 
 // Load your project's Routes
 

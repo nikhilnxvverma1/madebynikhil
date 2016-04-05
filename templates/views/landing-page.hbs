@@ -97,24 +97,17 @@
 <!--About me-->
 <div class="section" style="padding-bottom:50px">
 	<div class="container">
-		<h1>About me</h1>
+		<h1>{{__ "aboutMe"}}</h1>
 		<div class="z-depth-3">
 			<div style="padding:70px">
 				<div class="circleImageContainer z-depth-4 waves-effect" style="padding:10px;float:right;width:170px;height:170px">
 						<img class="circleImage" src="../images/facebook-logo.svg"/  style="width:250px;height:250px">
 				</div>
 				<p>
-					Lorem ipsum dolor sit amet, eum in corpora constituto. Ne veritus civibus accumsan vim, mei posse partem eu. Est tollit facete explicari cu, ius errem nihil eruditi ne. His et saepe viderer urbanitas, ne cum equidem dolorum suavitate. Inani prompta ea nec, ius zril singulis maluisset at, cu eum dicam quaestio.
-
-Id mel nisl purto quaestio, et elitr nobis accumsan nam, per civibus adversarium at. In mollis consectetuer mei. Autem viderer sanctus sit no, in usu eirmod dignissim maiestatis. Vis ut sale populo expetenda. Vocent appetere repudiandae pri an, impetus labores eligendi pro ea.
-
-Justo efficiantur eu vis, mei nominati expetendis cu. Recteque mediocrem per et. Sumo vocent convenire qui cu. Ius volumus assentior ad, utroque abhorreant ad vis, et perpetua intellegebat eam. Eum an urbanitas efficiendi, usu integre aliquid id.
+					{{__ "aboutMePara1"}}
 				</p>
 				<p>
-
-Mea essent noluisse an, cu sumo legere fabulas mel. Pri ei facer fastidii insolens, fabulas urbanitas gloriatur sea ex. In est oblique periculis, ridens vivendo ea quo, per ad movet utinam. Illud similique an cum, eam dicunt explicari no. Ad qui graece evertitur, melius concludaturque an eam, vim ei vidit fabulas gloriatur.
-
-Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant definitiones, id pro amet sale. Vel in sanctus facilisi definitionem. Nam an veniam splendide, ea sea sensibus recteque, sed ex perfecto molestiae. His legere aliquid adipiscing an, euismod apeirian vis ex, lorem facer ea qui.
+					{{__ "aboutMePara2"}}
 				</p>
 			</div>
 		</div>
@@ -160,10 +153,9 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 
 <div class="section">
 	<div class="container">
-		<h1>Skills and Technologies</h1>
+		<h1>{{__ "skillsNTechnologies"}}</h1>
 		{{! For desktops}}
 		{{>skill-diagram}}
-		{{!TODO different partial for mobile}}
 	</div>
 </div>
 
@@ -177,7 +169,7 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 
 <div class="section">
 	<div class="container">
-		<h1>Projects</h1>
+		<h1>{{__ "projects"}}</h1>
 		<div class="row">
 			<div class="col s12 m6 l5">
 				<div class="card">
@@ -185,12 +177,12 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 					<img class="activator" src="../images/sample-app.jpeg">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4"><a href="#">Carry the Flame</a><i class="material-icons right">more_vert</i></span>
-					<p>A simulation based puzzle game</p>
+					<span class="card-title activator grey-text text-darken-4"><a href="#">{{__ "titleProject1"}}</a><i class="material-icons right">more_vert</i></span>
+					<p>{{__ "briefProject1"}}</p>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Carry the Flame<i class="material-icons right">close</i></span>
-					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+					<span class="card-title grey-text text-darken-4">{{__ "titleProject1"}}<i class="material-icons right">close</i></span>
+					<p>{{__ "detailProject1"}}</p>
 				</div>
 				</div>
 			</div>
@@ -201,12 +193,12 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 					<img class="activator" src="../images/sample-app.jpeg">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-					<p><a href="#">App Store</a></p>
+					<span class="card-title activator grey-text text-darken-4"><a href="#">{{__ "titleProject2"}}</a><i class="material-icons right">more_vert</i></span>
+					<p>{{__ "briefProject2"}}</p>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+					<span class="card-title grey-text text-darken-4">{{__ "titleProject2"}}<i class="material-icons right">close</i></span>
+					<p>{{__ "detailProject2"}}</p>
 				</div>
 				</div>
 			</div>
@@ -219,12 +211,12 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 					<img class="activator" src="../images/sample-app.jpeg">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4"><a href="#">Carry the Flame</a><i class="material-icons right">more_vert</i></span>
-					<p>A simulation based puzzle game</p>
+					<span class="card-title activator grey-text text-darken-4"><a href="#">{{__ "titleProject3"}}</a><i class="material-icons right">more_vert</i></span>
+					<p>{{__ "briefProject3"}}</p>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Carry the Flame<i class="material-icons right">close</i></span>
-					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+					<span class="card-title grey-text text-darken-4">{{__ "titleProject3"}}<i class="material-icons right">close</i></span>
+					<p>{{__ "detailProject3"}}</p>
 				</div>
 				</div>
 			</div>
@@ -235,12 +227,12 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 					<img class="activator" src="../images/sample-app.jpeg">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-					<p><a href="#">App Store</a></p>
+					<span class="card-title activator grey-text text-darken-4"><a href="#">{{__ "titleProject4"}}</a><i class="material-icons right">more_vert</i></span>
+					<p>{{__ "briefProject4"}}</p>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+					<span class="card-title grey-text text-darken-4">{{__ "titleProject4"}}<i class="material-icons right">close</i></span>
+					<p>{{__ "detailProject4"}}</p>
 				</div>
 				</div>
 			</div>
@@ -253,12 +245,12 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 					<img class="activator" src="../images/sample-app.jpeg">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4"><a href="#">Carry the Flame</a><i class="material-icons right">more_vert</i></span>
-					<p>A simulation based puzzle game</p>
+					<span class="card-title activator grey-text text-darken-4"><a href="#">{{__ "titleProject5"}}</a><i class="material-icons right">more_vert</i></span>
+					<p>{{__ "briefProject5"}}</p>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Carry the Flame<i class="material-icons right">close</i></span>
-					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+					<span class="card-title grey-text text-darken-4">{{__ "titleProject5"}}<i class="material-icons right">close</i></span>
+					<p>{{__ "detailProject5"}}</p>
 				</div>
 				</div>
 			</div>
@@ -269,12 +261,12 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 					<img class="activator" src="../images/sample-app.jpeg">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-					<p><a href="#">App Store</a></p>
+					<span class="card-title activator grey-text text-darken-4"><a href="#">{{__ "titleProject6"}}</a><i class="material-icons right">more_vert</i></span>
+					<p>{{__ "briefProject6"}}</p>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-					<p>Pellentesque imperdiet suspendisse nec suspendisse sit vestibulum. Et luctus justo aliquam quaerat suscipit curae, quis pede neque orci varius, aenean dapibus ligula, donec ut nibh. Elit id ut lobortis purus arcu tempus, aptent turpis tempor, ut elit vel, mi adipiscing mattis feugiat, tempus mauris tortor duis magna vitae. Fusce phasellus, aliquam massa quam leo, nec at nunc nulla interdum sed sapien, molestias placerat morbi convallis pede, sunt non. Vivamus aliquam iste vehicula in, ligula eleifend turpis, mollis risus possimus. </p>
+					<span class="card-title grey-text text-darken-4">{{__ "titleProject6"}}<i class="material-icons right">close</i></span>
+					<p>{{__ "detailProject6"}}</p>
 				</div>
 				</div>
 			</div>
@@ -287,33 +279,33 @@ Cu sint facer quo, te usu sumo tibique necessitatibus. Sed no dicta dicant defin
 
 <div class="section">
 	<div class="container">
-		<h1>Contact Me</h1>
+		<h1>{{__ "contactMe"}}</h1>
 		<div class="row">
 			<form class="col s12">
 				<div class="row">
 					<div class="input-field col s12 m8 l6">
 						<i class="material-icons prefix">account_circle</i>
 						<input id="senderName" type="text" class="validate"/>
-						<label for="senderName">Name</label>
+						<label for="senderName">{{__ "name"}}</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m8 l6">
 						<i class="material-icons prefix">email</i>
 						<input id="email" type="email" class="validate"/>
-						<label for="email">Email</label>
+						<label for="email">{{__ "email"}}</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m8 l6">
 						<i class="material-icons prefix">mode_edit</i>
 						<textarea id="senderMessage" class="materialize-textarea"></textarea>
-						<label for="senderMessage">Message</label>
+						<label for="senderMessage">{{__ "message"}}</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s4 offset-s4">
-						<button class="btn waves-effect waves-light" type="submit" name="action">Send
+						<button class="btn waves-effect waves-light" type="submit" name="action">{{__ "send"}}
 						<i class="material-icons right">send</i>
 						</button>
 					</div>
