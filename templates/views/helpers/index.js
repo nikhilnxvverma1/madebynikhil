@@ -28,9 +28,12 @@ module.exports = function() {
 	// standard hbs equality check, pass in two values from template
 	// {{#ifeq keyToCheck data.myKey}} [requires an else blockin template regardless]
 	_helpers.ifeq = function(a, b, options) {
+		console.log("a :"+a+" b: "+b);
 		if (a == b) {
+			console.log("equal");
 			return options.fn(this);
 		} else {
+			console.log("unequal");
 			return options.inverse(this);
 		}
 	};

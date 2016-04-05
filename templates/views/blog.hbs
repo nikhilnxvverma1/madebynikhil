@@ -3,7 +3,7 @@
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-8 col-md-9">
+		<div class="col s8 m9">
 			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
 			<div class="blog">
 				{{# each data.posts.results}}
@@ -18,12 +18,29 @@
 				{{/each}}
 			</div>
 		</div>
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All Categories</a>
+		<div class="col s4 m3">
+			<h2>Categories: </h2>
+			<div style="margin-top: 70px;" class="collection">
+				{{! get total count of posts from controller}}
+				{{#ifeq filters.category null}}
+					<a href="/blog" class="active collection-item">All Categories</a>
+				{{else}}
+					<a href="/blog" class="collection-item">All Categories</a>
+				{{/ifeq}}
+				
 				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+				
+					{{#ifeq key ../filters.category }}
+						<a href="{{categoryUrl key}}" class="active collection-item">
+							{{name}}
+							<span class="white-text text-darken-4 badge">{{postCount}}</span>	
+						</a>
+					{{else}}
+						<a href="{{categoryUrl key}}" class="collection-item">
+							{{name}}
+							<span class="text-darken-4 badge">{{postCount}}</span>
+						</a>
+					{{/ifeq}}
 				{{/each}}
 			</div>
 		</div>
