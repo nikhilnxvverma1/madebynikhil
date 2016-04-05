@@ -81,6 +81,6 @@ exports = module.exports = function(req, res) {
 	});
 	
 	// Render the view
-	view.render('blog',{layout:"default"});
+	view.render('blog');
 	
 };
