@@ -22,6 +22,7 @@ var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 var i18n=require('i18n');
+var bodyParser=require('body-parser');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -36,8 +37,12 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function(app) {
 	
+	app.use(bodyParser.json());//to support json encoded bodies
+	app.use(bodyParser.urlencoded({extended:true}));//to support url encoded bodies
+	
 	// Views
 	app.get('/', routes.views.index);
+	app.post('/contact', routes.views.contact);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/projects', routes.views.projects);

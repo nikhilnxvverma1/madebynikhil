@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "async": "^1.5.0",
+    "body-parser": "^1.15.0",
     "cloudinary": "^1.2.4",
     "dotenv": "^1.1.0",
     "express-handlebars": "^1.1.0",

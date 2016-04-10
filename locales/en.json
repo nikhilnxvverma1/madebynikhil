@@ -28,6 +28,8 @@
 	"email": "Email",
 	"message": "Message",
 	"send": "Send",
+	"contactSuccess":"Thanks, I will get in touch with you soon!",
+	"contactFailure":"UH OH! Something went wrong. Please try again soon.",
 	"title1CarryTheFlame": "Help Drogo",
 	"detail1CarryTheFlame": "Young drogo is having a tough time coming out of his shell. His mother is not around and the egg won't incubate on its own. Fortunately there are enough inflamable items lying across the board. Can you help drogo hatch out of his egg?",
 	"title2CarryTheFlame": "Spread Fire",
