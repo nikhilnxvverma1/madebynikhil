@@ -14,6 +14,8 @@
     "moment": "^2.10.6",
     "node-sass": "^3.3.2",
     "node-sass-middleware": "^0.9.7",
+    "nodemailer": "^2.3.1",
+    "nodemailer-mailgunapi-transport": "0.0.3",
     "underscore": "^1.8.3"
   },
   "devDependencies": {

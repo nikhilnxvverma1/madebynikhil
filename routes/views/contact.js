@@ -1,4 +1,6 @@
 var keystone = require('keystone');
+var express=require('express');
+var app=express();
 
 exports = module.exports = function(req, res) {
 
@@ -9,11 +11,36 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 	
-	console.log("Came to contact js");
-	console.log("name is "+req.body.senderName);
-	console.log("email is "+req.body.email);
-	console.log("message is "+req.body.message);
+	
+	var senderName=req.body.senderName;
+	var email=req.body.email;
+	var message=req.body.message;
 
-	res.send("true");
+	//Mail options
+  	mailOptions = {
+		from:email , //grab form data from the request body object
+		to: 'nikhilnxvverma1@aol.com',
+		subject: 'Website contact form',
+		text: message
+  	};
+
+	//   console.log("app is "+app.locals.toString());
+	
+
+	//use the global smtp transporter (defined in app.locals) tp send the mail
+	smtpTransport.sendMail(mailOptions,function(error,response){
+		//Email not sent
+		if (error) {
+			console.log("Contact form Error:"+error);
+			res.send("false");
+		}
+		// Email sent
+		else {
+			console.log("Email Sent to AOL");
+			res.send("true");
+		}
+	});
+
+	
 
 };

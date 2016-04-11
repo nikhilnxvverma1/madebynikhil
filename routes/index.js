@@ -23,6 +23,9 @@ var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 var i18n=require('i18n');
 var bodyParser=require('body-parser');
+var nodemailer=require('nodemailer');
+var mailgunApiTransport = require("nodemailer-mailgunapi-transport");
+var mg = require('nodemailer-mailgun-transport');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -34,9 +37,27 @@ var routes = {
 	views: importRoutes('./views')
 };
 
+//transporter for Contact me form. This is the email from which the mail will be sent
+// smtpTransport = nodemailer.createTransport('smtps://nikhilnxvverma1.madebynikhil@gmail.com:dypxmlfymkinkzws');
+
+// smtpTransport = nodemailer.createTransport(mailgunApiTransport({
+// 	apiKey: "key-dcd34916e6e7e574501473e8219289b1",
+// 	domain:""
+// }));
+
+var auth = {
+  auth: {
+    api_key: 'key-dcd34916e6e7e574501473e8219289b1',
+    domain: 'sandbox67041c2e8416402b87df55b588abf5e8.mailgun.org'
+  }
+}
+
+smtpTransport = nodemailer.createTransport(mg(auth));
+
 // Setup Route Bindings
 exports = module.exports = function(app) {
 	
+	//body-parser configuration for support of post parameters
 	app.use(bodyParser.json());//to support json encoded bodies
 	app.use(bodyParser.urlencoded({extended:true}));//to support url encoded bodies
 	
