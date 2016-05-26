@@ -1,15 +1,16 @@
 var plan = require('flightplan');
 
 var appName = 'madebynikhil';
-var username = 'deploy-madebynikhil';
-var startFile = 'keystone';
+var username = 'deploy';
+// var startFile = 'bin/www';
 
-var tmpDir = appName+'-' + new Date().getTime();
+// var tmpDir = appName+'-' + new Date().getTime();
+var tmpDir = appName+'-codebase';
 
 // configuration
 plan.target('staging', [
   {
-    host: '198.211.98.82',//same server for staging
+    host: '198.211.98.82',
     username: username,
     privateKey:'/Users/NikhilVerma/.ssh/id_rsa',
     agent: process.env.SSH_AUTH_SOCK
@@ -45,6 +46,8 @@ plan.local(function(local) {
 
 // run commands on remote hosts (destinations)
 plan.remote(function(remote) {
+  remote.log('Deleting last codebase from users home directory');
+  remote.rm('-rf ~/' + tmpDir);
   remote.log('Move folder to root');
   remote.sudo('cp -R /tmp/' + tmpDir + ' ~', {user: username});
   remote.rm('-rf /tmp/' + tmpDir);
@@ -53,7 +56,12 @@ plan.remote(function(remote) {
   remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
 
   remote.log('Reload application');
-  remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});
-  remote.exec('forever stop ~/'+appName+'/'+startFile, {failsafe: true});
-  remote.exec('forever start ~/'+appName+'/'+startFile);
+  remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});//symlink
+  remote.exec('pm2 stop '+appName, {failsafe: true});
+  remote.with('cd ~/'+tmpDir, function() {
+    remote.exec('pm2 start keystone.js'+' --name='+appName);
+  });
+  // remote.exec('cd ~/'+tmpDir);
+  // remote.exec('pm2 start keystone.js'+' --name='+appName);
+  // remote.exec('cd ~');//go back to home directory
 });

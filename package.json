@@ -16,10 +16,12 @@
     "node-sass": "^3.3.2",
     "node-sass-middleware": "^0.9.7",
     "nodemailer": "^2.3.1",
+    "nodemailer-mailgun-transport": "^1.0.2",
     "nodemailer-mailgunapi-transport": "0.0.3",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "flightplan": "^0.6.13",
     "fly": "^1.2.3",
     "gulp": "^3.7.0",
     "gulp-jshint": "^1.9.0",
