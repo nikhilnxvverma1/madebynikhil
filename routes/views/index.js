@@ -10,6 +10,6 @@ exports = module.exports = function(req, res) {
 	locals.section = 'home';
 	
 	// Render the view
-	view.render('landing-page',{layout:"header-content-footer.hbs"});
+	view.render('landing-page2',{layout:"content-footer.hbs"});
 	
 };

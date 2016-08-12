@@ -3,7 +3,7 @@
 var connectedBlueDots={
   "particles": {
     "number": {
-      "value": 200,
+      "value": 50,
       "density": {
         "enable": true,
         "value_area": 1736.1282367447595

@@ -2,7 +2,7 @@
 	"aboutMe": "About Me",
 	"aboutMePara1": "Hi, my name is Nikhil Verma. I am a Computer Science student at Rochester Institute of technology. I was previously employed at a web development firm. I made this website to share my creations (and other ramblings) with the rest of the world. My interests is in Computer graphics and simulation.",
 	"aboutMePara2": "Through this website, I hope to share my insight and development experiences with the rest of the community. ",
-	"downloadResume":"Download Resume",
+	"downloadResume": "Download Resume",
 	"skillsNTechnologies": "Skills and Technologies",
 	"projects": "Projects",
 	"titleProject1": "Carry the Flame",
@@ -28,8 +28,8 @@
 	"email": "Email",
 	"message": "Message",
 	"send": "Send",
-	"contactSuccess":"Thanks, I will get in touch with you soon!",
-	"contactFailure":"UH OH! Something went wrong. Please try again soon.",
+	"contactSuccess": "Thanks, I will get in touch with you soon!",
+	"contactFailure": "UH OH! Something went wrong. Please try again soon.",
 	"title1CarryTheFlame": "Help Drogo",
 	"detail1CarryTheFlame": "Young drogo is having a tough time coming out of his shell. His mother is not around and the egg won't incubate on its own. Fortunately there are enough inflamable items lying across the board. Can you help drogo hatch out of his egg?",
 	"title2CarryTheFlame": "Spread Fire",
@@ -64,5 +64,7 @@
 	"more": "More",
 	"about": "About",
 	"contact": "Contact",
-	"pageTitle": "Made By Nikhil"
+	"pageTitle": "Made By Nikhil",
+	"portfolio": "portfolio",
+	"Portfolio": "Portfolio"
 }

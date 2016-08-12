@@ -20,38 +20,135 @@
 
 // Add your own site style includes here
 @import "site/layout";
-//
-//@font-face {
-//  font-family: 'Material Icons';
-//  font-style: normal;
-//  font-weight: 400;
-//  src: local('../fonts/materialize/material-design-icons/Material-Design-Icons.eot'); /* For IE6-8 */
-//  src:
-//  url(http://localhost:3000/fonts/materialize/material-design-icons/Material-Design-Icons.woff) format('woff')
-//  
-//}
-//
-//.material-icons {
-//  font-family: 'Material Icons';
-//  font-weight: normal;
-//  font-style: normal;
-//  font-size: 24px;  /* Preferred icon size */
-//  display: inline-block;
-//  line-height: 1;
-//  text-transform: none;
-//  letter-spacing: normal;
-//  word-wrap: normal;
-//  white-space: nowrap;
-//  direction: ltr;
-//
-//  /* Support for all WebKit browsers. */
-//  -webkit-font-smoothing: antialiased;
-//  /* Support for Safari and Chrome. */
-//  text-rendering: optimizeLegibility;
-//
-//  /* Support for Firefox. */
-//  -moz-osx-font-smoothing: grayscale;
-//
-//  /* Support for IE. */
-//  font-feature-settings: 'liga';
-//}
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:300;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #4D4D4D;
+  font-weight:lighter;
+}
+
+.text-on-dark-bg{
+  color: #D0D0D0;
+}
+
+.verticallyCenterContainer{
+  position: relative;
+}
+
+.verticallyCenter{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.circleImage {
+  width:150px;
+  height:150px;
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top:50%;
+  left:50%;
+}
+
+.circleImageContainer{
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height:100px;
+}
+
+.profilePic{
+  width:100px;
+  height:100px;
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.major-top-padding{
+  padding-top:75px;
+}
+
+#profile-column{
+  padding-top:75px;
+}
+
+.logo-first-part{
+  /* madeby: */
+  font-size: 24px;
+  color: #4ED0FF;
+}
+
+.logo-second-part{
+  /* nikhil: */
+  font-size: 24px;
+  color: #FF9200;
+}
+
+#top-left-logo{
+  padding-left:20px;
+}
+
+#viewPortfolio{
+  position: absolute;
+  left:50%;
+  bottom:5%;
+  transform: translate(-50%,-50%);
+}
+
+#viewPortfolio {
+  h1,h2,h3,h4,h5,h6{
+	color:#D0D0D0;
+	font-size:1.3em;	
+  }
+}
+#viewPortfolio img{
+  width:20px;
+}
+
+#bio-and-contact{
+  h5{
+	font-weight:bold;
+  }
+  p{
+	font-size:1.2em;
+  }
+}
+
+.strong-inline{
+  font-size:1.2em;
+  font-weight:bold;
+}
+.slightly-bigger-text{
+  font-size:1.2em;
+}
+
+.info-unit{
+  padding-bottom:15px;
+}
+.info-unit{
+  .circleImageContainer{
+	width:50px;
+  }
+  .circleImage{
+	width:50px;
+  }
+}
+
+.grid-item{
+  //width:100%;
+}
+.grid-item img{
+  //width:100%;
+}
+
+.grid-sizer{
+  width:33%;
+}
