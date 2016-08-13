@@ -31,10 +31,30 @@
         var msnry = new Masonry( '.grid', {
             // options
 			itemSelector:".grid-item",
-			columnWidth:".grid-sizer",
-			percentPosition:true
+//			columnWidth:".grid-sizer",
+//			percentPosition:true
         });
 	});
+	
+	function showProjectDetail(element){
+		var overlayTeaserDiv=element.parentElement;
+		$(overlayTeaserDiv).animate({height:"100%"},200);
+		$(overlayTeaserDiv).find('.show-detail').css('display',"none");
+        $(overlayTeaserDiv).find('.project-title').css('display',"none");
+        $(overlayTeaserDiv).find('.project-brief').css('display',"none");
+        $(overlayTeaserDiv).find('.project-detail').css('display',"block");
+        $(overlayTeaserDiv).find('.hide-detail').css('display',"block");
+	}
+	
+	function hideProjectDetail(element){
+        var overlayTeaserDiv=element.parentElement;
+        $(overlayTeaserDiv).animate({height:"30%"},200);
+        $(overlayTeaserDiv).find('.show-detail').css('display',"block");
+        $(overlayTeaserDiv).find('.project-title').css('display',"block");
+        $(overlayTeaserDiv).find('.project-brief').css('display',"block");
+        $(overlayTeaserDiv).find('.project-detail').css('display',"none");
+        $(overlayTeaserDiv).find('.hide-detail').css('display',"none");
+	}
 
 </script>
 
@@ -47,7 +67,7 @@
 	}
 	
 	#connectedParticles{
-		widows: 100%;
+		width: 100%;
 		height:100%;
         background-image: linear-gradient(135deg, #0F4B6D 0%, #000E33 100%);
 	}
@@ -168,8 +188,8 @@
 		</div>
 	</div>
 	<div id="viewPortfolio" class="center-align text-on-dark-bg">
-		<a href="#">
-			<h6>View Portfolio</h6>
+		<a href="#portfolio">
+			<h6>{{__ "viewPortfolio"}}</h6>
 			<img src="/images/hollow-down-arrowhead.svg"/>
         </a>
 	</div>
@@ -186,34 +206,146 @@
 </div>
 
 
-<!--Projects-->
+<!--Portfolio-->
 
-<div class="section">
-    <div class="container"><h3>{{__ "Portfolio"}}</h3></div>
+<div class="section" id="portfolio">
+    <div class="container"><h3>{{__ "portfolio"}}</h3></div>
 	<div class="grid">
 		<div class="grid-item">
             <img class="activator" src="/images/project-teasers/carry-the-flame-tsr.jpg">
+			<a href="/apps/carry-the-flame">
+				<div class="overlay-info text-on-dark-bg">
+					<h5 class="project-title">{{__ "titleProject1"}}</h5>
+					<p>{{__ "detailProject1"}}</p>
+				</div>
+			</a>
+			<div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+				<!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+				<a href="/apps/carry-the-flame"><h5 class="project-title">{{__ "titleProject1"}}</h5></a>
+				<p class="project-brief">{{__ "briefProject1"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailProject1"}}</p>
+			</div>
 		</div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/timeshift-tsr.png">
+            <a href="https://github.com/nikhilnxvverma1/Timeshift">
+				<div class="overlay-info text-on-dark-bg">
+					<h5 class="project-title">{{__ "titleProject2"}}</h5>
+					<p>{{__ "detailProject2"}}</p>
+            	</div>
+			</a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="https://github.com/nikhilnxvverma1/Timeshift"><h5 class="project-title">{{__ "titleProject2"}}</h5></a>
+                <p class="project-brief">{{__ "briefProject2"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailProject2"}}</p>
+            </div>
         </div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/fine-tsr.png">
+            <a href="https://github.com/nikhilnxvverma1/fine">
+				<div class="overlay-info text-on-dark-bg">
+					<h5 class="project-title">{{__ "titleFine"}}</h5>
+					<p>{{__ "detailFine"}}</p>
+            	</div>
+			</a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="https://github.com/nikhilnxvverma1/fine"><h5 class="project-title">{{__ "titleFine"}}</h5></a>
+                <p class="project-brief">{{__ "briefFine"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailFine"}}</p>
+            </div>
         </div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/opengl-tsr.png">
+            <a href="https://gitlab.com/nikhilnxvverma1/chess-scene"><div class="overlay-info text-on-dark-bg">
+                <h5 class="project-title">{{__ "titleOpengl"}}</h5>
+                <p>{{__ "detailOpengl"}}</p>
+            </div></a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="https://gitlab.com/nikhilnxvverma1/chess-scene"><h5 class="project-title">{{__ "titleOpengl"}}</h5></a>
+                <p class="project-brief">{{__ "briefOpengl"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailOpengl"}}</p>
+            </div>
         </div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/snakes-ergo-tsr.png">
+            <a href="apps/snakes-ergo"><div class="overlay-info text-on-dark-bg">
+                <h5 class="project-title">{{__ "titleProject4"}}</h5>
+                <p>{{__ "detailProject4"}}</p>
+            </div></a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="apps/snakes-ergo"><h5 class="project-title">{{__ "titleProject4"}}</h5></a>
+                <p class="project-brief">{{__ "briefProject4"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailProject4"}}</p>
+            </div>
         </div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/sudoku-all-solver-tsr.png">
+            <a href="apps/sudoku-all-solver"><div class="overlay-info text-on-dark-bg">
+                <h5 class="project-title">{{__ "titleProject5"}}</h5>
+                <p>{{__ "detailProject5"}}</p>
+            </div></a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="apps/sudoku-all-solver"><h5 class="project-title">{{__ "titleProject5"}}</h5></a>
+                <p class="project-brief">{{__ "briefProject5"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailProject5"}}</p>
+            </div>
         </div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/laying-bricks-tsr.png">
+            <a href="apps/laying-bricks"><div class="overlay-info text-on-dark-bg">
+                <h5 class="project-title">{{__ "titleProject6"}}</h5>
+                <p>{{__ "detailProject6"}}</p>
+            </div></a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="apps/laying-bricks"><h5 class="project-title">{{__ "titleProject6"}}</h5></a>
+                <p class="project-brief">{{__ "briefProject6"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailProject6"}}</p>
+            </div>
         </div>
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/calc-tsr.png">
+            <a href="https://github.com/nikhilnxvverma1/Calculator-MVC">
+				<div class="overlay-info text-on-dark-bg">
+					<h5 class="project-title">{{__ "titleCalc"}}</h5>
+					<p>{{__ "detailCalc"}}</p>
+            	</div>
+			</a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href="https://github.com/nikhilnxvverma1/Calculator-MVC"><h5 class="project-title">{{__ "titleCalc"}}</h5></a>
+                <p class="project-brief">{{__ "briefCalc"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailCalc"}}</p>
+            </div>
         </div>
 		
 	</div>
@@ -224,32 +356,36 @@
 <div class="section" id="bio-and-contact">
 	<div class="container">
 		<div class="info-unit">
-			<h5>Education</h5>
-			<p>Completed Bachelors in Computer Science. Currently pursuing Masters in Computer Science from Rochester Institute of Technology.</p>
+			<h5>{{__ "education"}}</h5>
+			<p>{{__ "educationDetail"}}</p>
 		</div>
     	<div class="info-unit">
-			<h5>Work Experience</h5>
-    		<p>Worked previously as a Java web developer for 2 years. Several live side projects.</p>
+			<h5>{{__ "workEx"}}</h5>
+    		<p>{{__ "workExDetail"}}</p>
 		</div>
 		<div class="info-unit">
-			<span class="strong-inline">Email: </span>
-			<span class="slightly-bigger-text"> nikhilnxvverma1@gmail.com</span>
+			<span class="strong-inline">{{__ "Email"}}: </span>
+			<span class="slightly-bigger-text"> {{__ "emailValue"}}</span>
 		</div>
         <div class="info-unit">
-            <span class="strong-inline">Mobile: </span>
-            <span class="slightly-bigger-text"> 585-309-2778</span>
+            <span class="strong-inline">{{__ "mobile"}}: </span>
+            <span class="slightly-bigger-text"> {{__ "mobileValue"}}</span>
         </div>
 
         <div class="info-unit">
-            <div class="circleImageContainer waves-effect">
-                <img class="circleImage" src="/images/github-logo.svg"/>
-            </div>
-            <div class="circleImageContainer waves-effect">
-                <img class="circleImage" src="/images/linked-in-logo.svg"/>
-            </div>
+            <a href="https://github.com/nikhilnxvverma1">
+				<div class="circleImageContainer waves-effect">
+                	<img class="circleImage" src="/images/github-logo.svg"/>
+            	</div>
+			</a>
+            <a href="https://www.linkedin.com/in/nikhil-verma-1b867267?trk=hp-identity-photo">
+				<div class="circleImageContainer waves-effect">
+                	<img class="circleImage" src="/images/linked-in-logo.svg"/>
+            	</div>
+			</a>
         </div>
 		<div class="info-unit">
-			<a href="#">View full resume</a>
+			<a href="">{{__ "viewFullResume"}}</a>
 		</div>
         <div class="center-align">
 			<button class="btn waves-effect waves-light " type="button" name="action">{{__ "contactMe"}}</button>

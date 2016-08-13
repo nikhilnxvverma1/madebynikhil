@@ -21,6 +21,7 @@
 // Add your own site style includes here
 @import "site/layout";
 
+$dark-bg-font-color: #D0D0D0;
 body{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight:300;
@@ -32,7 +33,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .text-on-dark-bg{
-  color: #D0D0D0;
+  color: $dark-bg-font-color;
 }
 
 .verticallyCenterContainer{
@@ -105,7 +106,7 @@ h1,h2,h3,h4,h5,h6{
 
 #viewPortfolio {
   h1,h2,h3,h4,h5,h6{
-	color:#D0D0D0;
+	color: $dark-bg-font-color;
 	font-size:1.3em;	
   }
 }
@@ -143,12 +144,108 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .grid-item{
-  //width:100%;
+  position: relative;
 }
+
 .grid-item img{
-  //width:100%;
+  width:100%;
 }
 
 .grid-sizer{
   width:33%;
+}
+
+.overlay-info{
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  width:100%;
+  height:100%;
+  bottom:0;
+  left:0;
+  opacity:0;
+  transition: opacity 0.2s linear;
+  
+  p{
+	padding:0px 25px 25px 25px;
+  }
+  h5{
+	margin-bottom:5px;
+	margin-top:15px;
+	padding-left:25px;
+	color:$dark-bg-font-color;
+  }
+  
+}
+
+.overlay-info:hover{
+  opacity:1;
+}
+
+.overlay-teaser{
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  width:100%;
+  height:30%;
+  bottom:0;
+  left:0;
+  padding-left:20px;
+  padding-right:10px;
+  h5{
+	color:$dark-bg-font-color;
+	margin-bottom:0;
+  }
+  p{
+	margin-top:6px;
+  }
+  a{
+	color:$dark-bg-font-color;
+  }
+  i{
+	cursor: pointer;
+	float:right;
+	margin-top:12.3px; //same as the margin top of h5
+  }
+  .project-detail{
+	margin-top:32px;
+  }
+}
+
+
+
+//desktop
+@media screen and (min-width: 1024px){
+  .grid-item{
+	width:25%;
+  }
+  .overlay-teaser{
+	display: none;
+  }
+}
+
+//mobile
+@media only screen and (max-width: 667px) {
+  .grid-item{
+	width:100%;
+  }
+  .overlay-info{
+	display: none;
+  }
+  .overlay-teaser{
+	display: block;
+  }
+}
+
+//tablet
+@media only screen
+and (min-width: 667px)
+and (max-width: 1024px) {
+  .grid-item{
+	width:50%;
+  }
+  .overlay-info{
+	display: none;
+  }
+  .overlay-teaser{
+	display: block;
+  }
 }
