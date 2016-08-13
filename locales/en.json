@@ -1,6 +1,6 @@
 {
 	"aboutMe": "About Me",
-	"aboutMePara1": "Hi, my name is Nikhil Verma. I am a Computer Science student at Rochester Institute of technology. I am passionate about programming and design. I have worked on countless projects throughout my development life. I made this website to share my development experiences and insight with rest of the world. My interests is in graphics, simulation and UX.",
+	"aboutMePara1": "Hi, my name is Nikhil Verma. I am a Computer Science student at Rochester Institute of Technology. I am passionate about programming and design. I have worked on countless projects throughout my development life. I made this website to share my development experiences and insight with rest of the world. My interests is in graphics, simulation and UX.",
 	"aboutMePara2": "Through this website, I hope to share my insight and development experiences with the rest of the community. ",
 	"downloadResume": "Download Resume",
 	"skillsNTechnologies": "Skills and Technologies",
@@ -18,7 +18,7 @@
 	"briefProject4": "Snakes game for smartphones devices",
 	"detailProject4": "Features a custom joystick control for improved ergonomics.The game also includes several themes and grid sizes. ",
 	"titleProject5": "Sudoku all Solver",
-	"briefProject5": "Not just any solver, an \"All Solver\"",
+	"briefProject5": "iPhone app that instantly solves any sudoku problem",
 	"detailProject5": "Designed an algorithm capable of finding multiple solutions of a sudoku problem. For an incomplete problem (i.e one without a unique solution), it will give every possible combination that covers the puzzle. ",
 	"titleProject6": "Laying Bricks",
 	"briefProject6": "A pretty neat Tetris clone",
