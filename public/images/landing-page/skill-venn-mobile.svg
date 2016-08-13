@@ -648,7 +648,7 @@
 <text id="vennLeftTitle" transform="matrix(1 0 0 1 -88.7065 1365.712)" font-family="'MyriadPro-Regular'" font-size="30">Web</text>
 <text id="vennRightTitle" transform="matrix(1 0 0 1 51.8 1365.712)" font-family="'MyriadPro-Regular'" font-size="30">Apps</text>
 <text id="vennBottomTitle" transform="matrix(1 0 0 1 -31.2524 1490.6526)" font-family="'MyriadPro-Regular'" font-size="30">Games</text>
-<text transform="matrix(1 0 0 1 167.9155 1216.9557)" font-family="'MyriadPro-Bold'" font-size="18">User Experience</text>
+<text transform="matrix(1 0 0 1 147.9155 1216.9557)" font-family="'MyriadPro-Bold'" font-size="18">Design and Prototype</text>
 <text transform="matrix(1 0 0 1 -299.7041 1216.9557)" font-family="'MyriadPro-Bold'" font-size="18">Java, iOS, Node</text>
 <text transform="matrix(1 0 0 1 -91.7065 1260.3208)" font-family="'MyriadPro-Bold'" font-size="18">Angular JS</text>
 <text transform="matrix(1 0 0 1 -200.3789 1281.73)" font-family="'MyriadPro-Bold'" font-size="18">Materialize</text>
@@ -662,7 +662,7 @@
 <text transform="matrix(1 0 0 1 165.3623 1368.1265)" font-family="'MyriadPro-Bold'" font-size="18">Core Data</text>
 <text transform="matrix(1 0 0 1 124.8628 1448.4819)" font-family="'MyriadPro-Bold'" font-size="18">XML</text>
 <text transform="matrix(1 0 0 1 157.4048 1399.6548)" font-family="'MyriadPro-Bold'" font-size="18">Electron</text>
-<text transform="matrix(1 0 0 1 101.0801 1464.2075)" font-family="'MyriadPro-Bold'" font-size="18">Illustrator/Photoshop</text>
+<text transform="matrix(1 0 0 1 101.0801 1464.2075)" font-family="'MyriadPro-Bold'" font-size="18">Illustrator/Sketch</text>
 <text transform="matrix(1 0 0 1 -301.0132 1586.2056)" font-family="'MyriadPro-Bold'" font-size="18">Strong OOP Skills</text>
 <text transform="matrix(1 0 0 1 -200.3789 1449.1068)" font-family="'MyriadPro-Bold'" font-size="18">Cocos2D-JS</text>
 <text transform="matrix(1 0 0 1 -214.124 1464.2081)" font-family="'MyriadPro-Bold'" font-size="18">Particle Systems</text>

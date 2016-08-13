@@ -34,6 +34,11 @@
 //			columnWidth:".grid-sizer",
 //			percentPosition:true
         });
+        $("#viewPortfolio").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#portfolio").offset().top
+            }, 1000);
+        });
 	});
 	
 	function showProjectDetail(element){
@@ -159,7 +164,7 @@
     <nav style="background: transparent;box-shadow:none">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo valign" id="top-left-logo">
-				<span class="logo-first-part">madeby</span><span class="logo-second-part">nikhil</span>
+				<span class="logo-first-part">{{__ "madeBy"}}</span><span class="logo-second-part">{{__ "nikhil"}}</span>
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
@@ -188,10 +193,8 @@
 		</div>
 	</div>
 	<div id="viewPortfolio" class="center-align text-on-dark-bg">
-		<a href="#portfolio">
 			<h6>{{__ "viewPortfolio"}}</h6>
 			<img src="/images/hollow-down-arrowhead.svg"/>
-        </a>
 	</div>
 </div>        
 
@@ -388,7 +391,7 @@
 			<a href="">{{__ "viewFullResume"}}</a>
 		</div>
         <div class="center-align">
-			<button class="btn waves-effect waves-light " type="button" name="action">{{__ "contactMe"}}</button>
+			<a class="btn waves-effect waves-light " href="mailto:nikhilnxvverma1@gmail.com?subject=Made by Nikhil">{{__ "contactMe"}}</a>
 		</div>
 	</div>
 </div>
