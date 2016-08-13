@@ -7,27 +7,10 @@
 		//load the particle system,
 		//connectedBlueDots is defined in config file(blue-connected.json)
 		particlesJS('connectedParticles',connectedBlueDots);
+
+        $(".button-collapse").sideNav();
+        $('.dropdown-button').dropdown({hover:false});
 		
-		
-		//event handler for the contact form submission
-		$("#contactMe").click(function(){
-			
-			var senderName=$('#senderName').val();
-			var email=$('#email').val();
-			var message=$('#message').val();
-			$.post('/contact',{'senderName':senderName,'email':email,'message':message},function(result){
-				if(result=='true'){
-					//success
-					Materialize.toast('{{__ 'contactSuccess'}}', 4000) // 4000 is the duration of the toast
-					$('#senderName').val('');
-					$('#email').val('');
-					$('#message').val('');							
-				}else{
-					//failure
-					Materialize.toast('{{__ 'contactFailure'}}', 4000) // 4000 is the duration of the toast
-				}
-			});
-		});
         var msnry = new Masonry( '.grid', {
             // options
 			itemSelector:".grid-item",
@@ -182,12 +165,12 @@
         </div>
     </nav>
     <div class="row verticallyCenter">
-        <div class="col offset-s6 s2 offset-m4 m2 offset-l3 l1 major-top-padding" id="profile-column">
+        <div class="col offset-s4 s2 offset-m4 m2 offset-l3 l1 major-top-padding" id="profile-column">
             <div class="circleImageContainer waves-effect">
             	<img class="circleImage profilePic" src="/images/mugshot.jpg" >
 			</div>
         </div>
-		<div class="col s12 m8 offset-l2 l4">
+		<div class="col s12 offset-m2 m8 offset-l2 l4">
 			<h3 class="text-on-dark-bg">{{__ "aboutMe"}}</h3>
 			<p class="text-on-dark-bg">{{__ "aboutMePara1"}}</p>
 		</div>
@@ -388,7 +371,7 @@
 			</a>
         </div>
 		<div class="info-unit">
-			<a href="">{{__ "viewFullResume"}}</a>
+			<a href="/resume.pdf">{{__ "viewFullResume"}}</a>
 		</div>
         <div class="center-align">
 			<a class="btn waves-effect waves-light " href="mailto:nikhilnxvverma1@gmail.com?subject=Made by Nikhil">{{__ "contactMe"}}</a>
