@@ -221,6 +221,9 @@ h1,h2,h3,h4,h5,h6{
   .overlay-teaser{
 	display: none;
   }
+  .grid-sizer{
+	width:25%;
+  }
 }
 
 //mobile
@@ -233,6 +236,9 @@ h1,h2,h3,h4,h5,h6{
   }
   .overlay-teaser{
 	display: block;
+  }
+  .grid-sizer{
+	width:100%;
   }
 }
 
@@ -248,5 +254,8 @@ and (max-width: 1024px) {
   }
   .overlay-teaser{
 	display: block;
+  }
+  .grid-sizer{
+	width:50%;
   }
 }

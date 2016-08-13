@@ -8692,7 +8692,9 @@ h1, h2, h3, h4, h5, h6 {
   .grid-item {
     width: 25%; }
   .overlay-teaser {
-    display: none; } }
+    display: none; }
+  .grid-sizer {
+    width: 25%; } }
 
 @media only screen and (max-width: 667px) {
   .grid-item {
@@ -8700,7 +8702,9 @@ h1, h2, h3, h4, h5, h6 {
   .overlay-info {
     display: none; }
   .overlay-teaser {
-    display: block; } }
+    display: block; }
+  .grid-sizer {
+    width: 100%; } }
 
 @media only screen and (min-width: 667px) and (max-width: 1024px) {
   .grid-item {
@@ -8708,4 +8712,6 @@ h1, h2, h3, h4, h5, h6 {
   .overlay-info {
     display: none; }
   .overlay-teaser {
-    display: block; } }
+    display: block; }
+  .grid-sizer {
+    width: 50%; } }

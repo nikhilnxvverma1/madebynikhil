@@ -11,18 +11,22 @@
         $(".button-collapse").sideNav();
         $('.dropdown-button').dropdown({hover:false});
 		
-        var msnry = new Masonry( '.grid', {
-            // options
-			itemSelector:".grid-item",
-//			columnWidth:".grid-sizer",
-//			percentPosition:true
-        });
+		
         $("#viewPortfolio").click(function() {
             $('html, body').animate({
                 scrollTop: $("#portfolio").offset().top
             }, 1000);
         });
 	});
+
+    //wait for all the images to load up before calling masanory
+    $(window).load(function(){
+        var msnry = new Masonry( '.grid', {
+            // options
+            itemSelector:".grid-item",
+			columnWidth:".grid-item",
+        });
+    });
 	
 	function showProjectDetail(element){
 		var overlayTeaserDiv=element.parentElement;
