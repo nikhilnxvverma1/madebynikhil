@@ -8692,6 +8692,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
   font-weight: 500; }
 
+#connectedParticles {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, #0F4B6D 0%, #000E33 100%); }
+
 @media screen and (min-width: 1024px) {
   .grid-item {
     width: 25%; }
@@ -8708,7 +8713,9 @@ h1, h2, h3, h4, h5, h6 {
   .overlay-teaser {
     display: block; }
   .grid-sizer {
-    width: 100%; } }
+    width: 100%; }
+  #connectedParticles {
+    height: 135%; } }
 
 @media only screen and (min-width: 667px) and (max-width: 1024px) {
   .grid-item {
@@ -8718,4 +8725,12 @@ h1, h2, h3, h4, h5, h6 {
   .overlay-teaser {
     display: block; }
   .grid-sizer {
-    width: 50%; } }
+    width: 50%; }
+  #connectedParticles {
+    height: 120%; } }
+
+@media only screen and (max-width: 1024px) {
+  #connectedParticles {
+    position: relative; }
+  #viewPortfolio {
+    bottom: 0; } }
