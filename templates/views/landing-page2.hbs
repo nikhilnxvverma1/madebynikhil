@@ -117,6 +117,8 @@
 <!--Connected Particles-->
 <div id="connectedParticles">
     <ul id="appsDropdownForNonMobile" class="dropdown-content">
+        <li><a href="http://www.fileneat.com/">{{__ "fileNeat"}}</a></li>
+	    <li class="divider"></li>
         <li><a href="/apps/carry-the-flame">{{__ "carryTheFlame"}}</a></li>
         <li class="divider"></li>
         <li><a href="/apps/sudoku-all-solver">{{__ "sudokuAllSolver"}}</a></li>
@@ -126,6 +128,8 @@
         <li><a href="/apps/laying-bricks">{{__ "layingBricks"}}</a></li>
     </ul>
     <ul id="appsDropdownMobile" class="dropdown-content">
+        <li><a href="http://www.fileneat.com/">{{__ "fileNeat"}}</a></li>
+	    <li class="divider"></li>
         <li><a href="/apps/carry-the-flame">{{__ "carryTheFlame"}}</a></li>
         <li class="divider"></li>
         <li><a href="/apps/sudoku-all-solver">{{__ "sudokuAllSolver"}}</a></li>
@@ -135,6 +139,8 @@
         <li><a href="/apps/laying-bricks">{{__ "layingBricks"}}</a></li>
     </ul>
     <ul id="projectsDropdownForNonMobile" class="dropdown-content">
+        <li><a href="https://github.com/nikhilnxvverma1/recycle-fling">{{__ "titleRecycleRampage"}}</a></li>
+	    <li class="divider"></li>
         <li><a href="https://github.com/nikhilnxvverma1/Timeshift">{{__ "timeshift"}}</a></li>
         <li class="divider"></li>
         <li><a href="http://devpost.com/software/graphit">{{__ "graphIt"}}</a></li>
@@ -142,6 +148,8 @@
         <li><a href="http://devpost.com/software/spot-search">{{__ "spotSearch"}}</a></li>
     </ul>
     <ul id="projectsDropdownMobile" class="dropdown-content">
+        <li><a href="https://github.com/nikhilnxvverma1/recycle-fling">{{__ "titleRecycleRampage"}}</a></li>
+	    <li class="divider"></li>
         <li><a href="https://github.com/nikhilnxvverma1/Timeshift">{{__ "timeshift"}}</a></li>
         <li class="divider"></li>
         <li><a href="http://devpost.com/software/graphit">{{__ "graphIt"}}</a></li>
@@ -176,7 +184,13 @@
         </div>
 		<div class="col s12 offset-m2 m8 offset-l2 l4">
 			<h3 class="text-on-dark-bg">{{__ "aboutMe"}}</h3>
-			<p class="text-on-dark-bg">{{__ "aboutMePara1"}}</p>
+			<p class="text-on-dark-bg">
+                {{__ "aboutMePara1"}}
+                <a class="header-description-links" href='http://www.fileneat.com/'>{{__ "fileNeat"}}</a>
+                {{__ "and"}}
+                <a class="header-description-links" href='/apps/carry-the-flame'>{{__ "carryTheFlame"}}</a>
+                {{__ "aboutMePara1AfterLinks"}}
+			</p>
 		</div>
 	</div>
 	<div id="viewPortfolio" class="center-align text-on-dark-bg">
@@ -220,6 +234,24 @@
 			</div>
 		</div>
         <div class="grid-item">
+            <img class="activator" src="http://res.cloudinary.com/madebynikhil/image/upload/c_scale,h_300,w_400/v1474842369/fine-sunburst_cvvjdj.png">
+            <a href='http://www.fileneat.com/'>
+				<div class="overlay-info text-on-dark-bg">
+					<h5 class="project-title">{{__ "titleFine"}}</h5>
+					<p>{{__ "detailFine"}}</p>
+            	</div>
+			</a>
+            <div class="overlay-teaser text-on-dark-bg">
+                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
+                <!--Close button (this will be toggled through the click/tap handlers)-->
+                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
+                <a href='http://www.fileneat.com/'><h5 class="project-title">{{__ "titleFine"}}</h5></a>
+                <p class="project-brief">{{__ "briefFine"}}</p>
+                <!--Detail about project(this will be toggled through the click/tap handlers)-->
+                <p class="project-detail" style="display: none;">{{__ "detailFine"}}</p>
+            </div>
+        </div>
+        <div class="grid-item">
             <img class="activator" src="/images/project-teasers/timeshift-tsr.png">
             <a href="https://github.com/nikhilnxvverma1/Timeshift">
 				<div class="overlay-info text-on-dark-bg">
@@ -237,24 +269,7 @@
                 <p class="project-detail" style="display: none;">{{__ "detailProject2"}}</p>
             </div>
         </div>
-        <div class="grid-item">
-            <img class="activator" src="/images/project-teasers/fine-tsr.png">
-            <a href="https://github.com/nikhilnxvverma1/fine">
-				<div class="overlay-info text-on-dark-bg">
-					<h5 class="project-title">{{__ "titleFine"}}</h5>
-					<p>{{__ "detailFine"}}</p>
-            	</div>
-			</a>
-            <div class="overlay-teaser text-on-dark-bg">
-                <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
-                <!--Close button (this will be toggled through the click/tap handlers)-->
-                <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
-                <a href="https://github.com/nikhilnxvverma1/fine"><h5 class="project-title">{{__ "titleFine"}}</h5></a>
-                <p class="project-brief">{{__ "briefFine"}}</p>
-                <!--Detail about project(this will be toggled through the click/tap handlers)-->
-                <p class="project-detail" style="display: none;">{{__ "detailFine"}}</p>
-            </div>
-        </div>
+        
         <div class="grid-item">
             <img class="activator" src="/images/project-teasers/opengl-tsr.png">
             <a href="https://gitlab.com/nikhilnxvverma1/chess-scene"><div class="overlay-info text-on-dark-bg">
@@ -320,21 +335,21 @@
             </div>
         </div>
         <div class="grid-item">
-            <img class="activator" src="/images/project-teasers/calc-tsr.png">
-            <a href="https://github.com/nikhilnxvverma1/Calculator-MVC">
+            <img class="activator" src="/images/project-teasers/recycle-rampage-tsr.png">
+            <a href="https://github.com/nikhilnxvverma1/recycle-fling">
 				<div class="overlay-info text-on-dark-bg">
-					<h5 class="project-title">{{__ "titleCalc"}}</h5>
-					<p>{{__ "detailCalc"}}</p>
+					<h5 class="project-title">{{__ "titleRecycleRampage"}}</h5>
+					<p>{{__ "detailRecycleRampage"}}</p>
             	</div>
 			</a>
             <div class="overlay-teaser text-on-dark-bg">
                 <i class="material-icons show-detail" onclick="showProjectDetail(this)">more_vert</i>
                 <!--Close button (this will be toggled through the click/tap handlers)-->
                 <i class="material-icons hide-detail" onclick="hideProjectDetail(this)" style="display: none;">close</i>
-                <a href="https://github.com/nikhilnxvverma1/Calculator-MVC"><h5 class="project-title">{{__ "titleCalc"}}</h5></a>
-                <p class="project-brief">{{__ "briefCalc"}}</p>
+                <a href="https://github.com/nikhilnxvverma1/Calculator-MVC"><h5 class="project-title">{{__ "titleRecycleRampage"}}</h5></a>
+                <p class="project-brief">{{__ "briefRecycleRampage"}}</p>
                 <!--Detail about project(this will be toggled through the click/tap handlers)-->
-                <p class="project-detail" style="display: none;">{{__ "detailCalc"}}</p>
+                <p class="project-detail" style="display: none;">{{__ "detailRecycleRampage"}}</p>
             </div>
         </div>
 		

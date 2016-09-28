@@ -1,9 +1,9 @@
 <div class="container">
-	<h1>{{__ "blog"}}</h1>
+	<h2>{{__ "blog"}}</h2>
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col s8 m9">
+		<div class="col s12 m9 l10">
 			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
 			<div class="blog">
 				{{# each data.posts.results}}
@@ -18,8 +18,8 @@
 				{{/each}}
 			</div>
 		</div>
-		<div class="col s4 m3">
-			<h2>Categories: </h2>
+		<div class="col m3 l2 hide-on-small-only">
+			<h4>Categories: </h4>
 			<div style="margin-top: 70px;" class="collection">
 				{{! get total count of posts from controller}}
 				{{#ifeq filters.category null}}

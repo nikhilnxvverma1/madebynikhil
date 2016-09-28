@@ -8688,6 +8688,10 @@ h1, h2, h3, h4, h5, h6 {
   .overlay-teaser .project-detail {
     margin-top: 32px; }
 
+.header-description-links {
+  color: #ffffff !important;
+  font-weight: 500; }
+
 @media screen and (min-width: 1024px) {
   .grid-item {
     width: 25%; }
