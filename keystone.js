@@ -20,7 +20,7 @@ keystone.init({
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
-	'cloudinary config':'cloudinary://776549184149912:DyBfSnI3vF9UUlePOeHrJcmm1_Q@madebynikhil',
+	'cloudinary config':process.env.CLOUDINARY_KEY,
 	'views': 'templates/views',
 	'view engine': 'hbs',
 	
@@ -36,7 +36,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret':'e5266c0b79cd713f87efda4d562f6cad95efb292188c902871c91fc9f83d5d1bac8252c43cec032dfce8b0a27146991cfa8c350499ddf6739e9a5ecd1e6fd76f'	
+	'cookie secret':process.env.COOKIE_SECRET
 
 });
 
