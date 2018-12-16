@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{.Title }}</title>
+</head>
+<body>
+	{{block "header" .}} {{partial "header.html" .}} {{end}}
+	{{block "main" .}} {{end}}
+	{{block "footer" .}} {{partial "footer.html" .}} {{end}}
+  </body>
+</html>
