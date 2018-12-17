@@ -1,0 +1,190 @@
+["defaultHtmlTitle"]
+ other = "MadeByNikhil"
+["aboutMe"]
+ other =  "About Me"
+["aboutMePara1"]
+ other =  "Hi, I am Nikhil Verma, creator of "
+["fileNeat"]
+ other = "File Neat"
+["and"]
+ other = " and "
+["aboutMePara1AfterLinks"]
+ other = ". As a full stack developer, I love working on crazy ideas that delight the user. Currently, I am pursuing my masters degree in computer science from Rochester Institute of Technology. I have worked on several side projects and apps. I made this website to share some of my development experiences and insights. My interests is in computer graphics, simulation and user experience."
+["aboutMePara2"]
+ other =  "Through this website, I hope to share my insight and development experiences with the rest of the community. "
+["downloadResume"]
+ other =  "Download Resume"
+["skillsNTechnologies"]
+ other =  "Skills and Technologies"
+["projects"]
+ other =  "Projects"
+["titleProject1"]
+ other =  "Carry the Flame"
+["briefProject1"]
+ other =  "Spread fire, burn stuff, Carry the flame"
+["detailProject1"]
+ other =  "A unique simulation based puzzle game for iPad. Spread fire across a variety of inflammable items until it reaches its target. The development involved a physics simulated gameplay mechanic, several artwork resources, sound, music, and a (pretty detailed) XML based level editor right inside the app."
+["titleProject2"]
+ other =  "Timeshift"
+["briefProject2"]
+ other =  "A keyframe based animation editor"
+["detailProject2"]
+ other =  "An animation tool that allows tweaking and keyframing several properties of shapes on a timeline. With support for undoable operations, the editor comprises of a canvas with several tools, a keyframe table containing list of shapes in the workspace, fully functional selection system,a graph editor,shape specific gizmos."
+["titleProject3"]
+ other =  "Spot Search"
+["briefProject3"]
+ other =  "A nifty search tool for music"
+["detailProject3"]
+ other =  "This application provides music results for a search query and beautifully displays them to the user. It hits the spotify web API to get the results and categorizes them across three tabs : Tracks, Albums and Artists. Clicking on any result will take the user straight to the Spotify Web Player for that song."
+["titleProject4"]
+ other =  "Snakes Ergo"
+["briefProject4"]
+ other =  "Snakes game for smartphones devices"
+["detailProject4"]
+ other =  "Features a custom joystick control for improved ergonomics.The game also includes several themes and grid sizes. "
+["titleProject5"]
+ other =  "Sudoku all Solver"
+["briefProject5"]
+ other =  "iPhone app that instantly solves any sudoku problem"
+["detailProject5"]
+ other =  "Designed an algorithm capable of finding multiple solutions of a sudoku problem. For an incomplete problem (i.e one without a unique solution), it will give every possible combination that covers the puzzle. "
+["titleProject6"]
+ other =  "Laying Bricks"
+["briefProject6"]
+ other =  "A pretty neat Tetris clone"
+["detailProject6"]
+ other =  "Fun to play on a smartphone device. The controls are simple and sound effects are nice."
+["titleFine"]
+ other =  "File Neat"
+["briefFine"]
+ other =  "Disk usage + File organization tool"
+["detailFine"]
+ other =  "File Neat is an HTML5 based disk utility application that scans through a users file system and shows them their disk usage in a beautiful sunburst chart. It also has a file browser which allows carrying out bulk file operations without needing to rescan the file system."
+["titleOpengl"]
+ other =  "OpenGL Scene"
+["briefOpengl"]
+ other =  "3D Scene created using OpenGL"
+["detailOpengl"]
+ other =  "As part of the final project for the Computer Graphics course, this 3 day project involved creating a 3D scene in OpenGL with shaders used for lightening and texture calculations."
+["titleCalc"]
+ other =  "Calculator"
+["briefCalc"]
+ other =  "A versatile calculator"
+["detailCalc"]
+ other =  "Developed in JavaFX, the calculator supports evaluation of complex mathematical expressions involving brackets and boolean operations"
+["titleRecycleRampage"]
+ other = "Recycle Rampage"
+["briefRecycleRampage"]
+ other = "A recycling game developed in a Unity"
+["detailRecycleRampage"]
+ other = "This was done at a 36 hour hackathon held at Cornell University. Our team comprised of an artist and 2 developers. I developed the main gameplay mechanic while my partner wrote code for handling the UI. We ended up winning the best UI/UX prize category."
+["contactMe"]
+ other =  "Contact Me"
+["name"]
+ other =  "Name"
+["message"]
+ other =  "Message"
+["send"]
+ other =  "Send"
+["contactSuccess"]
+ other =  "Thanks, I will get in touch with you soon!"
+["contactFailure"]
+ other =  "UH OH! Something went wrong. Please try again soon."
+["title1CarryTheFlame"]
+ other =  "Help Drogo"
+["detail1CarryTheFlame"]
+ other =  "Young drogo is having a tough time coming out of his shell. His mother is not around and the egg won't incubate on its own. Fortunately there are enough inflamable items lying across the board. Can you help drogo hatch out of his egg?"
+["title2CarryTheFlame"]
+ other =  "Spread Fire"
+["detail2CarryTheFlame"]
+ other =  "Your job is to spread fire till it reaches the egg. Use Matchsticks, Rockets,  Gunpowder and several other household items littered on the table to create a chain reaction that carries the flame straight to drogo's shell."
+["title3CarryTheFlame"]
+ other =  "Mind your Surroundings"
+["detail3CarryTheFlame"]
+ other =  "Remember, you gotta keep the flame alive. This means, water, ice and wind are your worst enemies. If you run out of fire, you lose. "
+["title1Sudoku"]
+ other =  "Solves Any..Solves All"
+["detail1Sudoku"]
+ other =  "Don't bother putting all the numbers in. Our \"Number Map\" algorithm is intelligent enough to give instant solution to any problem, including partially filled ones. You can navigate back and forth between the different solutions."
+["title2Sudoku"]
+ other =  "Easy.Medium.Hard"
+["detail2Sudoku"]
+ other =  "Having a robust solver is great. Having a randomly generated puzzle section is better. Just choose your difficultly setting and off you go. There is a handy hint feature too, for a more casual experience."
+["title3Sudoku"]
+ other =  "Unlimited.Overloaded"
+["detail3Sudoku"]
+ other =  "Sudokus are crazy. There a are like a gazillion possible combinations that fit the grid. You can randomly generate each one these (because why not). There is a pause button too, in case you fall in love with one."
+["pageTitleSnakes"]
+ other =  "Snakes Ergo"
+["title1Snakes"]
+ other =  "Classic.Simple.Mobile"
+["detail1Snakes"]
+ other =  "We introduced a new control system for touchscreen devices. Its basicallya a cross shaped widget that can be moved anywhere across the screen. You tap on the four sections of the cross to control the snake."
+["title2Snakes"]
+ other =  "Grid Size.Customizable"
+["detail2Snakes"]
+ other =  "No one likes running out of grid space for their snake. No one likes loosing early either .Choose a small grid if you are new. Once you get better, move to a larger grid."
+["title3Snakes"]
+ other =  "Themes.Many"
+["detail3Snakes"]
+ other =  "Old doesn't mean ugly. This app packs a variety of themes to choose from. The classic gray theme is also included."
+["carryTheFlame"]
+ other =  "Carry the Flame"
+["sudokuAllSolver"]
+ other =  "Sudoku All Solver"
+["snakesErgo"]
+ other =  "Snakes Ergo"
+["layingBricks"]
+ other =  "Laying Bricks"
+["timeshift"]
+ other =  "Timeshift"
+["graphIt"]
+ other =  "Graph It"
+["spotSearch"]
+ other =  "Spot Search"
+["home"]
+ other =  "Home"
+["blog"]
+ other =  "Blog"
+["apps"]
+ other =  "Apps"
+["pageTitleSudoku"]
+ other =  "Sudoku all Solver"
+["pageTitleCarryTheFlame"]
+ other =  "Carry the Flame"
+["more"]
+ other =  "More"
+["about"]
+ other =  "About"
+["contact"]
+ other =  "Contact Me"
+["pageTitle"]
+ other =  "Made By Nikhil"
+["portfolio"]
+ other =  "Portfolio"
+["education"]
+ other =  "Education"
+["educationDetail"]
+ other =  "Completed Bachelors in Computer Science. Currently pursuing Masters in Computer Science from Rochester Institute of Technology."
+["workEx"]
+ other =  "Work Experience"
+["workExDetail"]
+ other =  "Worked previously as a Java web developer for 2 years. Several live side projects."
+["email"]
+ other =  "Email"
+["emailValue"]
+ other =  "nikhilnxvverma1@gmail.com"
+["mobile"]
+ other =  "Mobile"
+["mobileValue"]
+ other =  "585-309-2778"
+["viewPortfolio"]
+ other =  "View Portfolio"
+["viewFullResume"]
+ other =  "View Full Resume"
+["Email"]
+ other =  "Email"
+["madeBy"]
+ other = "madeby"
+["nikhil"]
+ other = "nikhil"
