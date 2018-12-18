@@ -37,3 +37,6 @@ node_modules
 
 # Nginx configuration file
 madebynikhil.conf
+
+# Scratch work used during migration process
+scratch

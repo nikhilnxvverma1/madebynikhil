@@ -1,10 +1,69 @@
-{{$activeLink := .Params.activeLink}}
-<header class="outer-margin-offset">
-	<nav>
+ <!--Navigation menu (Header section)-->
+ <!--<title>{glitch} gone</title>-->
+<script>
+	$(document).ready(function(){
+		$(".button-collapse").sideNav(); 
+		$('.dropdown-button').dropdown({hover:false});
+	});
 
-		<li>first</li>
-		<li>second</li>
-		<li>third</li>
-		<li>fourth</li>
-	</nav>
-</header>
+</script>
+<ul id="appsDropdownForNonMobile" class="dropdown-content">
+	<li><a href="http://www.fileneat.com/">{{i18n "fileNeat"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/carry-the-flame">{{i18n "carryTheFlame"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/sudoku-all-solver">{{i18n "sudokuAllSolver"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/snakes-ergo">{{i18n "snakesErgo"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/laying-bricks">{{i18n "layingBricks"}}</a></li>
+</ul>
+<ul id="appsDropdownMobile" class="dropdown-content">
+	<li><a href="http://www.fileneat.com/">{{i18n "fileNeat"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/carry-the-flame">{{i18n "carryTheFlame"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/sudoku-all-solver">{{i18n "sudokuAllSolver"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/snakes-ergo">{{i18n "snakesErgo"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="/apps/laying-bricks">{{i18n "layingBricks"}}</a></li>
+</ul>
+<ul id="projectsDropdownForNonMobile" class="dropdown-content">
+	<li><a href="https://github.com/nikhilnxvverma1/recycle-fling">{{i18n "titleRecycleRampage"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="https://github.com/nikhilnxvverma1/Timeshift">{{i18n "timeshift"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="http://devpost.com/software/graphit">{{i18n "graphIt"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="http://devpost.com/software/spot-search">{{i18n "spotSearch"}}</a></li>
+</ul>
+<ul id="projectsDropdownMobile" class="dropdown-content">
+	<li><a href="https://github.com/nikhilnxvverma1/recycle-fling">{{i18n "titleRecycleRampage"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="https://github.com/nikhilnxvverma1/Timeshift">{{i18n "timeshift"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="http://devpost.com/software/graphit">{{i18n "graphIt"}}</a></li>
+	<li class="divider"></li>
+	<li><a href="http://devpost.com/software/spot-search">{{i18n "spotSearch"}}</a></li>
+</ul>
+<nav>
+	<div class="nav-wrapper">  
+		<a href="/" class="brand-logo valign" id="top-left-logo">
+            <span class="logo-first-part">{{i18n "madeBy"}}</span><span class="logo-second-part">{{i18n "nikhil"}}</span>
+		</a>
+		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		<ul class="right hide-on-med-and-down">
+		<li><a href="/">{{i18n "home"}}</a></li>
+		<li><a href="/blog">{{i18n "blog"}}</a></li>
+		<li><a class="dropdown-button" href="#!" data-activates="appsDropdownForNonMobile">{{i18n "apps"}} <i class="material-icons right">arrow_drop_down</i></a></li>
+		<li><a class="dropdown-button" href="#!" data-activates="projectsDropdownForNonMobile">{{i18n "projects"}} <i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+		<ul class="side-nav" id="mobile-demo">
+		<li><a href="/">{{i18n "home"}}</a></li>
+		<li><a href="/blog">{{i18n "blog"}}</a></li>
+		<li><a class="dropdown-button" href="#!" data-activates="appsDropdownMobile">{{i18n "apps"}}<i class="material-icons right">arrow_drop_down</i></a></li>
+		<li><a class="dropdown-button" href="#!" data-activates="projectsDropdownMobile">{{i18n "projects"}}<i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+	</div>
+</nav>
