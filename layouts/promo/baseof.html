@@ -1,19 +1,21 @@
 
-<!-- Body Footer -->
+<!-- Header Body -->
 
 <!doctype html>
 <html>
 	<head>
+		{{block "jquery-materialize" .}} {{partial "jquery-materialize" .}} {{end}}
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		{{block "jquery-materialize" .}} {{partial "jquery-materialize" .}} {{end}}
 		<title>{{.Title }}</title>
 	</head>
 	<body>
+
+		<!-- Header -->
+		{{block "header" .}} {{partial "header" .}} {{end}}
+
 		<!-- Body -->
 		{{block "main" .}}{{end}}
 
-		<!-- Footer -->
-		{{block "footer" .}} {{partial "footer" .}} {{end}}
     </body>
 </html>
