@@ -1,0 +1,126 @@
+
+<style>
+	/* Changes to header*/
+	.nav-wrapper{
+		background-color: #e13e29;
+	}
+	/* End of changes to header*/
+	body{
+			margin: 0px;
+			background-color: #a0d2fa;
+		}
+		
+		.featureHeading{
+/*                background-color: black;*/
+/*                color: #ededed;*/
+/*                padding-left: 5px;*/
+/*                padding-right: 5px;*/
+		}
+		
+		.featureSection{
+			padding-top: 50px;
+			padding-bottom: 20px;
+		}
+		
+		.logoContainer{
+			background:#17558a;
+			text-align: end;
+			position: relative;
+		}
+		#logo{
+			padding-top:20px;
+			padding-bottom: 10px;
+		}
+		
+		.headerImages{
+			position: relative;
+			width: 100%;
+		}
+		#partialGrid{
+			position: absolute;
+			bottom: 0px;
+		}
+		
+		/* For larger devices*/
+		@media only screen and (min-width:600px){
+			
+		}
+		/* For mobile devices*/
+		@media only screen and (max-width:600px){
+			
+			#partialGrid{
+				position: relative;
+				padding-top:30px;
+			}
+		}
+		
+		#sudokuCubes{
+			width: 100%;
+		}
+</style>
+<title>{{i18n "pageTitleSudoku"}}</title>
+<div id="container">
+	<div class="row logoContainer">
+		<div class="col s12 m4 offset-m2" id="logo">
+			<img class="headerImages" src="/images/sudoku-all-solver/logo.png" alt="logo"/>
+		</div>
+		<div class="col s12 m2 offset-m7" id="partialGrid">
+			<img class="headerImages" src="/images/sudoku-all-solver/sudoku-grid-partial.png" alt="partial grid"/>
+		</div>
+	</div>
+</div>
+<section>
+	<div class="container">
+		<div class="row featureSection">
+			<div class="col s12 m4 offset-m1 l4 offset-l1">
+				<img src="/images/sudoku-all-solver/solver.gif"/ alt="game demo" width="100%">
+			</div>
+			<div class="col s12 m6 l4 offset-l2 featureSection">
+				<h4 class="center-align"><span class="featureHeading">{{i18n "title1Sudoku"}}</span></h4>
+				<p>
+					{{i18n "detail1Sudoku"}} 
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row featureSection">
+			<div class="col s12 m4 offset-m2 push-m6 l4 offset-l1 push-l6">
+				<img src="/images/sudoku-all-solver/sudoku-play.gif"/ alt="game demo" width="100%">
+			</div>
+			<div class="col s12 m5 offset-m1 pull-m6 l4 offset-l2 pull-l6 featureSection">
+				<h4 class="center-align"><span class="featureHeading">{{i18n "title2Sudoku"}}</span></h4>
+				<p>
+					{{i18n "detail2Sudoku"}} 
+				</p>
+			</div>
+			
+			
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row featureSection">
+			<div class="col s12 m4 offset-m1 l4 offset-l1">
+				<img src="/images/sudoku-all-solver/generator.gif"/ alt="game demo" width="100%">
+			</div>
+			<div class="col s12 m5 offset-m1 l4 offset-l2 featureSection">
+				<h4 class="center-align"><span class="featureHeading">{{i18n "title3Sudoku"}}</span></h4>
+				<p>
+					{{i18n "detail3Sudoku"}}
+				</p>
+			</div>  
+		</div>
+	</div>
+</section>
+<div class="row" style="padding-top:30px;padding-bottom:50px;">
+	<div class="col s8 offset-s2 m4 offset-m4 l3 offset-l5">
+		<a href="https://itunes.apple.com/us/app/sudoku-all-solver/id947904468?ls=1&mt=8"><img id="appStore" src="/images/app-store-badge.svg" width="100%" alt="App Store Link"/></a>
+	</div>
+</div>
+<img id="sudokuCubes" src="/images/sudoku-all-solver/sudoku-cubes.png" alt="logo" />

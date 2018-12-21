@@ -14,8 +14,20 @@
 		<!-- Header -->
 		{{block "header" .}} {{partial "header" .}} {{end}}
 
-		<!-- Body -->
-		{{block "main" .}}{{end}}
+		<!-- Content -->
+		{{if eq .Params.id "laying-bricks"}}
+			{{block "laying-bricks" .}} {{partial "laying-bricks.html" .}} {{end}}
+		{{else if (eq .Params.id "sudoku-all-solver")}}
+			{{block "sudoku-all-solver" .}} {{partial "sudoku-all-solver.html" .}} {{end}}
+		{{else if (eq .Params.id "snakes-ergo")}}
+			{{block "snakes-ergo" .}} {{partial "snakes-ergo.html" .}} {{end}}
+		{{else if (eq .Params.id "carry-the-flame")}}
+			{{block "carry-the-flame" .}} {{partial "carry-the-flame.html" .}} {{end}}
+		{{else}}
+			<!-- Body -->
+			{{block "main" .}}{{end}}
+		{{end}}
+
 
     </body>
 </html>
