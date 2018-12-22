@@ -40,3 +40,6 @@ madebynikhil.conf
 
 # Scratch work used during migration process
 scratch
+
+# published directory from hugo
+public
