@@ -1,3 +1,13 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Nikhil Verma"
+
+# Pagination
+paginate = 3
+paginatePath = "page"
+
+# Theme to use
+theme = "hugo-material-blog"
+
+# Copyright, appears in the footer
+copyright = "© 2016 Copyright Nikhil Verma"

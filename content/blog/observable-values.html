@@ -1,0 +1,114 @@
+---
+title: "Observable Values"
+date: 2018-12-24T12:58:54+05:30
+draft: true
+---
+
+Imagine a view in JavaFx which displays some user data. This data is, at any time, likely&nbsp;going to&nbsp;change.&nbsp;Ever wondered how the&nbsp;view stays updated with respect to the data it is displaying? One way is to manually set the values in the corresponding&nbsp;node elements every time a change occurs. But this would dramatically add&nbsp;to a lot of extra work , not to mention unneeded headache for the developer. The other way is to make use of whats called an 'Observable value'.
+
+<strong>The Observer pattern</strong>
+
+Before discussing <em>'Observable values'</em>&nbsp;, lets understand the underlying principle.O<strong><em>bserver pattern&nbsp;</em></strong>is a design pattern&nbsp;in which an&nbsp;<em>observed</em> value&nbsp;called the <em>subject</em>&nbsp;maintains a list of <em>dependents</em>. These dependents are called&nbsp;<em>observers</em> and they are notified of any change on the <em>subject</em>. Moreover, the&nbsp;subject never&nbsp;knows the identity of&nbsp;its&nbsp;observers in that the notion of an Observer is usually defined through an interface(or sometimes a super class) which ends up being implemented by several concrete classes.
+
+<strong>ObservableValue</strong>
+
+In JavaFx, <strong>ObservableValue</strong> is an interface that symbolises&nbsp;a subject. The classes that implement this interface essentially hold&nbsp;a&nbsp;value and&nbsp;a list of&nbsp;observers that are interested in the state of this&nbsp;value. If a change is made to the value thats being held, all the corresponding Observers will be notified of that&nbsp;change. In JavaFx, these observers are also referred to as <strong>ChangeListeners.&nbsp;</strong>Here is a class diagram that illustrates this&nbsp;relationship.
+
+<a href="https://glitchgone.files.wordpress.com/2015/11/observablevalue.png"><img class="size-large wp-image-114 aligncenter" src="https://glitchgone.files.wordpress.com/2015/11/observablevalue.png?w=660" alt="ObservableValue" width="660" height="283"></a>
+
+The ObservableValue interface itself defines three methods&nbsp;that the implementing classes implement:&nbsp;<em>addListener()</em> which is used to register an observer in the list of observers,&nbsp;<em>removeListener()</em> which does just the opposite i.e. removes it,&nbsp;and<em> getValue()</em> which retrieves the current value of the subject. It holds a list of ChangeListeners. Any time a change occurs on the observed value, the <em>changed()</em> method gets&nbsp;called.
+
+We will look at&nbsp;a very&nbsp;simple example of an <strong>ObservableValue:&nbsp;</strong>a <strong>SimpleStringProperty</strong>
+<pre>public static void main(String[] args) throws InterruptedException {
+
+    //Define a simple string property which is an Implementation of ObservableValue
+    SimpleStringProperty simpleStringProperty=new SimpleStringProperty("OLD");
+    System.out.println("Original Value is "+simpleStringProperty.getValue());
+
+    //Add a listener to the above property
+    simpleStringProperty.addListener(new ChangeListener&lt;String&gt;() {
+
+        //This method will be fired anytime the value of simpleStringProperty changes
+        @Override
+        public void changed(ObservableValue&lt;? extends String&gt; observableValue, String oldValue, String newValue) {
+            System.out.println("Value changed from "+oldValue+" to "+newValue);
+        }
+    });
+
+    //wait for 2 seconds
+    Thread.sleep(2000);
+
+    //change the value of the property
+    simpleStringProperty.set("NEW");
+}</pre>
+In the above example,we create a SimpleStringProperty and add a ChangeListener to it, next we wait for 2 seconds(just for this demo's sake) and then change the value of the simpleStringProperty. When this value gets changed, the ChangeListener is notified and&nbsp;its <em>changed()</em> is fired.
+
+Another similar implementation of an ObservableValue is the <strong>SimpleIntegerProperty.</strong>&nbsp;In the below example we add some UI elements to demonstrate the same concept:
+<pre>@Override
+public void start(Stage stage) throws Exception {
+
+    //instantiate a SimpleIntegerProperty
+    final SimpleIntegerProperty simpleIntegerProperty=new SimpleIntegerProperty(99);
+
+    //the string in textfield will always be updated, thanks to the observer that we register next.
+    final TextField textField=new TextField(simpleIntegerProperty.getValue().toString());
+
+    //we register an observer, which will be fired anytime the value of this property changes
+    simpleIntegerProperty.addListener(new ChangeListener&lt;Number&gt;() {
+        @Override
+        public void changed(ObservableValue&lt;? extends Number&gt; observableValue, Number oldValue, Number newValue) {
+            textField.setText(newValue.toString());
+        }
+    });
+
+    //whenever we click the button, the value of the SimpleIntegerProperty gets changed
+    Button button=new Button("Make it 100");
+    button.setOnAction(new EventHandler&lt;ActionEvent&gt;() {
+        @Override
+        public void handle(ActionEvent actionEvent) {
+            simpleIntegerProperty.set(100);
+        }
+    });
+
+    //wrapping the whole thing up in a VBox
+    VBox vBox=new VBox(40);
+    vBox.setAlignment(Pos.CENTER);
+    vBox.getChildren().addAll(textField,button);
+    Scene scene=new Scene(vBox,150,100);
+    stage.setScene(scene);
+    stage.show();
+}</pre>
+The above example consists of&nbsp;a textfield and a button. First we&nbsp;setup a SimpleIntegerProperty that holds the value of 99, next we instantiate the textfield, giving it the current value of our&nbsp;integer&nbsp;property. Now, we add&nbsp;our ChangeListener which simply changes the value of the textfield to the newValue.&nbsp;Next, we instantiate a button&nbsp;and add an&nbsp;<em>event handler</em> to it. which gets fired when we click on it. In the Event Handler, we change the value of the SimpleIntegerProperty to 100,&nbsp;which in turn&nbsp;notifies all the listeners currently attached to this property. The listener,that we attached before now gets fired, and it changes the text in the textfield to the new value which is&nbsp;100.
+
+<strong>ObservableList</strong>
+
+An <strong>ObservableList</strong> is similar to an ObservableValue.&nbsp;Much like an ObservableValue, an ObservableList notifies any listener which might be interested in tracking the state of this list. ObservableLists are widely used in JavaFx. In fact, the scene graph itself is made up of ObservableList for holding the children of a Parent node.
+
+Now we will look at something we didn't cover before: the <strong>ComboBox.&nbsp;</strong>This is the most common type of&nbsp;dropdown you will encounter in any UI driven application. Its simply a dropdown with a list of values to choose from. &nbsp;Lets take a look at the code to present a simple ComboBox.
+<pre>@Override
+public void start(Stage stage) throws Exception {
+
+    //create a list of item for the combo box to hold
+    ObservableList&lt;String&gt; monthList= FXCollections.observableArrayList();
+    monthList.addAll("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+
+    //create a combo box for the above list
+    ComboBox&lt;String&gt; comboBox= new ComboBox&lt;&gt;(monthList);//parameter of the constructor,specfies the item list to hold
+    comboBox.setLayoutX(100);
+    comboBox.setLayoutY(30);
+
+    //If nothing is selected this would show up on the combo box
+    comboBox.setPromptText("Month");
+    //show only 5 rows at a time
+    comboBox.setVisibleRowCount(5);
+
+    //put all the above in a simple Pane
+    Pane pane =new Pane();
+    pane.getChildren().addAll(comboBox);
+    Scene scene=new Scene(pane,300,300);
+    stage.setScene(scene);
+    stage.show();
+}</pre>
+Setting up a simple ComboBox doesn't take&nbsp;much work. The&nbsp;main thing here is the <strong>item&nbsp;list</strong> that the&nbsp;ComboBox holds. In the above example, we are simply using a list of Strings and passing it as an argument to the ComboBox's constructor(you could otherwise use the <em>setItems()</em>&nbsp;). The list of a&nbsp;ComboBox is of the <strong>ObservableList</strong> type. &nbsp;So any time you make changes to this list elsewhere in your code, this ComboBox automatically gets updated. Neat!
+
+JavaFx offers a variety of ObservableValue classes. We have seen a few of them in this tutorial. Often times an ObservableValue(or an ObservableList) holds the containing data as a&nbsp;generic. This allows a good amount of flexibility. To keep things concise, I will conclude this tutorial here. In the next tutorial we will cover Event Handling. Till then, see you.

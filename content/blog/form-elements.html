@@ -1,0 +1,171 @@
+---
+title: "Form Elements"
+date: 2018-12-24T12:57:16+05:30
+draft: true
+---
+
+Welcome to another JavaFX tutorial. In the last tutorial, we learned about&nbsp;Layout containers and how they help us&nbsp;organise our view. In this tutorial, I will be covering&nbsp;the various UI elements and controls that JavaFx offers.
+
+<strong>"Labelled</strong><strong>" Node class</strong>
+
+Lets start by discussing what a <em>labelled</em> node is.&nbsp;<strong>Labelled</strong> is an abstract Node class in JavaFx which provides the functionality for a subclass Node to have a textual property associated to it,&nbsp;along with a <em>graphic</em>. Radio buttons, check boxes&nbsp;or&nbsp;even a simple button are all examples of Labelled nodes. They have an obvious graphic element and an associated text property (thus aptly&nbsp;named <em>Labelled</em>). The relative alignment of the graphic and text property can be modified using the <em>setAlignment()</em> method. You can further set your own graphic node to a <em>Labelled Node</em> provided that the graphic node doesn't appear anywhere else in the scene graph. We will see many examples of Labelled node in this tutorial as we move along.
+
+<strong>Capturing Text information</strong>
+
+Most UI driven application usually require capturing certain&nbsp;textual data.&nbsp;A&nbsp;<strong>TextField</strong>&nbsp;can be&nbsp;used to capture short textual user inputs which fit in one line. If you need to support multi-line &nbsp;and long input texts (lets say for supporting a user to write long paragraphs and such), you can make use of a&nbsp;<strong>TextArea</strong>.&nbsp;Furthermore,&nbsp;if you want to hide the text information being typed in, such as while&nbsp;capturing passwords or pins, you can make use of the&nbsp;<strong>PasswordField</strong> which,&nbsp;intuitively&nbsp;enough,&nbsp;extends the TextField class. In the example below, we create each of the above.&nbsp;Notice that you can also set placeholder text to a textfield by calling&nbsp;<em>setPrompt("placeholder")</em> method.
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+    
+    TextField textField=new TextField("Default Text");
+    
+    TextArea textArea=new TextArea("Default text");
+    textArea.setPrefHeight(50);
+
+    PasswordField passwordField=new PasswordField();
+    passwordField.setPromptText("Enter password");
+
+    //add those elements to a vbox container
+    VBox vBox=new VBox();
+    vBox.getChildren().addAll(textField,textArea,passwordField);
+
+    //we will set some padding around the border
+    vBox.setPadding(new Insets(5,5,5,5));//an inset defines the border around this container
+
+    //provide some spacing between the children of the vbox
+    vBox.setSpacing(10);
+    primaryStage.setTitle("Text Input");
+    primaryStage.setScene(new Scene(vBox, 300, 275));
+    primaryStage.show();
+}</pre>
+<strong>Rendering Text</strong>
+
+A <strong>Text</strong>&nbsp;node can be used to render text on the view(duh!). Text supports <em>soft wrapping</em> which means you can visually show&nbsp;a long string&nbsp;across&nbsp;multiple&nbsp;lines as though they were being 'wrapped'. The <em>wrappingWidth</em>&nbsp;of the Text&nbsp;determines the bounds of the wrap. You can otherwise, also <em>hard wrap</em> your Text by&nbsp;delimiting the contained string&nbsp;with '\n'. This can be useful in case you want to&nbsp;render&nbsp;several paragraphs with&nbsp;one Text node. Moreover, you can set the font and the alignment properties of the text by calling the <em>setFont()&nbsp;</em>and&nbsp;<em>setTextAlignment</em>&nbsp;()<em>&nbsp;</em>methods respectively.
+
+Where Text nodes soft wrap to render their content , a <strong>Label</strong>&nbsp;node truncates the trailing string and replaces it with <em>dot dot dot</em>&nbsp;(example:&nbsp;<em>some long str...)&nbsp;</em> making it the preferred option&nbsp;for displaying "headings" that are usually fixed and need to fit in a certain area.&nbsp;Label is a <em>Labelled</em> node which means you can supply an optional graphic to your Label such as an ImageView(discussed below).&nbsp;Label nodes also have a&nbsp;<em>labelFor</em> property which&nbsp;allows them to be used as&nbsp;mnemonics: Imagine you have several input controls lined up in a form. More often than not, you would be annotating those controls with a small&nbsp;text that describes them(for example: <i>"First Name"</i>&nbsp;followed by a TextField, "<em>Last Name"</em> followed by a TextField, etc).&nbsp;A&nbsp;mnemonic is a fancy way of saying that&nbsp;a Label is used '<em>for'</em> this particular node. Now whenever focus comes on that Label(lets say by pressing the tab key), it goes directly to&nbsp;the node referred by the <em>"</em><i>labelFor"</i> property.
+
+The example below shows how this works. Note that a Label also support setting of font and alignment just as a Text does.
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+
+    Text text=new Text("A very very very very very very very very very very very very " +
+            "long string that will get wrapped");
+    text.setWrappingWidth(250);
+    text.setFont(new Font("Gill Sans",20));
+
+    Label label=new Label("Label for the following field");
+    TextField textField=new TextField();
+    label.setLabelFor(textField);
+
+    //add those elements to a vbox container
+    VBox vBox=new VBox();
+    vBox.getChildren().addAll(text,new TextField(),new TextField(),label,textField);
+
+    //we will set some padding around the border
+    vBox.setPadding(new Insets(5,5,5,5));//an inset defines the border around this container
+
+    //provide some spacing between the children of the vbox
+    vBox.setSpacing(10);
+    primaryStage.setTitle("Text Input");
+    primaryStage.setScene(new Scene(vBox, 300, 275));
+    primaryStage.show();
+}</pre>
+<strong>Rendering Images</strong>
+
+An&nbsp;<strong>ImageView</strong>&nbsp;node can display images on the view. The image displayed can either be loaded by supplying the image name as a classpath resource or through the JavaFx's Image class.The displayed image can be resized by specifying the <i>fitWidth</i> and&nbsp;<em>fitHeight</em> property.&nbsp;While setting these properties you may lose your aspect ratio. In order to preserve it use the <em>preserveAspectRatio</em> property by using its setter. Note that aspect ratio always uses the<em> fitWidth</em> property&nbsp;if both&nbsp;width and height are specified.
+<pre>    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        Image image = new Image("mountain.png");
+        ImageView imageView=new ImageView(image);
+        imageView.setPreserveRatio(true);
+
+        //aspect ratio always works width first it it is specified, if not then the height
+        imageView.setFitHeight(250);
+        //uncommenting this line would make aspect ratio act on the width instead of height
+//        imageView.setFitWidth(150);
+
+        Pane pane=new Pane();
+        pane.getChildren().addAll(imageView);
+
+        primaryStage.setTitle("Render Image");
+        primaryStage.setScene(new Scene(pane, 500, 500));
+        primaryStage.show();
+    }</pre>
+<strong>Choices and options</strong>
+
+To allow the user to select from a finite number of options, a <strong>CheckBox</strong>&nbsp;can be used. CheckBox is a&nbsp;<em>Labelled</em> node where in, the box acts as the graphic.CheckBox also has an boolean&nbsp;<em>indeterminate</em> property which, if set, allows the&nbsp;user to&nbsp;toggle between three states: checked, unchecked and undefined(which is shown&nbsp;as a dash).
+
+We have already seen the <strong>Button</strong> node in the previous tutorials. A different type of button&nbsp;called a <strong>ToggleButton</strong>&nbsp;can used to present an&nbsp;on/off&nbsp;switch. A ToggleButton(which is again a <em>Labelled</em> node) holds a boolean flag called "<em>selected</em>" which indicates if it is selected or not. By default, a ToggleButton exists <em>on its own</em>, but a multitude of ToggleButtons can also be part of a <strong>ToggleGroup.</strong>&nbsp;A ToggleGroup&nbsp;comprises of a number&nbsp;of ToggleButtons ,wherein at most one ToggleButton can be selected at a time. Keep in mind that a selected&nbsp;ToggleButton could always be toggled off regardless of weather&nbsp;it is in a ToggleGroup or not.To specify a ToggleGroup for a ToggleButton simply call the&nbsp;<em>setToggleGroup()</em> method.
+
+When mutually exclusive options need to be presented, a <strong>RadioButton</strong> can be used. A <strong>RadioButton</strong> is a direct subclass of a ToggleButton. But unlike ToggleButtons,once selected, a RadioButton can never be deselected by clicking on it again. It can only be deselected if another RadioButton in the same&nbsp;ToggleGroup gets selected.
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+
+    //Checkboxes for "interests"
+    CheckBox football=new CheckBox("Football");
+    CheckBox basketball=new CheckBox("Basketball");
+    CheckBox hockey=new CheckBox("Hockey");
+    CheckBox cricket=new CheckBox("Cricket");
+    cricket.setIndeterminate(true);//allows a third undefined state shown as '-'
+    FlowPane checkBoxes = new FlowPane();
+    checkBoxes.getChildren().addAll(football,basketball,hockey,cricket);
+
+    //Toggle Buttons for "playback controls"
+    ToggleGroup playbackGroup=new ToggleGroup();
+    ToggleButton rewind=new ToggleButton("Rewind");
+    ToggleButton play=new ToggleButton("Play");
+    ToggleButton fastForward=new ToggleButton("Fast forward");
+    rewind.setToggleGroup(playbackGroup);
+    play.setToggleGroup(playbackGroup);
+    fastForward.setToggleGroup(playbackGroup);
+    HBox playbackContainer=new HBox();
+    playbackContainer.getChildren().addAll(rewind,play,fastForward);
+
+    //Radio buttons for "gender"
+    ToggleGroup genderGroup =new ToggleGroup();
+    RadioButton male=new RadioButton("Male");
+    RadioButton female=new RadioButton("Female");
+    male.setToggleGroup(genderGroup);
+    female.setToggleGroup(genderGroup);
+    HBox genderContainer=new HBox();
+    genderContainer.getChildren().addAll(male,female);
+
+    //add those elements to a vbox container
+    VBox vBox=new VBox();
+    vBox.getChildren().addAll(checkBoxes,playbackContainer,genderContainer);
+
+    //we will set some padding around the border
+    vBox.setPadding(new Insets(5,5,5,5));//an inset defines the border around this container
+
+    //provide some spacing between the children of the vbox
+    vBox.setSpacing(10);
+    primaryStage.setTitle("Render Text");
+    primaryStage.setScene(new Scene(vBox, 300, 275));
+    primaryStage.show();
+}</pre>
+<strong>Button</strong>
+
+Lastly, we have, the ever most common element: the button. We have already covered buttons in the last few tutorials, but one thing I&nbsp;never mentioned is the <em>action</em>&nbsp;should happen when a button is clicked. A click on a button is an event which, like many other events in JavaFx is handled by&nbsp;implementing&nbsp;an&nbsp;<strong>EventHandler</strong>. This is usually through&nbsp;an anonymous class (or if you are&nbsp;in JDK 8 : lambda expressions). In the example below, we simple create a button which upon being clicked, will print "Clicked" on the console.
+<pre>@Override
+public void start(Stage stage) throws Exception {
+    //create a button
+    Button button=new Button("Click me!");
+    button.setLayoutX(170);
+    button.setLayoutY(170);
+
+    //Add the event handler that gets fired when this button gets clicked
+    button.setOnAction(new EventHandler&lt;ActionEvent&gt;() {
+        @Override
+        public void handle(ActionEvent actionEvent) {
+            System.out.println("Clicked");
+        }
+    });
+
+    //just add the above button at the center of a pane
+    Pane pane=new Pane();
+    pane.getChildren().addAll(button);
+    Scene scene=new Scene(pane,400,400);
+    stage.setScene(scene);
+    stage.show();
+}</pre>
+I will wrap up here. In the next tutorial, we will go over "Observable Values" and how they help maintaining the UI in an updated state&nbsp;.Till then,&nbsp;happy coding.

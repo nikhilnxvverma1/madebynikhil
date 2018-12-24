@@ -1,0 +1,80 @@
+---
+title: "JavaFX Hello World"
+date: 2018-12-24T12:54:25+05:30
+draft: true
+---
+
+JavaFx is a&nbsp;GUI framework that comes&nbsp;prepackaged with JDK&gt;1.7 update 6. In this tutorial I will walk you through the basics of JavaFX .This is my first blog and&nbsp;I will be creating a list of tutorials on JavaFx&nbsp;. Here though, we will start with a basic&nbsp;"Hello world" example and gradually build on top of it.
+
+Prerequisites:
+<ul>
+ 	<li>Basic knowledge of Java</li>
+ 	<li>JDK 7/8(for jdk&lt;1.7 update 6, you will need to externally add JavaFX's jar files)</li>
+ 	<li>Any IDE of your choice</li>
+</ul>
+Go ahead and copy paste this code in a file (named Main.java) and add all the imports. On running this program you will see a a window with the label "Hello world" somewhere at the centre.
+<pre>public class Main extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+        Pane pane= new Pane();
+        Label helloWorldLabel=new Label("Hello World");
+        helloWorldLabel.setLayoutX(125);
+        helloWorldLabel.setLayoutY(100);
+        pane.getChildren().add(helloWorldLabel);
+        primaryStage.setTitle("Title");
+        primaryStage.setScene(new Scene(pane, 300, 275));
+        primaryStage.show();
+    }
+}</pre>
+The first thing you will notice is the <strong>Application</strong> class which the Main class extends. It has an abstract method &nbsp;"<em>start(Stage primaryStage)</em>" &nbsp;that&nbsp;our class "Main"&nbsp;needs&nbsp;to implement. This method acts as&nbsp;the main entry point for our&nbsp;JavaFx application. If you noticed ,the main method only calls a static method "<em>launch"</em> which internally creates an instance of the calling class(Main in this case) and calls its&nbsp;<em>start</em> method.
+
+In JavaFx, every view(such a Labels,Text,Buttons etc) is referred to as a <strong>Node</strong>. These nodes are arranged in a hierarchical fashion forming a tree data structure, making up whats call the <strong>Scene Graph</strong>. Each node can have&nbsp;zero or one parent. The root node has no parent.
+
+In the first three lines of the <em>start</em> method, we are creating the Scene Graph.In line 1, we instantiate a <strong>Pane.</strong>A Pane is a simple view container that allows it children nodes to be positioned&nbsp;anywhere in the "contained space".In line 2,we&nbsp;create a <strong>Label&nbsp;</strong>titled&nbsp;"Hello world".In the next two lines we position the label &nbsp;by specifying the layoutX and layoutY properties (125,100).Note that in JavaFx, Y increases as we go down. Finally, we&nbsp;add the Label&nbsp;as a child to the Pane(line 5).So right now our simple scene graph looks like this.
+
+<a href="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-24-08-am.png" data-mce-href="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-24-08-am.png"><img class="size-large wp-image-34 aligncenter" src="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-24-08-am.png?w=660" alt="Screen Shot 2015-09-12 at 9.24.08 am" width="660" height="387" data-mce-src="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-24-08-am.png?w=660"></a>
+
+Now a scene graph needs to be contained in a&nbsp;<strong>Scene</strong>.This is where the Scene class comes in.By specifying just the root element along with the dimensions of the window, our Scene is "said to be created". The Scene itself is contained in a top level container called the&nbsp;<strong>Stage</strong>.Think of a stage as a window,which houses the scene that it needs to show.
+
+<img class=" wp-image-33 aligncenter" src="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-10-36-am.png" alt="Screen Shot 2015-09-12 at 9.10.36 am" width="418" height="279" data-mce-src="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-10-36-am.png?w=418">
+
+The <em>start</em> method provides us with <em>"primaryStage"</em> argument that will act as the main window for our application. We will later see, how we can create additional windows in the application.In the last three lines of the&nbsp;<em>start</em> method, we set the title of the window to "Tutorial"(line 6).&nbsp;In line 7, we set the Scene of&nbsp;the&nbsp;<em>primaryStage&nbsp;</em>by instantiating a new Scene class and providing it a Scene Graph(root) along with the dimensions(300,275). At the very end(line 8) we&nbsp;issue the&nbsp;<em>show</em> method on the&nbsp;<em>primaryStage</em> . This is where our Scene graph is fired and we see the main window.
+
+At this point, we got the basics covered.&nbsp;Lets experiment with some more types of views, here I will add a button titled&nbsp;"My Button" and a TextField with the default value "My Textfield". Notice that now we are using the&nbsp;<em>addAll</em> method to add all our views at once.Also keep in mind the <strong>order</strong> in which we added the our views.We will come to this in a second.
+<pre>    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+        Pane pane= new Pane();
+
+        Label helloWorldLabel=new Label("Hello World");
+        helloWorldLabel.setLayoutX(125);
+        helloWorldLabel.setLayoutY(100);
+
+        Button button=new Button("My Button");
+        button.setLayoutX(150);
+        button.setLayoutY(125);
+
+        TextField textField=new TextField("My Textfield");
+        textField.setLayoutX(50);
+        textField.setLayoutY(200);
+
+        pane.getChildren().addAll(helloWorldLabel,button,textField);
+
+        primaryStage.setTitle("Title");
+        primaryStage.setScene(new Scene(pane, 300, 275));
+        primaryStage.show();
+    }</pre>
+So now our scene graph will look something like this:
+
+<a href="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-40-08-am.png" data-mce-href="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-40-08-am.png"><img class="size-large wp-image-37 aligncenter" src="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-40-08-am.png?w=660" alt="Screen Shot 2015-09-12 at 9.40.08 am" width="660" height="373" data-mce-src="https://glitchgone.files.wordpress.com/2015/09/screen-shot-2015-09-12-at-9-40-08-am.png?w=660"></a>
+
+On running the above code, you will notice that the TextField overlaps on top of the button. This is where the order of the nodes plays a crucial role. In JavaFX, nodes don't have&nbsp;an explicit "z-index" property which could dictate the order in which nodes are drawn, one on top of the other. Instead, its the&nbsp;order of nodes in the&nbsp;children list of a parent node(Pane,in this case) which decides which node gets drawn on top. Fortunately, we have some very convenient ways to change this order. But we will cover those later.
+
+That wraps up this introductory tutorial on javaFx. Going forward, we will learn about the different types of containers and views, and later ,event handling. As said before, this is my first blog. If I missed out or misspoke any detail , please feel free to correct me. Comments will be appreciated.

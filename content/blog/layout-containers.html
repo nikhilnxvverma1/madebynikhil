@@ -1,0 +1,138 @@
+---
+title: "Layout Containers"
+date: 2018-12-24T12:56:19+05:30
+draft: true
+---
+
+In the last tutorial, we learn't about some of&nbsp;JavaFx's basic terminologies and concepts.&nbsp;In this tutorial, we will be covering JavaFx's Layout containers. We will start with a simple example that discuses the structure of a scene graph and then we will list down some common layout containers in JavaFx.
+
+Consider this simple JavaFx application which comprises of a Pane with a&nbsp;Label, a Button and a Textfield added to it as its children.
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+    Pane pane= new Pane();
+
+    Label helloWorldLabel=new Label("Hello World");
+    helloWorldLabel.setLayoutX(70);
+    helloWorldLabel.setLayoutY(50);
+
+    Button button=new Button("My Button");
+    button.setLayoutX(80);
+    button.setLayoutY(100);
+
+    TextField textField=new TextField("My Textfield");
+    textField.setLayoutX(100);
+    textField.setLayoutY(150);
+
+    pane.getChildren().addAll(helloWorldLabel,button,textField);
+    primaryStage.setTitle("Title");
+    primaryStage.setScene(new Scene(pane, 300, 275));
+    primaryStage.show();
+}</pre>
+[caption id="attachment_82" align="alignright" width="411"]<a href="https://glitchgone.files.wordpress.com/2015/10/screen-shot-2015-10-18-at-11-13-20-am.png"><img class="size-full wp-image-82" src="https://glitchgone.files.wordpress.com/2015/10/screen-shot-2015-10-18-at-11-13-20-am.png" alt="Scene Graph" width="411" height="282"></a> Scene Graph[/caption]
+
+A&nbsp;JavaFx 'Scene Graph' is essentially&nbsp;a tree which comprises of nodes starting at&nbsp;the root.&nbsp;With the exception of the root node, every node in the tree has a parent. Nodes of a tree can either be branches&nbsp;or leafs. In this&nbsp;example , you can see that the Label,the Button and the Textfield are leaf nodes whereas the Pane acts as the branched&nbsp;(as well as root) node . Branched nodes basically act as 'containers' for leaf nodes. These 'containers' are what decides the basic positional and alignment make up of its 'containing'&nbsp;children nodes. Leaf nodes on the other hand mainly make up the visual 'target' elements of a scene. In JavaFx ,these branched and leaf nodes are well defined.
+
+<span style="text-decoration:underline;"><strong>AnchorPane:</strong></span>
+
+We will now see some of the containers that JavaFx has to offer. In the last tutorial, we have already seen the 'Pane' in action. An&nbsp;AnchorPane&nbsp;which extends directly from the Pane is a more modified version of a Pane.&nbsp;Where Panes allow you to position nodes anywhere in them, AnchorPanes additionally allow you to 'anchor' an element (or fix an offset to an element) to any of the borders of the pane.
+
+For example, a Label can be fixed to the top right&nbsp;corner of the AnchorPane&nbsp;and Button can be fixed at the bottom left corner of&nbsp;an&nbsp;AnchorPane. This allows you to freely change the&nbsp;size of the&nbsp;AnchorPane without disturbing the relative positions that&nbsp;these elements hold with respect to the borders of the&nbsp;AnchorPane.Of course, you can still have unanchored elements (like the TextField) in the AnchorPane&nbsp;and define their positions just like you would in a normal Pane.
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+    AnchorPane anchorPane= new AnchorPane();
+
+    Label formLabel=new Label("Enter information :");
+    AnchorPane.setTopAnchor(formLabel,20d);
+    AnchorPane.setLeftAnchor(formLabel, 20d);
+
+    TextField textField=new TextField("My Textfield");
+    textField.setLayoutX(100);
+    textField.setLayoutY(150);
+
+    Button button=new Button("Submit");
+    AnchorPane.setBottomAnchor(button,20d);
+    AnchorPane.setRightAnchor(button, 20d);;
+
+    anchorPane.getChildren().addAll(formLabel,button,textField);
+    primaryStage.setTitle("Form");
+    primaryStage.setScene(new Scene(anchorPane, 300, 275));
+    primaryStage.show();
+}</pre>
+Go ahead and run this example, and then change the size of the window. You will notice that, as&nbsp;the window size changes, the 'anchored' elements continue to maintain their&nbsp;fixation to the respective borders of the AnchorPane (label on top right, button on bottom left). Compare this with the previous example which&nbsp;uses just the Pane.
+
+<span style="text-decoration:underline;"><strong>HBox and VBox:</strong></span>
+
+Next we will look at a very handy container called the 'HBox'. An HBox or a 'Horizontal Box' allows you to align nodes horizontally in a straight line in the order in which they are added. To demonstrate this concept, we will club three buttons together we will call them <em>'Cancel', 'Previous' and&nbsp;'Next'&nbsp;</em>(typical of a form).On running the example below, you will see three buttons&nbsp;laid down horizontally.
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+
+    //3 horizontal buttons
+    Button cancel=new Button("Cancel");
+    Button previous=new Button("Previous");
+    Button next=new Button("Next");
+
+    //laid down horizontally
+    HBox hBox=new HBox();
+    hBox.getChildren().addAll(cancel,previous,next);
+    hBox.setSpacing(20d); //creates a gap between nodes
+
+    primaryStage.setTitle("HBox Example");
+    primaryStage.setScene(new Scene(hBox, 250, 50));
+    primaryStage.show();
+}</pre>
+Similar to the HBox, a 'VBox' (Vertical box) allows you to align nodes vertically down in a straight line.
+
+<span style="text-decoration:underline;"><strong>FlowPane:</strong></span>
+
+HBoxes and VBoxes are good, but what if you want to wrap your nodes once they reach the bounding width of the container? Thats where the FlowPane comes in. A FlowPane allows you align your nodes, either horizontally(like an HBox)&nbsp;or vertically(like an VBox), and then also wrap them to the next line if they cross the bounding width.
+<pre>@Override
+    public void start(Stage primaryStage) throws Exception {
+
+        FlowPane flowPane=new FlowPane(Orientation.HORIZONTAL);//wraps horizontally
+//        FlowPane flowPane=new FlowPane(Orientation.VERTICAL);//wraps vertically
+        
+        //these gaps govern the space between two adjacent nodes
+        flowPane.setHgap(8d);
+        flowPane.setVgap(5d);
+
+        for (int i = 1; i &lt;= 10; i++) {
+            Label number= new Label("Label#"+i);
+            flowPane.getChildren().add(number);
+        }
+
+        primaryStage.setTitle("FlowPane Example");
+        primaryStage.setScene(new Scene(flowPane, 250, 120));
+        primaryStage.show();
+    }</pre>
+<span style="text-decoration:underline;"><strong>ScrollPane:</strong></span>
+
+Scrolling is a very common feature that&nbsp;exists for any view that occupies more space than what could be given to it. A ScrollPane&nbsp;allows you to&nbsp;contain a node and&nbsp;make it scrollable. The scrollable portion is always the size of the ScrollPane , whereas the contained node will get clipped off so only part of it show inside the ScrollPane.Here we are adding 10 labels to a 'big pane' at random positions. We then set that big pane as the content to the&nbsp;ScrollPane. The Labels are irrelevant in&nbsp;this example, what matters more is the size of their container(bigPane)
+<pre>@Override
+public void start(Stage primaryStage) throws Exception {
+    Pane bigPane=new Pane();
+    bigPane.setPrefSize(500, 500);
+
+    //we will add 10 labels at random positions to our big pane, nevermind any overlaps
+    Random random=new Random();
+    for (int i = 1; i &lt;= 10; i++) {
+        Label number= new Label("Label#"+i);
+        number.setLayoutX(random.nextInt(500));
+        number.setLayoutY(random.nextInt(500));
+        bigPane.getChildren().add(number);
+    }
+
+    ScrollPane scrollpane=new ScrollPane();
+    scrollpane.setContent(bigPane);
+    primaryStage.setTitle("ScrollPane Example");
+    primaryStage.setScene(new Scene(scrollpane, 300, 300));
+    primaryStage.show();
+}</pre>
+<span style="text-decoration:underline;"><strong>StackPane:</strong></span>
+
+As the name suggests, a 'StackPane' allows you to stack nodes on top of each other.One clever use of this can be to show a photo album&nbsp;with pictures stacked on top of each other.Other uses of StackPane include creating a custom view(which we will discuss&nbsp;in another tutorial).
+
+<span style="text-decoration:underline;"><strong>BorderPane:</strong></span>
+
+Lastly, we have yet another very useful container called the 'BorderPane'. A BorderPane can be thought of as a Pane divided in&nbsp;5 parts: &nbsp;top, right, bottom, left and center . Children nodes are then added directly to these parts. When the view is rendered each component is drawn in the area it belongs to.
+
+There are several more&nbsp;layout containers that JavaFx offers but I will conclude this tutorial here.All the code for this tutorial can be found here. In the next tutorial we will look at some of the controls and UI elements that make up a basic view. Till then happy coding.
