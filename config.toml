@@ -11,3 +11,5 @@ theme = "hugo-material-blog"
 
 # Copyright, appears in the footer
 copyright = "© 2016 Copyright Nikhil Verma"
+
+disqusShortname = "madebynikhil"

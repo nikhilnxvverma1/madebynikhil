@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{ $truncate := default true .Site.Params.truncate }}
-{{ range .Paginator.Pages }}
+{{ range .Paginator.Pages.ByDate }}
 
     {{ if $truncate }}
         {{ .Render "summary" }}
