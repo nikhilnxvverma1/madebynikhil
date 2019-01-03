@@ -1,5 +1,6 @@
 {{ define "main" }}
-
+{{/* TODO Use custom paginate method to fix the ordering issue */}}
+<h1>Blog</h1>
 {{ $truncate := default true .Site.Params.truncate }}
 {{ range .Paginator.Pages.ByDate }}
 
