@@ -4,8 +4,13 @@ date: 2015-12-24T12:59:48+05:30
 draft: true
 ---
 
-Upto this point, we were&nbsp;creating&nbsp;our user interfaces&nbsp;without any user interactions in them. In this tutorial, we will cover&nbsp;the most important aspect of any user interface i.e. event handling. Before I go forwards, I want to clarify the term "event" in this context. An event can be anything that occurs as part of an ongoing system.&nbsp;Very specifically, "user event" are the events that happen as part of user's interaction&nbsp;with the interface. These include, but are not limited to mouse events (like mouse pressed,mouse dragged, and mouse released events), keyboard events (like key pressed, key released etc) and even scroll events (like scroll started, scrolling, scroll finished).
-
-<strong>General Button based event handling</strong>
+<p>
+	Upto this point, we were&nbsp;creating&nbsp;our user interfaces&nbsp;without any user interactions in them. In this tutorial, we will cover&nbsp;the most important aspect of any user interface i.e. event handling. Before we continue, lets discuss the terminology a bit. An event can be anything that occurs as part of an ongoing system.&nbsp;Very specifically, "user event" are the events that happen as part of user's interaction&nbsp;with the interface. These include, but are not limited to mouse events (like mouse pressed,mouse dragged, and mouse released events), keyboard events (like key pressed, key released etc) and even scroll events (like scroll started, scrolling, scroll finished). Besides user events, there are other general system events that a developer can "handle" to achieve a desired result. For example, when a file download finishes a simple network event can be handled by, lets say, displaying a user friendly text that notifies the user of this process on our GUI.
+</p>
+<h4>Nature of events and their handling</h4>
+<p>
+	In most cases, you handle an event by providing a 'callback'. A callback is like a patch of code that you want to be invoked when something happens(in this case, an event). So for example,when a button gets pressed, your custom callback code gets executed. This is pretty straight forward. However, keep in mind the nature of the event. A mouse 'click' is considered a single event. A mouse drag is though a multi step (i.e. 'press','drag','release'). Eace event thus has a dedicated callback routine (or method). Also, remember, some events occur more frequently than others. A simple mouse move(or mouse drag) is more common than a an occasional button click. Naturally, the frequency dictates how complex your callback routine can be.
+</p>
+<h4>Buttons</h4>
 
 Buttons&nbsp;present the most common scenario for handling events.
