@@ -11,6 +11,12 @@ draft: true
 <p>
 	In most cases, you handle an event by providing a 'callback'. A callback is like a patch of code that you want to be invoked when something happens(in this case, an event). So for example,when a button gets pressed, your custom callback code gets executed. This is pretty straight forward. However, keep in mind the nature of the event. A mouse 'click' is considered a single event. A mouse drag is though a multi step (i.e. 'press','drag','release'). Eace event thus has a dedicated callback routine (or method). Also, remember, some events occur more frequently than others. A simple mouse move(or mouse drag) is more common than a an occasional button click. Naturally, the frequency dictates how complex your callback routine can be.
 </p>
-<h4>Buttons</h4>
+<h4>Types of event handlers</h4>
+<p>
+	Generally speaking, an event handler is an implementation of an "interface" in Java. Objects of classes implementing this interface can be sent as arguments to either the constructor or a target method of the invoking object (like a JavaFX button). In the simpler cases, these interfaces only declare one method. Such interfaces are known as "Functional Interfaces" and are useful when you want to elegantly code the interface inline using something called lambda functions. We are not going to discuss lamda functions here. Instead, I will just let you know that they are convinient shorthand alternatives to creating a full blown implementations (or even an anonymous class).
+</p>
+<p>In cases where interfaces declares more than one method, you are obligated to implement the entire interface either within the same class or through a separate class. Separately, you will then have to specify the object thats implementing the interface in the invoking control. Examples of some of these interfaces include: Mouse Listeners, Keyboard Listeners etc. All of these have more than one event that needs handling and thus they are put in one interface. Lets now work through some of the common JavaFX controls to see these events in action.</p>
+
+<h5>Button</h5>
 
 Buttons&nbsp;present the most common scenario for handling events.
