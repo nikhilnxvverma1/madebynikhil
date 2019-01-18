@@ -97,8 +97,13 @@ h1,h2,h3,h4,h5,h6{
   padding-left:20px;
 }
 
+#aboutMe{
+	margin-top:250px;
+	margin-bottom: 250px;
+}
+
 #viewPortfolio{
-  position: absolute;
+  position: relative;
   left:50%;
   bottom:5%;
   transform: translate(-50%,-50%);
