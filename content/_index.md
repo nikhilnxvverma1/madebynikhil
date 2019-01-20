@@ -10,4 +10,4 @@ draft: false
 
 #### Education: 
 - B.Tech in Computer Sciene from JIIT, Noida with a GPA of 7.3 (2009-2013)
-- Pursuing Masters in Computer Science from Rochester Institute of Technology with a current GPA of 3.5/4(Expected Graduation Date: May 2019)
+- Pursuing Masters in Computer Science from Rochester Institute of Technology with a current GPA of 3.54(Expected Graduation Date: May 2019)
