@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{/* TODO Use custom paginate method to fix the ordering issue */}}
+<div class="row max-width">
+	<div class="col s12 l10 offset-l1">
+		<h1>{{i18n "blog"}}</h1>
+	</div>
+</div>
+
+{{ $truncate := default true .Site.Params.truncate }}
+{{ range .Paginator.Pages.ByDate }}
+
+    {{ if $truncate }}
+        {{ .Render "summary" }}
+    {{ else }}
+        {{ .Render "content" }}
+    {{ end }}
+
+{{ end }}
+
+{{ partial "paginator" . }}
+
+{{ end }}
