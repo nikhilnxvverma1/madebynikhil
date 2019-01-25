@@ -6,7 +6,7 @@ draft: false
 
 #### Experience:
 - 2 Years as a Software Engineer at Nucleus Software (2013-2015)
-- Published 4 apps on the App Store
+- Published 4 apps on the App Store (Currently unavailable)
 
 #### Education: 
 - B.Tech in Computer Sciene from JIIT, Noida with a GPA of 7.3 (2009-2013)
